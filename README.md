@@ -1,35 +1,24 @@
-<p align="center"> <img alt="Frontier Station 14" height="300" src="https://github.com/new-frontiers-14/frontier-station-14/blob/master/Resources/Textures/_NF/Logo/logo.png?raw=true" /></p>
+<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-Frontier Station 14 is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
+<p align="center"> Станция 14 это сессионная игрушка про взаимодействие космонафтиков и взаимодействие газов. Сборка VXS14 представляет примерно такой же геймплей, но сессионки чуть меньше а пострелушек чуть больше. 06.06.2025</p>
 
-This is the primary repo for Frontier Station 14.
+## Ссылки
 
-If you want to host or create content for FS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+[Дискорд](https://discord.gg/wArjmHTv7S) | [Апстрим](https://github.com/space-wizards/space-station-14) | [Вики](https://vxs14.miraheze.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0)
 
-## Links
+## Контрибьютинг
 
-[Discord](https://discord.gg/tpuAT7d3zm/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/)
+Список TODO можно увидеть в дискорде проекта или получить у мейнтейнера проекта.
 
-## Documentation/Wiki
+## Локальный сервер
 
-Our [wiki](https://frontierstation.wiki.gg/) has documentation on FS14's content.
+0. Установите необходимые зависимости (Dotnet, git, python)
+1. Клонируйте репозиторий (git clone https://github.com/kel593/VXSS14/)
+2. Запустите `RUN_THIS.py` для установки дополнительных зависимостей
+3. Компилируйте решение (dotnet build)
+4. Запустите решение (dotnet run --project Content.Server)
 
-## Contributing
-
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of ideas](https://discord.com/channels/1123826877245694004/1127017858833068114) that can be done and anybody can pick them up. Don't be afraid to ask for help either!
-
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language consider creating a fork or contributing to a fork.
-
-If you make any contributions, please make sure to read the markers section in [MARKERS.md](https://github.com/new-frontiers-14/frontier-station-14/blob/master/MARKERS.md)
-Any changes made to files belonging to our upstream should be properly marked in accordance to what is specified there.
-
-## Building
-
-1. Clone this repo.
-2. Run `RUN_THIS.py` to init submodules and download the engine.
-3. Compile the solution.
-
-[More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
+[Более детальная инструкция по работе с репозиторием и запуску локального сервера](https://docs.spacestation14.com/en/general-development/setup.html)
 
 ## License
 
