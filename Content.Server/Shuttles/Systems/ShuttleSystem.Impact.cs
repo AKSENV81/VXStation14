@@ -23,12 +23,12 @@ public sealed partial class ShuttleSystem
     /// <summary>
     /// Kinetic energy required to dismantle a single tile
     /// </summary>
-    private const float TileBreakEnergy = 2000;
+    private const float TileBreakEnergy = 1000;
 
     /// <summary>
     /// Kinetic energy required to spawn sparks
     /// </summary>
-    private const float SparkEnergy = 1500;
+    private const float SparkEnergy = 550;
 
     private readonly SoundCollectionSpecifier _shuttleImpactSound = new("ShuttleImpactSound");
 
@@ -78,7 +78,7 @@ public sealed partial class ShuttleSystem
     private void ProcessTile(EntityUid uid, MapGridComponent grid, Vector2i tile, float energy, Vector2 dir)
     {
         DamageSpecifier damage = new();
-        damage.DamageDict = new() { { "Structural", energy } };
+        damage.DamageDict = new() { { "Blunt", energy } };
 
         foreach (EntityUid localUid in _lookup.GetLocalEntitiesIntersecting(uid, tile, gridComp: grid))
         {
