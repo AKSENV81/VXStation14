@@ -3,7 +3,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
-    lifetime: 0.4
+    lifetime: 0.1 # VXS
+  - type: PointLight # VXS
+    radius: 4
+    energy: 0.1
+    castShadows: true
+    color: "#FFE1A9"
   - type: Sprite
     drawdepth: BelowMobs
     layers:
