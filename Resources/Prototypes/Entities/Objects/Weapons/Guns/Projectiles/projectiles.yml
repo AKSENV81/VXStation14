@@ -145,11 +145,11 @@
     damage:
       types:
         Blunt: 14
-  - type: PointLight
-    enabled: true
-    color: "#ff4300"
-    radius: 2.0
-    energy: 7.0
+  # - type: PointLight VXS
+  #   enabled: true VXS
+  #   color: "#ff4300" VXS
+  #   radius: 2.0 VXS
+  #   energy: 7.0 VXS
   - type: IgniteOnCollide
     fireStacks: 0.25
   - type: Tracer # Frontier
@@ -700,10 +700,10 @@
     intensitySlope: 6
     totalIntensity: 200
     maxTileBreak: 1
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 3.5
+  #   color: orange
+  #   energy: 0.5
 
 - type: entity
   id: BulletWeakRocket
@@ -722,10 +722,10 @@
     intensitySlope: 1
     totalIntensity: 4 # 60 total damage to distribute over tiles
     maxTileBreak: 1
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 3.5 VXS
+  #   color: orange VXS
+  #   energy: 0.5 VXS
 
 - type: entity
   id: BulletGrenadeBaton
@@ -816,10 +816,10 @@
     disableDuration: 10
   - type: Ammo
     muzzleFlash: null
-  - type: PointLight
-    radius: 3.5
-    color: blue
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 3.5 VXS
+  #   color: blue VXS
+  #   energy: 0.5 VXS
 
 - type: entity
   id: BulletCap
@@ -913,10 +913,10 @@
     intensitySlope: 6
     totalIntensity: 60
     maxTileBreak: 0
-  - type: PointLight
-    radius: 1
-    color: orange
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 1 VXS
+  #   color: orange VXS
+  #   energy: 0.5 VXS
 
 - type: entity
   id: GrapplingHook

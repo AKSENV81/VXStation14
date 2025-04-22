@@ -228,10 +228,10 @@
   - type: Tracer # Frontier
     color: "#9BE792FF" # Frontier
     length: 1.5 # Frontier
-  - type: PointLight # Frontier
-    radius: 1.1 # Frontier
-    energy: 1 # Frontier
-    color: "#9BE792FF" # Frontier
+  # - type: PointLight # Frontier VXS
+  #   radius: 1.1 # Frontier
+  #   energy: 1 # Frontier
+  #   color: "#9BE792FF" # Frontier
 
 - type: entity
   id: PelletShotgunUraniumSpread
