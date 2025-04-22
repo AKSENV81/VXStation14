@@ -1,0 +1,15 @@
+- type: lobbyBackground
+  id: Nestrelyanniy
+  background: /Textures/_VXS/LobbyScreens/towebp.webp
+
+- type: lobbyBackground
+  id: Kozel
+  background: /Textures/_VXS/LobbyScreens/kozelblyad.webp
+
+- type: lobbyBackground
+  id: PTSD
+  background: /Textures/_VXS/LobbyScreens/PTSD.webp
+
+- type: lobbyBackground
+  id: Izokorteks
+  background: /Textures/_VXS/LobbyScreens/izocortex.webp
