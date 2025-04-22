@@ -8,6 +8,15 @@
     damage:
       types:
         Piercing: 35
+        Blunt: 12 # VXS
+        Asphyxiation: 7 # VXS
+    penetrationThreshold: 30 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 22
+  - type: TimedDespawn # VXS
+    lifetime: 13
 
 - type: entity
   id: BulletMagnumPractice
@@ -18,7 +27,17 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 1
+        Piercing: 35 # VXS
+        Blunt: 12 # VXS
+        Asphyxiation: 7 # VXS
+        Heat: 3 # VXS
+    penetrationThreshold: 30 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 21
+  - type: TimedDespawn # VXS
+    lifetime: 13
 
 - type: entity
   id: BulletMagnumRubber
@@ -29,9 +48,9 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
+        Blunt: 11 # VXS
   - type: StaminaDamageOnCollide
-    damage: 35 # 3 hits to stun cuz revolver
+    damage: 22 # VXS
 
 - type: entity
   id: BulletMagnumIncendiary
@@ -42,9 +61,14 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 32
-        
+        Piercing: 30 # VXS
+        Heat: 5 # VXS
+    penetrationThreshold: 25 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: TimedDespawn # VXS
+    lifetime: 13
+
 - type: entity
   id: BulletMagnumAP
   name: bullet (.45 magnum armor-piercing)
@@ -54,8 +78,15 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 26 # 20% decrease
-    ignoreResistances: true
+        Piercing: 16 # VXS
+        Blunt: 19 # VXS
+    penetrationThreshold: 35 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 8
+  - type: TimedDespawn # VXS
+    lifetime: 13
 
 - type: entity
   id: BulletMagnumUranium
@@ -66,5 +97,12 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 15
-        Piercing: 20
+        Radiation: 1 # VXS
+        Piercing: 35 # VXS
+    penetrationThreshold: 35 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Structural # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 4
+  - type: TimedDespawn # VXS
+    lifetime: 20

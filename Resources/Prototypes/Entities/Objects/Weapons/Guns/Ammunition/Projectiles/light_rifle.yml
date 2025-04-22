@@ -7,7 +7,16 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 19
+        Piercing: 36 # VXS
+        Blunt: 12 # VXS
+        Asphyxiation: 6 # VXS
+    penetrationThreshold: 40 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 20
+  - type: TimedDespawn # VXS
+    lifetime: 15
 
 - type: entity
   id: BulletLightRiflePractice
@@ -18,7 +27,17 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 2
+        Piercing: 36 # VXS
+        Blunt: 12 # VXS
+        Asphyxiation: 6 # VXS
+        Heat: 3 # VXS
+    penetrationThreshold: 40 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 19
+  - type: TimedDespawn # VXS
+    lifetime: 15
 
 - type: entity
   id: BulletLightRifleRubber
@@ -26,10 +45,12 @@
   parent: BaseBulletRubber
   categories: [ HideSpawnMenu ]
   components:
-  - type: Projectile
+  - type: Projectile # VXS
     damage:
       types:
-        Blunt: 3
+        Blunt: 11 # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 20
 
 - type: entity
   id: BulletLightRifleIncendiary
@@ -40,8 +61,16 @@
   - type: Projectile
     damage:
       types:
-        Blunt: 3
-        Heat: 16
+        Asphyxiation: 6 # VXS
+        Piercing: 36 # VXS
+        Heat: 11 # VXS
+    penetrationThreshold: 30 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Piercing # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 6
+  - type: TimedDespawn # VXS
+    lifetime: 10
 
 - type: entity
   id: BulletLightRifleUranium
@@ -52,5 +81,12 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 9
-        Piercing: 10
+        Radiation: 1 # VXS
+        Piercing: 48 # VXS
+    penetrationThreshold: 65 # VXS
+    penetrationDamageTypeRequirement: # VXS
+    - Structural # VXS
+  - type: StaminaDamageOnCollide # VXS
+    damage: 2
+  - type: TimedDespawn # VXS
+    lifetime: 20
