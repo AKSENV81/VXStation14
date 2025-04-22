@@ -21,7 +21,7 @@
       damage:
         types:
           Heat: 40
-      idlePower: 0 # VXS
+      idlePower: 500 # VXS
       activePower: 1500 # VXS
     - type: InteractionOutline
     - type: Sprite
