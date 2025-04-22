@@ -14,7 +14,7 @@ namespace Content.Server.Audio;
 public sealed class ContentAudioSystem : SharedContentAudioSystem
 {
     [ValidatePrototypeId<SoundCollectionPrototype>]
-    private const string LobbyMusicCollection = "NFLobbyMusic"; // Frontier: LobbyMusic<NFLobbyMusic
+    private const string LobbyMusicCollection = "VXSLobbyMusic"; // VXS: LobbyMusic<NFLobbyMusic<VXSLobbyMusic, why the hell music collections are hardcodded???
 
     [Dependency] private readonly AudioSystem _serverAudio = default!;
     [Dependency] private readonly IRobustRandom _robustRandom = default!;
