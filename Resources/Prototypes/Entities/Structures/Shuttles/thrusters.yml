@@ -21,12 +21,14 @@
       damage:
         types:
           Heat: 40
+      idlePower: 500 # VXS
+      activePower: 1500 # VXS
     - type: InteractionOutline
     - type: Sprite
     - type: Appearance
     - type: ThrusterVisuals
     - type: ApcPowerReceiver
-      powerLoad: 1500
+    #  powerLoad: 1500 VXS
     - type: ExtensionCableReceiver
     - type: Damageable
       damageContainer: StructuralInorganic
