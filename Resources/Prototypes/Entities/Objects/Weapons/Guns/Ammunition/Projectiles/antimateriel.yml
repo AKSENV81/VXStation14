@@ -7,13 +7,16 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 75
+        Blunt: 45 # VXS
+        Piercing: 70 # VXS
         Structural: 226
-    penetrationThreshold: 360
+    penetrationThreshold: 500 # VXS
     penetrationDamageTypeRequirement:
     - Structural
   - type: StaminaDamageOnCollide
-    damage: 60
+    damage: 99 # VXS
+  - type: TimedDespawn # VXS
+    lifetime: 30
   - type: Tracer # Frontier
     color: "#FFFFFFFF" # Frontier
     length: 3 # Frontier

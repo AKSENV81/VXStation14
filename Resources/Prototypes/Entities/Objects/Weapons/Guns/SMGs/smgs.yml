@@ -14,20 +14,24 @@
     slots:
     - Back
     - suitStorage
-  - type: AmmoCounter
+  # - type: AmmoCounter VXS
   - type: Gun
+    projectileSpeed: 40 # VXS
     minAngle: 2
     maxAngle: 16
     fireRate: 8
     burstFireRate: 8
     angleIncrease: 3
-    angleDecay: 16  
+    angleDecay: 16
     selectedMode: FullAuto
     availableModes:
     - SemiAuto
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/smg.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/SMG/smg3.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 2
     defaultDirection: 1, 0
   - type: ChamberMagazineAmmoProvider
     soundRack:
@@ -37,8 +41,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolSubMachineGun
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        insertSound: /Audio/_VXS/Weaponry/Gunsounds/SMG/smgInsert2.ogg # VXS
+        ejectSound: /Audio/_VXS/Weaponry/Gunsounds/SMG/smgMagout.ogg # VXS
         priority: 2
         whitelist:
           tags:
@@ -72,9 +76,13 @@
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
+    projectileSpeed: 35 # VXS
     fireRate: 10
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/SMG/smg1.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 2
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -100,17 +108,25 @@
     unwieldOnUse: false
   - type: GunWieldBonus
     minAngle: -19
-    maxAngle: -16
+    maxAngle: -23 # VXS
+  - type: AmmoCounter # VXS
   - type: Gun
+    fireRate: 9 # VXS
+    cameraRecoilScalar: 1 # VXS
+    projectileSpeed: 40 # VXS
     minAngle: 21
     maxAngle: 32
     shotsPerBurst: 5
+    burstCooldown: 0.1 # VXS
     availableModes:
+    #- SemiAuto VXS
     - Burst
     - FullAuto
-    - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/SMG/smg2.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 2
   - type: ChamberMagazineAmmoProvider
     autoEject: true
   - type: MagazineVisuals
@@ -140,16 +156,21 @@
       minAngle: -19
       maxAngle: -16
     - type: Gun
+      projectileSpeed: 35 # VXS
       minAngle: 21
       maxAngle: 32
       fireRate: 6
       burstFireRate: 12
+      selectedMode: Burst # VXS
       soundGunshot:
-        path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+        path: /Audio/_VXS/Weaponry/Gunshots/SMG/smg1.ogg # VXS
+        params: # VXS
+          maxDistance: 55
+          volume: 2
       availableModes:
       - Burst
-      - FullAuto
-      - SemiAuto
+      # - FullAuto VXS
+      # - SemiAuto VXS
       shotsPerBurst: 3
       burstCooldown: 0.25
     - type: ItemSlots
@@ -157,8 +178,8 @@
         gun_magazine:
           name: Magazine
           startingItem: MagazinePistolSubMachineGun
-          insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-          ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+          insertSound: /Audio/_VXS/Weaponry/Gunsounds/SMG/smgInsert2.ogg # VXS
+          ejectSound: /Audio/_VXS/Weaponry/Gunsounds/SMG/smgMagout.ogg # VXS
           priority: 2
           whitelist:
             tags:
@@ -200,27 +221,29 @@
     sprite: Objects/Weapons/Guns/SMGs/wt550.rsi
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
+  - type: AmmoCounter # VXS
   - type: Gun
+    projectileSpeed: 40 # VXS
     fireRate: 5.5
     minAngle: 1
     maxAngle: 6
     angleIncrease: 1.5
-    angleDecay: 6  
+    angleDecay: 6
     selectedMode: FullAuto
     shotsPerBurst: 5
     burstCooldown: 0.2
     burstFireRate: 7
     availableModes:
+    - SemiAuto
     - Burst
     - FullAuto
-    - SemiAuto
   - type: ItemSlots
     slots:
       gun_magazine:
         name: Magazine
         startingItem: MagazinePistolSubMachineGunTopMounted
-        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        insertSound: /Audio/_VXS/Weaponry/Gunsounds/SMG/smgInsert2.ogg # VXS
+        ejectSound: /Audio/_VXS/Weaponry/Gunsounds/SMG/smgMagout.ogg # VXS
         priority: 2
         whitelist:
           tags:

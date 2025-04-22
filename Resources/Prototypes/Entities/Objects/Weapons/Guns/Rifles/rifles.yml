@@ -14,14 +14,27 @@
     slots:
     - Back
     - suitStorage
-  - type: AmmoCounter
+  #- type: AmmoCounter VXS
+  - type: GunWieldBonus # VXS
+    minAngle: -11
+    maxAngle: -10
   - type: Gun
+    minAngle: 13 # VXS
+    maxAngle: 16 # VXS
+    angleIncrease: 1.5 # VXS
+    angleDecay: 6 # VXS
+    cameraRecoilScalar: 2
+    projectileSpeed: 50 # VXS
     fireRate: 5
-    selectedMode: FullAuto
+    selectedMode: SemiAuto # VXS
     availableModes:
+      - SemiAuto # VXS
       - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/batrifle.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Rifle/rifle1.ogg # VXS
+      params: # VXS
+        maxDistance: 60
+        volume: 3
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/sf_rifle_cock.ogg
@@ -30,8 +43,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightRifle
-        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg # VXS
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg # VXS
         priority: 2
         whitelist:
           tags:
@@ -52,10 +65,10 @@
     price: 500
 
 - type: entity
-  name: AKMS
+  name: AKMDR # VXS
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband
   id: WeaponRifleAk
-  description: An iconic weapon of war. Uses .30 rifle ammo. An illegal firearm often used by Syndicate agents.
+  description: A modified modern version of the famous iconic weapon, the AKM. # VXS
   components:
   - type: Sprite
     sprite: Objects/Weapons/Guns/Rifles/ak.rsi
@@ -65,9 +78,14 @@
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Gun
+    cameraRecoilScalar: 2
+    projectileSpeed: 45 # VXS
     fireRate: 5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Rifle/rifle1.ogg # VXS
+      params: # VXS
+        maxDistance: 60
+        volume: 3
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/ltrifle_cock.ogg
@@ -76,8 +94,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineLightRifle
-        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        insertSound: /Audio/_VXS/Weaponry/Gunsounds/Rifle/rifleInsert.ogg # VXS
+        ejectSound: /Audio/_VXS/Weaponry/Gunsounds/Rifle/rifleMagout2.ogg # VXS
         priority: 2
         whitelist:
           tags:
@@ -115,6 +133,14 @@
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun # VXS
+    cameraRecoilScalar: 1
+    projectileSpeed: 45
+    soundGunshot:
+      path: /Audio/_VXS/Weaponry/Gunshots/Rifle/rifle2.ogg
+      params:
+        maxDistance: 60
+        volume: 2
   - type: Clothing
     sprite: Objects/Weapons/Guns/Rifles/carbine.rsi
   - type: ItemSlots
@@ -122,8 +148,8 @@
       gun_magazine:
         name: Magazine
         startingItem: MagazineRifle
-        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
-        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        insertSound: /Audio/_VXS/Weaponry/Gunsounds/Rifle/rifleInsert2.ogg # VXS
+        ejectSound: /Audio/_VXS/Weaponry/Gunsounds/Rifle/rifleMagout2.ogg # VXS
         priority: 2
         whitelist:
           tags:
@@ -162,8 +188,21 @@
   - type: Clothing
     sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi # Frontier: add _NF prefix
   - type: Gun
+    cameraRecoilScalar: 2 # VXS
+    projectileSpeed: 50 # VXS
+    shotsPerBurst: 2 # VXS
+    burstCooldown: 0.1 # VXS
+    burstFireRateModifier: 1.5 # VXS
+    selectedMode: Burst # VXS
+    availableModes: # VXS
+    - SemiAuto
+    - Burst
+    - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Rifle/rifle3.ogg # VXS
+      params: # VXS
+        maxDistance: 60
+        volume: 3
   - type: ItemSlots
     slots:
       gun_magazine:

@@ -26,6 +26,7 @@
   id: WeaponLauncherChinaLake
   description: PLOOP.
   components:
+  - type: GunRequiresWield # VXS
   - type: Sprite
     sprite: Objects/Weapons/Guns/Launchers/china_lake.rsi
     layers:
@@ -36,14 +37,18 @@
     slots:
     - Back
     - suitStorage
-  - type: AmmoCounter
+  #- type: AmmoCounter VXS
   - type: Gun
+    projectileSpeed: 35 # VXS
     fireRate: 1
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Launcher/launcher1.ogg # VXS
+      params: # VXS
+        maxDistance: 75
+        volume: 4
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -54,7 +59,7 @@
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
 
 - type: entity
-  name: RPG-7
+  name: RPG-29-2M # VXS
   parent: [ BaseWeaponLauncher, BaseC3Contraband ] # Frontier: BaseMajorContraband<BaseC3Contraband
   id: WeaponLauncherRocket
   description: A modified ancient rocket-propelled grenade launcher.
@@ -69,9 +74,14 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Launchers/rocket.rsi
   - type: Gun
+    cameraRecoilScalar: 4
+    projectileSpeed: 40 # VXS
     fireRate: 0.5
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/rpgfire.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Launcher/launcher2.ogg # VXS
+      params: # VXS
+        maxDistance: 75
+        volume: 3
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -79,7 +89,9 @@
     proto: CartridgeRocket
     capacity: 1
     soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+      path: /Audio/Machines/id_insert.ogg # VXS
+      params: # VXS
+        volume: 8
   - type: MagazineVisuals
     magState: mag
     steps: 2
@@ -88,6 +100,7 @@
 
 - type: entity
   name: multiple rocket launcher
+  suffix: DEBUG # VXS
   parent: BaseWeaponLauncher
   id: WeaponLauncherMultipleRocket
   description: A modified ancient rocket-propelled grenade launcher.

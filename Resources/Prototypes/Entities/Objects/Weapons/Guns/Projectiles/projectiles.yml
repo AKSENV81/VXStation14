@@ -3,7 +3,12 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: TimedDespawn
-    lifetime: 0.4
+    lifetime: 0.1 # VXS
+  - type: PointLight # VXS
+    radius: 4
+    energy: 0.1
+    castShadows: true
+    color: "#FFE1A9"
   - type: Sprite
     drawdepth: BelowMobs
     layers:
@@ -126,13 +131,13 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
-    - state: practice
+    - state: trasser # VXS
   - type: Projectile
     damage:
       types:
         Blunt: 1
   - type: Tracer # Frontier
-    color: "#E98C23FF" # Frontier
+    color: "#FFFFFFFF" # Frontier VXS
     length: 1.5 # Frontier
 
 - type: entity
@@ -145,11 +150,11 @@
     damage:
       types:
         Blunt: 14
-  - type: PointLight
-    enabled: true
-    color: "#ff4300"
-    radius: 2.0
-    energy: 7.0
+  # - type: PointLight VXS
+  #   enabled: true VXS
+  #   color: "#ff4300" VXS
+  #   radius: 2.0 VXS
+  #   energy: 7.0 VXS
   - type: IgniteOnCollide
     fireStacks: 0.25
   - type: Tracer # Frontier
@@ -170,9 +175,9 @@
       types:
         Piercing: 11 # 20% decrease
     ignoreResistances: true
-  - type: Tracer # Frontier
-    color: "#000000FF" # Frontier
-    length: 1.5 # Frontier
+  # - type: Tracer # Frontier VXS
+  #   color: "#000000FF" # Frontier VXS
+  #   length: 1.5 # Frontier VXS
 
 - type: entity
   id: BaseBulletUranium
@@ -188,13 +193,13 @@
     damage:
       types:
         Radiation: 11
-  - type: Tracer # Frontier
-    color: "#9BE792FF" # Frontier
-    length: 1.5 # Frontier
-  - type: PointLight # Frontier
-    radius: 1.1 # Frontier
-    energy: 1 # Frontier
-    color: "#9BE792FF" # Frontier
+  # - type: Tracer # Frontier VXS
+  #   color: "#9BE792FF" # Frontier VXS
+  #   length: 1.5 # Frontier VXS
+  # - type: PointLight # Frontier VXS
+  #   radius: 1.1 # Frontier VXS
+  #   energy: 1 # Frontier VXS
+  #   color: "#9BE792FF" # Frontier VXS
 
 # Energy projectiles
 - type: entity
@@ -700,10 +705,10 @@
     intensitySlope: 6
     totalIntensity: 200
     maxTileBreak: 1
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 3.5
+  #   color: orange
+  #   energy: 0.5
 
 - type: entity
   id: BulletWeakRocket
@@ -722,10 +727,10 @@
     intensitySlope: 1
     totalIntensity: 4 # 60 total damage to distribute over tiles
     maxTileBreak: 1
-  - type: PointLight
-    radius: 3.5
-    color: orange
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 3.5 VXS
+  #   color: orange VXS
+  #   energy: 0.5 VXS
 
 - type: entity
   id: BulletGrenadeBaton
@@ -816,10 +821,10 @@
     disableDuration: 10
   - type: Ammo
     muzzleFlash: null
-  - type: PointLight
-    radius: 3.5
-    color: blue
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 3.5 VXS
+  #   color: blue VXS
+  #   energy: 0.5 VXS
 
 - type: entity
   id: BulletCap
@@ -913,10 +918,10 @@
     intensitySlope: 6
     totalIntensity: 60
     maxTileBreak: 0
-  - type: PointLight
-    radius: 1
-    color: orange
-    energy: 0.5
+  # - type: PointLight VXS
+  #   radius: 1 VXS
+  #   color: orange VXS
+  #   energy: 0.5 VXS
 
 - type: entity
   id: GrapplingHook
@@ -1197,9 +1202,9 @@
       path: /Audio/Weapons/Guns/Hits/snap.ogg
   - type: StaminaDamageOnCollide
     damage: 22 # 5 hits to stun sounds reasonable
-  - type: Tracer
-    color: "#206EEFFF"
-    length: 1.5 # Frontier
+  # - type: Tracer VXS
+  #   color: "#206EEFFF" VXS
+  #   length: 1.5 # Frontier VXS
 
 - type: entity
   id: BaseBulletEmp

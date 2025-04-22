@@ -6,6 +6,7 @@
   - type: CartridgeAmmo
     proto: BulletRifleRubber
   - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Casings/rifle.rsi # VXS
     layers:
       - state: base
         map: [ "enum.AmmoVisualLayers.Base" ]
