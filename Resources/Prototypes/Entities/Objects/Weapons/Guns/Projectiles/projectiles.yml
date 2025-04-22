@@ -126,13 +126,13 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Projectiles/projectiles2.rsi
     layers:
-    - state: practice
+    - state: trasser # VXS
   - type: Projectile
     damage:
       types:
         Blunt: 1
   - type: Tracer # Frontier
-    color: "#FDF5E6FF" # Frontier VXS
+    color: "#FFFFFFFF" # Frontier VXS
     length: 1.5 # Frontier
 
 - type: entity
