@@ -26,13 +26,17 @@
     - suitStorage
     - Belt
   - type: Gun
+    projectileSpeed: 40 # VXS
     fireRate: 6
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
       - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/pistol.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Pistol/pistol1.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 2
   - type: ChamberMagazineAmmoProvider
     soundRack:
       path: /Audio/Weapons/Guns/Cock/pistol_cock.ogg
@@ -59,7 +63,7 @@
     containers:
       gun_magazine: !type:ContainerSlot
       gun_chamber: !type:ContainerSlot
-  - type: AmmoCounter
+  #- type: AmmoCounter VXS
   - type: MagazineVisuals
     magState: mag
     steps: 1
@@ -74,6 +78,7 @@
   id: WeaponPistolViper
   description: A small, easily concealable, but somewhat underpowered gun. Retrofitted with a fully automatic receiver. Uses .35 auto ammo. An illegal firearm often used by Syndicate agents.
   components:
+  - type: AmmoCounter # VXS
   - type: Sprite
     sprite: Objects/Weapons/Guns/Pistols/viper.rsi
   - type: ItemSlots
@@ -156,11 +161,13 @@
   - type: ChamberMagazineAmmoProvider
     boltClosed: null
   - type: Gun
+    projectileSpeed: 35 # VXS
     fireRate: 4
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Pistol/pistolSupressed.ogg # VXS
       params:
-        volume: -14
+        volume: -2
+        maxDistance: 25 # VXS
     availableModes:
     - SemiAuto
   - type: ItemSlots
@@ -203,11 +210,14 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
   - type: Gun
+    projectileSpeed: 40 # VXS
     fireRate: 5
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Pistol/pistol2.ogg # VXS
+      volume: 2
+      maxDistance: 55
   - type: PirateBountyItem # Frontier
     id: WeaponPistolMk58 # Frontier
 
@@ -227,6 +237,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Pistols/N1984.rsi
   - type: Gun
+    projectileSpeed: 45 # VXS
     minAngle: 1
     maxAngle: 20
     angleIncrease: 8
@@ -235,7 +246,10 @@
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Pistol/pistol2.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 3
   - type: ItemSlots
     slots:
       gun_magazine:

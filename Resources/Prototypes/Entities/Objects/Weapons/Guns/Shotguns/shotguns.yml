@@ -18,14 +18,19 @@
     slots:
     - Back
     - suitStorage
-  - type: AmmoCounter
+  # - type: AmmoCounter VXS
   - type: Gun
     fireRate: 2
+    cameraRecoilScalar: 2 # VXS
+    projectileSpeed: 30 # VXS
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Shotgun/shotgun2.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 2
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: BallisticAmmoProvider
@@ -35,7 +40,7 @@
     capacity: 7
     proto: ShellShotgun
     soundInsert:
-      path: /Audio/Weapons/Guns/MagIn/shotgun_insert.ogg
+      collection: InsertShotgunShell # VXS
   - type: ContainerContainer
     containers:
       ballistic-ammo: !type:Container
@@ -65,15 +70,20 @@
     slots:
     - Back
     - suitStorage
-  - type: AmmoCounter
+  # - type: AmmoCounter VXS
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    cameraRecoilScalar: 2 # VXS
+    projectileSpeed: 30 # VXS
     fireRate: 2
     selectedMode: FullAuto
     availableModes:
     - FullAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/shotgun.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Shotgun/shotgun1.ogg # VXS
+      params: # VXS
+        maxDistance: 55
+        volume: 2
     soundEmpty:
       path: /Audio/Weapons/Guns/Empty/empty.ogg
   - type: ItemSlots
@@ -178,7 +188,7 @@
     sprite: _NF/Objects/Weapons/Guns/Shotguns/pump.rsi # Frontier: add _NF prefix
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
-    fireRate: 1
+    fireRate: 4 # VXS
   - type: Tag
     tags:
     - WeaponShotgunKammerer
@@ -194,9 +204,11 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Shotguns/sawn.rsi # Delta-V: add _DV prefix
   - type: Item
-    size: Small
+    size: Normal # VXS
     sprite: _DV/Objects/Weapons/Guns/Shotguns/sawn.rsi # Delta-V: add _DV prefix, sawn_inhands_64x<sawn
   - type: Gun
+    projectileSpeed: 25 # VXS
+    cameraRecoilScalar: 2
     fireRate: 3
   - type: BallisticAmmoProvider
     capacity: 2
@@ -280,6 +292,7 @@
     sprite: Objects/Weapons/Guns/Shotguns/improvised_shotgun_inhands_64x.rsi
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
+    projectileSpeed: 25 # VXS
     fireRate: 4 #No reason to stifle the firerate since you have to manually reload every time anyways.
   - type: BallisticAmmoProvider
     capacity: 1

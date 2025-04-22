@@ -17,14 +17,17 @@
     slots:
     - Back
     - suitStorage
-  - type: AmmoCounter
+  # - type: AmmoCounter VXS
   - type: Gun
     fireRate: 0.75
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Sniper/sniper1.ogg # VXS
+      params: # VXS
+        maxDistance: 110
+        volume: 6
   - type: BallisticAmmoProvider
     capacity: 10
     proto: CartridgeLightRifle
@@ -52,6 +55,18 @@
     pvsIncrease: 0.15 # Frontier
   - type: AltFireMelee # Frontier
     attackType: Light # Frontier
+  - type: Gun # VXS
+    cameraRecoilScalar: 2
+    projectileSpeed: 55
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_VXS/Weaponry/Gunshots/Sniper/sniper1.ogg # VXS
+      params:
+        maxDistance: 65
+        volume: 5
 
 - type: entity
   name: Hristov
@@ -64,13 +79,16 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Snipers/heavy_sniper.rsi
   - type: GunRequiresWield
+  - type: AmmoCounter # VXS
   - type: Gun
-    fireRate: 0.4
-    selectedMode: SemiAuto
-    availableModes:
-    - SemiAuto
+    fireRate: 1
+    cameraRecoilScalar: 3 # VXS
+    projectileSpeed: 100 # VXS
     soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Sniper/sniper2.ogg # VXS
+      params: # VXS
+        maxDistance: 110
+        volume: 6
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -82,8 +100,9 @@
     sprintModifier: 0.25
   - type: CursorOffsetRequiresWield
   - type: EyeCursorOffset
-    maxOffset: 3
-    pvsIncrease: 0.3
+    maxOffset: 16 # VXS
+    pvsIncrease: 64 # VXS
+    offsetSpeed: 0.2 # VXS
 
 - type: entity
   name: musket
