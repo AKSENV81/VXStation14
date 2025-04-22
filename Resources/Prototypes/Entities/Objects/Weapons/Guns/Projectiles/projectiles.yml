@@ -132,7 +132,7 @@
       types:
         Blunt: 1
   - type: Tracer # Frontier
-    color: "#E98C23FF" # Frontier
+    color: "#FDF5E6FF" # Frontier VXS
     length: 1.5 # Frontier
 
 - type: entity
@@ -170,9 +170,9 @@
       types:
         Piercing: 11 # 20% decrease
     ignoreResistances: true
-  - type: Tracer # Frontier
-    color: "#000000FF" # Frontier
-    length: 1.5 # Frontier
+  # - type: Tracer # Frontier VXS
+  #   color: "#000000FF" # Frontier VXS
+  #   length: 1.5 # Frontier VXS
 
 - type: entity
   id: BaseBulletUranium
@@ -188,13 +188,13 @@
     damage:
       types:
         Radiation: 11
-  - type: Tracer # Frontier
-    color: "#9BE792FF" # Frontier
-    length: 1.5 # Frontier
-  - type: PointLight # Frontier
-    radius: 1.1 # Frontier
-    energy: 1 # Frontier
-    color: "#9BE792FF" # Frontier
+  # - type: Tracer # Frontier VXS
+  #   color: "#9BE792FF" # Frontier VXS
+  #   length: 1.5 # Frontier VXS
+  # - type: PointLight # Frontier VXS
+  #   radius: 1.1 # Frontier VXS
+  #   energy: 1 # Frontier VXS
+  #   color: "#9BE792FF" # Frontier VXS
 
 # Energy projectiles
 - type: entity
@@ -1197,9 +1197,9 @@
       path: /Audio/Weapons/Guns/Hits/snap.ogg
   - type: StaminaDamageOnCollide
     damage: 22 # 5 hits to stun sounds reasonable
-  - type: Tracer
-    color: "#206EEFFF"
-    length: 1.5 # Frontier
+  # - type: Tracer VXS
+  #   color: "#206EEFFF" VXS
+  #   length: 1.5 # Frontier VXS
 
 - type: entity
   id: BaseBulletEmp

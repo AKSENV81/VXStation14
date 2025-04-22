@@ -30,9 +30,9 @@
         Blunt: 10
   - type: StaminaDamageOnCollide
     damage: 30 # 4 hits to stun
-  - type: Tracer # Frontier
-    color: "#004A00FF" # Frontier
-    length: 1.5 # Frontier
+  # - type: Tracer # Frontier VXS
+  #   color: "#004A00FF" # Frontier VXS
+  #   length: 1.5 # Frontier VXS
 
 - type: entity
   id: PelletShotgun
@@ -161,7 +161,7 @@
   - type: InjectableSolution
     solution: ammo
   - type: Tracer # Frontier
-    color: "#49CECEFF" # Frontier
+    color: "#FDF5E6FF" # Frontier VXS
     length: 1.5 # Frontier
 
 - type: entity
