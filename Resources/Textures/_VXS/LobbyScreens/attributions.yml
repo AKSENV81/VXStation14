@@ -8,7 +8,7 @@
   copyright: "t.me/desastresguerra"
   source: "https://t.me/desastresguerra/622"
 
-- files: ["PTSD.webp"]
+- files: ["ptsd.webp"]
   license: "CC-BY-NC-SA-3.0"
   copyright: "t.me/desastresguerra"
   source: "https://t.me/desastresguerra/486"
@@ -17,4 +17,19 @@
   license: "CC-BY-NC-SA-3.0"
   copyright: "t.me/desastresguerra"
   source: "https://t.me/desastresguerra/678?single"
+  
+- files: ["jupiter.webp"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "kosmos"
+  source: "kosmos"
+  
+- files: ["mks.webp"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "kosmos"
+  source: "kosmos"
+  
+- files: ["saturn.webp"]
+  license: "CC-BY-NC-SA-3.0"
+  copyright: "kosmos"
+  source: "kosmos"
   

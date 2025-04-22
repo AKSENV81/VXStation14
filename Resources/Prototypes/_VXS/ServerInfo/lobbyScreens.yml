@@ -8,8 +8,20 @@
 
 - type: lobbyBackground
   id: PTSD
-  background: /Textures/_VXS/LobbyScreens/PTSD.webp
+  background: /Textures/_VXS/LobbyScreens/ptsd.webp
 
 - type: lobbyBackground
   id: Izokorteks
   background: /Textures/_VXS/LobbyScreens/izocortex.webp
+
+- type: lobbyBackground
+  id: Jupiter
+  background: /Textures/_VXS/LobbyScreens/jupiter.webp
+
+- type: lobbyBackground
+  id: MKS
+  background: /Textures/_VXS/LobbyScreens/mks.webp
+
+- type: lobbyBackground
+  id: Saturn
+  background: /Textures/_VXS/LobbyScreens/saturn.webp
