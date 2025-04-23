@@ -3,7 +3,7 @@
   id: BulletRocketFugas
   name: rocket
   parent: BaseBulletTrigger
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _VXS/Weapons/Ammunition/Explosives/rpg.rsi
@@ -33,7 +33,7 @@
   id: BulletRocketThermobar
   name: rocket
   parent: BaseBulletTrigger
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _VXS/Weapons/Ammunition/Explosives/rpg.rsi
@@ -56,7 +56,7 @@
   id: BulletRocketFrag
   name: rocket
   parent: BaseBulletTrigger
-  noSpawn: true
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _VXS/Weapons/Ammunition/Explosives/rpg.rsi
