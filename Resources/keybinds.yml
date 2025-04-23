@@ -279,6 +279,9 @@ binds:
 - function: FlipObject
   type: State
   key: F
+- function: OfferItem # ADT-Tweak
+  type: State
+  key: F
 - function: TextCursorLeft
   type: State
   key: Left
