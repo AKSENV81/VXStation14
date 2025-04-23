@@ -77,7 +77,7 @@
     availableModes:
       - Burst
     soundGunshot:
-      path: /Audio/_NF/Weapons/Guns/Gunshots/rifle.ogg
+      path: /Audio/_VXS/Weaponry/Gunshots/Rifle/rifle4.ogg
       params:
         volume: -5
   - type: ItemSlots
