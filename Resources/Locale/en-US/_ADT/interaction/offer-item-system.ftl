@@ -1,0 +1,9 @@
+offer-item-empty-hand = Your hands are empty!
+offer-item-full-hand = Your hands are busy!
+offer-item-try-give = You offer {THE($item)}  {$target}
+offer-item-try-give-target = {$user} offers you {THE($item)}
+offer-item-give = You gave {THE($item)}  {$target}
+offer-item-give-other = {$user} gave {THE($item)}  {$target}
+offer-item-give-target = {$user} gave you {THE($item)}
+offer-item-no-give = You stop offering {THE($item)}  {$target}
+offer-item-no-give-target = {$user} is no longer offers you {THE($item)}

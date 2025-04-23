@@ -26,6 +26,7 @@
     - alertType: Magboots
     - alertType: Pacified
     - alertType: Crawling #ADT crawling
+    - alertType: Offer # ADT-Tweak
 
 - type: entity
   id: AlertSpriteView
@@ -34,6 +35,17 @@
   - type: Sprite
     layers:
     - map: [ "enum.AlertVisualLayers.Base" ]
+
+# ADT-Tweak start
+- type: alert
+  id: Offer
+  clickEvent: !type:AcceptOfferAlertEvent
+  icons:
+  - sprite: /Textures/_ADT/Alerts/offer_item.rsi
+    state: offer_item
+  name: alerts-offer-name
+  description: alerts-offer-desc
+# ADT-Tweak end
 
 - type: alert
   id: LowOxygen
