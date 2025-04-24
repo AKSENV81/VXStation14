@@ -35,3 +35,9 @@
 
 - type: Tag
   id: MagazineSniperSupressorTag
+
+- type: Tag
+  id: ArtilleryShell57mm
+
+- type: Tag
+  id: ArtilleryShellClip57mm

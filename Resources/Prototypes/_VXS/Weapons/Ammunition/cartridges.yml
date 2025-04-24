@@ -354,3 +354,35 @@
       map: ["enum.AmmoVisualLayers.Base"]
   - type: Appearance
   - type: SpentAmmoVisuals
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+- type: entity
+  parent: BaseCartridge
+  id: CartridgeTestArtillery
+  name: ArtilleryShell57mm
+  suffix: Trasser
+  components:
+  - type: Tag
+    tags:
+    - ArtilleryShell57mm
+  - type: CartridgeAmmo
+    proto: BulletSniperSupressorTrasser
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Casings/marksman.rsi
+    layers:
+    - state: base
+      map: ["enum.AmmoVisualLayers.Base"]
+  - type: Appearance
+  - type: SpentAmmoVisuals
