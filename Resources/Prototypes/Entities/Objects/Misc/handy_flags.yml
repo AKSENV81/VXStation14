@@ -9,6 +9,34 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/blank_handy_flag.rsi
+  - type: Appearance  # VXS-S
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    alwaysCombustible: true
+    damage:
+      types:
+        Heat: 10
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire-flag
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+            Ash:
+              min: 1
+              max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]  # VXS-E
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall
@@ -21,6 +49,34 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/NT_handy_flag.rsi
+  - type: Appearance  # VXS-S
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    alwaysCombustible: true
+    damage:
+      types:
+        Heat: 10
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire-flag
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+            Ash:
+              min: 1
+              max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]  # VXS-E
 
 - type: entity
   parent: [BaseItem, BaseC3SyndicateContraband, RecyclableItemClothSmall] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband added RecyclableItemClothSmall
@@ -33,6 +89,34 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/syndie_handy_flag.rsi
+  - type: Appearance  # VXS-S
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    alwaysCombustible: true
+    damage:
+      types:
+        Heat: 10
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire-flag
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+            Ash:
+              min: 1
+              max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]  # VXS-E
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall
@@ -45,6 +129,34 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/lgbtq_handy_flag.rsi
+  - type: Appearance  # VXS-S
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    alwaysCombustible: true
+    damage:
+      types:
+        Heat: 10
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire-flag
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+            Ash:
+              min: 1
+              max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]  # VXS-E
 
 - type: entity
   parent: [BaseItem, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall
@@ -57,3 +169,31 @@
     state: icon
   - type: Item
     sprite: Objects/Misc/Handy_Flags/pirate_handy_flag.rsi
+  - type: Appearance # VXS-S
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Flammable
+    fireSpread: true
+    alwaysCombustible: true
+    damage:
+      types:
+        Heat: 10
+  - type: FireVisuals
+    sprite: Effects/fire.rsi
+    normalState: fire-flag
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+            Ash:
+              min: 1
+              max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ] # VXS-E
