@@ -43,7 +43,9 @@
     maxIntensity: 100
     maxTileBreak: 1
     tileBreakScale: 2
-
+  - type: NpcFactionMember # VXS
+    factions:
+    - Missile
 
 - type: entity
   parent: BaseMeteor

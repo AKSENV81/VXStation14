@@ -34,6 +34,12 @@ public sealed partial class NPCRangedCombatComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     public float LOSAccumulator = 0f;
 
+    /// <summary> VXS-S
+    ///  Does this predict where the target is moving towards, and then fires there?
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite)]
+    public bool Advanced = false; // VXS-E
+
     /// <summary>
     ///  Is the target still considered in LOS since the last check.
     /// </summary>
