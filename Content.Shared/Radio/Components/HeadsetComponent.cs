@@ -1,4 +1,5 @@
 using Content.Shared.Inventory;
+using Robust.Shared.Audio; // VXS
 
 namespace Content.Shared.Radio.Components;
 
@@ -15,4 +16,16 @@ public sealed partial class HeadsetComponent : Component
 
     [DataField("requiredSlot")]
     public SlotFlags RequiredSlot = SlotFlags.EARS;
+
+    /// <summary> VXS-S
+     /// The sound effect played when headset receive message
+     /// </summary>
+    [DataField("soundReceive")]
+    public SoundSpecifier MessageReceiveSound = new SoundPathSpecifier("/Audio/_VXS/Effects/radio_receive.ogg");
+
+     /// <summary>
+     /// The sound effect played when headset send message
+     /// </summary>
+    [DataField("soundTalk")]
+    public SoundSpecifier MessageSendSound = new SoundPathSpecifier("/Audio/_VXS/Effects/radio_talk.ogg"); // VXS-E
 }
