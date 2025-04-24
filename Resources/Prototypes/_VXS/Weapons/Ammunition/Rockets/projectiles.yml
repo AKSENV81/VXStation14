@@ -1,0 +1,270 @@
+# СТРУНА
+- type: entity
+  id: BulletRocketAntiShipStrunaHE
+  name: SSR-800ARH String
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
+    layers:
+      - state: he
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBomb
+    maxIntensity: 50
+    intensitySlope: 16
+    totalIntensity: 600
+  - type: TimedDespawn
+    lifetime: 50
+  - type: WorldLoader
+    radius: 1
+  - type: ActiveRadioHeading
+    seekRange: 100
+    rotationSpeed: 3
+    guidanceType: PurePursuit
+    acceleration: 50
+    topSpeed: 100
+    initialSpeed: 50
+    FOV: 60
+    lockedIn: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: BulletRocketAntiShipStrunaEMP
+  name: SSR-806ARHEM Arc
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
+    layers:
+      - state: emp
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 100
+    intensitySlope: 50
+    totalIntensity: 100
+  - type: EmpOnTrigger
+    range: 5
+    energyConsumption: 10000
+    disableDuration: 15
+  - type: TimedDespawn
+    lifetime: 50
+  - type: WorldLoader
+    radius: 1
+  - type: ActiveRadioHeading
+    seekRange: 100
+    rotationSpeed: 3
+    guidanceType: PurePursuit
+    acceleration: 50
+    topSpeed: 100
+    initialSpeed: 50
+    FOV: 60
+    lockedIn: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: BulletRocketAntiShipStrunaRLS
+  name: SSR-100ARHMC Frostbush
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
+    layers:
+      - state: he
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: HardBomb
+    maxIntensity: 50
+    intensitySlope: 16
+    totalIntensity: 600
+  - type: TimedDespawn
+    lifetime: 50
+  - type: WorldLoader
+    radius: 1
+  - type: ActiveRadioHeading
+    seekRange: 500
+    rotationSpeed: 200
+    guidanceType: PredictiveGuidance
+    acceleration: 40
+    topSpeed: 100
+    initialSpeed: 10
+    FOV: 100
+    lockedIn: true
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 30
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+- type: entity
+  id: BulletRocketAntiShipStrunaNuclear
+  name: SSR-20ARHN Mint
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
+    layers:
+      - state: nuclear
+  - type: TimedDespawn
+    lifetime: 50
+  - type: WorldLoader
+    radius: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 50
+        Structural: 500
+    deleteOnCollide: true
+  - type: ActiveRadioHeading
+    seekRange: 1000
+    rotationSpeed: 30
+    guidanceType: PurePursuit
+    acceleration: 100
+    topSpeed: 200
+    initialSpeed: 10
+    FOV: 90
+    lockedIn: true
+  # - type: TriggerOnEnterGrid Dunno if this good idea
+  - type: SpawnOnTrigger
+    proto: NuclearFalloutAsh
+  - type: EmpOnTrigger
+    range: 20
+    energyConsumption: 10000
+    disableDuration: 15
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: FireBomb
+    maxIntensity: 30
+    intensitySlope: 3
+    totalIntensity: 2000
+  - type: DeleteOnTrigger
+
+# СВИЧБЛЕЙД
+
+- type: entity
+  id: BulletRocketAntiShipSwitchbladeHE
+  name: ASM-875T Switchblade-ARH
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/switchblade.rsi
+    layers:
+      - state: he
+  - type: TimedDespawn
+    lifetime: 50
+  - type: WorldLoader
+    radius: 1
+  - type: ActiveRadioHeading
+    seekRange: 50
+    rotationSpeed: 10
+    guidanceType: PurePursuit
+    acceleration: 10
+    topSpeed: 200
+    initialSpeed: 50
+    FOV: 60
+    lockedIn: true
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 200
+        Structural: 2000
+    penetrationThreshold: 1000
+    penetrationDamageTypeRequirement:
+    - Structural
+    deleteOnCollide: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: TwoStageTrigger
+    triggerDelay: 1
+    components:
+      - type: ExplodeOnTrigger
+      - type: Explosive
+        explosionType: HardBomb
+        maxIntensity: 100
+        intensitySlope: 35
+        totalIntensity: 350
+
+- type: entity
+  id: BulletRocketAntiShipSwitchbladeEMP
+  name: ASM-875EMP Switchblade-ARH
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/switchblade.rsi
+    layers:
+      - state: emp
+  - type: TimedDespawn
+    lifetime: 50
+  - type: WorldLoader
+    radius: 1
+  - type: ActiveRadioHeading
+    seekRange: 50
+    rotationSpeed: 10
+    guidanceType: PurePursuit
+    acceleration: 10
+    topSpeed: 200
+    initialSpeed: 50
+    FOV: 60
+    lockedIn: true
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 200
+        Structural: 2000
+    penetrationThreshold: 1000
+    penetrationDamageTypeRequirement:
+    - Structural
+    deleteOnCollide: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: TwoStageTrigger
+    triggerDelay: 1
+    components:
+      - type: EmpOnTrigger
+        range: 5
+        energyConsumption: 1000
+        disableDuration: 5
