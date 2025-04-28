@@ -36,6 +36,9 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  - type: NpcFactionMember
+    factions:
+    - Missile
 
 - type: entity
   id: BulletRocketAntiShipStrunaEMP
@@ -220,6 +223,9 @@
         maxIntensity: 100
         intensitySlope: 35
         totalIntensity: 350
+  - type: NpcFactionMember
+    factions:
+    - Missile
 
 - type: entity
   id: BulletRocketAntiShipSwitchbladeEMP

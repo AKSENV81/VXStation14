@@ -163,7 +163,7 @@
       availableModes:
         - SemiAuto
       soundGunshot:
-        collection: ADTShipBattle30mmGunFire
+        collection: Gunfire30mm
     - type: BallisticAmmoProvider
       whitelist:
         tags:

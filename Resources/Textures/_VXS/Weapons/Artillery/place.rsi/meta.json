@@ -4,14 +4,11 @@
   "copyright": "Made by LogDog for VXS14",
   "size": {
     "x": 64,
-    "y": 128
+    "y": 96
   },
     "states": [
         {
-            "name": "icon"
-        },
-        {
-            "name": "broken"
+            "name": "base"
         }
     ]
 }
