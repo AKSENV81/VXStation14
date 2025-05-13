@@ -20,22 +20,18 @@
 
 [Более детальная инструкция по работе с репозиторием и запуску локального сервера](https://docs.spacestation14.com/en/general-development/setup.html)
 
-## License
+## Лицензия
 
-Content contributed to this repository after commit 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 is licensed under the GNU Affero General Public License version 3.0, unless otherwise stated (note Attributions below). See `LICENSE-AGPLv3.txt`.
-Content contributed to this repository before commit 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 is licensed under the MIT license, unless otherwise stated. See `LICENSE-MIT.txt`.
+Контент репозитория после коммита 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 лицензирован под GNU Affero General Public License 3.0, если не указано другое. Подробнее в `LICENSE-AGPLv3.txt`.
+Контент репозитория до коммита 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 лицензированы под MIT license, если не указано другое. Подробнее в `LICENSE-MIT.txt`.
 
 [2fca06eaba205ae6fe3aceb8ae2a0594f0effee0](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0) was pushed on July 1, 2024 at 16:04 UTC
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and the copyright in the metadata file. [Example](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) если не указано другое. У ассетов есть свои лицензии и авторские права которые указаны в файле meta.json. [Пример](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
-Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+Стоит взять во внимание необходимость убрать контент под лицензией [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или схожими лицензиями если вы захотите использовать этот проект коммерчески.
 
-## Attributions
-
-When we pull content from other forks, we organize their content to repo-specific subfolders to better track attribution and limit merge conflicts.
-
-Content under these subdirectories originate from their respective forks and may contain modifications. These modifications are denoted by comments around the modified lines.
+## Дополнительное
 
 | Subdirectory | Fork Name | Fork Repository | License |
 |--------------|-----------|-----------------|---------|
@@ -51,6 +47,8 @@ Content under these subdirectories originate from their respective forks and may
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `Nyanotrasen` | Nyanotrasen | https://github.com/Nyanotrasen/Nyanotrasen | MIT |
+| `_Backmen` | Backmen | https://github.com/Rxup/space-station-14 | AGPL 3.0 |
+| `_CorvaxNext` | Corvax Next | https://github.com/space-syndicate/space-station-14-next | AGPL 3.0 |
 
 Additional repos that we have ported features from without subdirectories are listed below.
 
