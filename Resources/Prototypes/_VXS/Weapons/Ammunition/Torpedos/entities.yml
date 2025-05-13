@@ -1,0 +1,105 @@
+- type: entity
+  id: WeaponTorpedoAntiShipChirHE
+  name: AST-90 Chir-A # ХЕ
+  parent: ShuttleGunBase
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/chir.rsi
+    state: x90a
+  - type: TriggerOnSignal
+  - type: StaticPrice
+    price: 1000
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 100
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 50
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:ExplodeBehavior
+          - !type:SpawnEntitiesBehavior
+            spawn:
+              ScrapGlass:
+                min: 1
+                max: 1
+              ScrapSteel:
+                min: 1
+                max: 2
+  - type: Anchorable
+  - type: Physics
+    bodyType: Dynamic
+  - type: DeleteOnTrigger
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 200
+    intensitySlope: 5
+    maxIntensity: 4
+  - type: Gun
+    projectileSpeed: 60
+    fireRate: 1
+    minAngle: 0
+    maxAngle: 0
+    soundGunshot:
+      path: /Audio/Effects/explosion_small3.ogg
+      params:
+        pitch: 0.8
+        volume: 5
+  - type: DeviceLinkSink
+    ports:
+      - Trigger
+  - type: BallisticAmmoProvider
+    cycleable: false
+    whitelist:
+      entities:
+        - BulletTorpedoAntiShipChirHE
+    capacity: 1
+    proto: BulletTorpedoAntiShipChirHE
+  - type: FlashOnTrigger
+    range: 10
+  - type: Item
+    size: Ginormous
+    sprite: _VXS/Weapons/Ammunition/Explosives/chir.rsi
+  - type: Appearance
+  - type: MultiHandedItem
+  - type: ClothingSpeedModifier
+    walkModifier: 0
+    sprintModifier: 0
+  - type: HeldSpeedModifier
+
+- type: entity
+  id: WeaponTorpedoAntiShipChirEMP
+  name: AST-90 Chir-B # ЭМИ
+  parent: WeaponTorpedoAntiShipChirHE
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/chir.rsi
+    state: x90b
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 100
+    intensitySlope: 5
+    maxIntensity: 4
+  - type: Gun
+    projectileSpeed: 60
+    fireRate: 1
+    minAngle: 0
+    maxAngle: 0
+    soundGunshot:
+      path: /Audio/Effects/explosion_small3.ogg
+      params:
+        pitch: 0.8
+        volume: 5
+  - type: BallisticAmmoProvider
+    cycleable: false
+    whitelist:
+      entities:
+        - BulletTorpedoAntiShipChirEMP
+    capacity: 1
+    proto: BulletTorpedoAntiShipChirEMP

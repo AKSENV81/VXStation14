@@ -1,0 +1,12 @@
+- type: entity
+  parent: BaseComputerCircuitboard
+  id: WeaponryControllerConsoleCircuitboard
+  name: Weaponry controller computer board
+  description: A computer printed circuit board for weaponry controller computer.
+  components:
+    - type: Sprite
+      state: cpu_syndicate
+    - type: ComputerBoard
+      prototype: WeaponryControllerConsole
+    - type: ComputerTabletopBoard
+      prototype: WeaponryControllerConsoleTabletop
