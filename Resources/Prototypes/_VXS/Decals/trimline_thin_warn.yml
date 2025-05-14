@@ -1,0 +1,55 @@
+- type: decal
+  id: TrimlineThinCornerWarnNeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_corner_warn_ne
+
+- type: decal
+  id: TrimlineThinCornerWarnNwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_corner_warn_nw
+
+- type: decal
+  id: TrimlineThinCornerWarnSeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_corner_warn_se
+
+- type: decal
+  id: TrimlineThinCornerWarnSwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_corner_warn_sw
+
+- type: decal
+  id: TrimlineThinLineWarnEOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_line_warn_e
+
+- type: decal
+  id: TrimlineThinLineWarnNOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_line_warn_n
+
+- type: decal
+  id: TrimlineThinLineWarnSOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_line_warn_s
+
+- type: decal
+  id: TrimlineThinLineWarnWOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline_thin_warn.rsi
+    state: trimline_thin_line_warn_w
