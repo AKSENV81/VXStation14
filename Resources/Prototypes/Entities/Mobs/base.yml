@@ -8,7 +8,6 @@
   - type: Sprite
     noRot: true
     drawdepth: Mobs
-  - type: MobCollision # VXS
   - type: Physics
     bodyType: KinematicController
   - type: Fixtures
