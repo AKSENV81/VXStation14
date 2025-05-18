@@ -27,9 +27,6 @@ expedition_cooldown = 30.0
 # Frontier: shorter expeditions
 expedition_duration = 180.0
 
-[movement] # VXS
-mob_pushing = true
-
 [shuttle]
 grid_fill = false
 auto_call_time = 0
