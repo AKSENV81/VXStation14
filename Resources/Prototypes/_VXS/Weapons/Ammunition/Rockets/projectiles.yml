@@ -19,10 +19,10 @@
     lifetime: 50
   - type: WorldLoader
     radius: 1
-  - type: ActiveRadioHeading
+  - type: VXSActiveRadioHeading
     seekRange: 100
     rotationSpeed: 3
-    guidanceType: PurePursuit
+    guidanceAlgorithm: PurePursuit
     acceleration: 50
     topSpeed: 100
     initialSpeed: 50
@@ -64,10 +64,10 @@
     lifetime: 50
   - type: WorldLoader
     radius: 1
-  - type: ActiveRadioHeading
+  - type: VXSActiveRadioHeading
     seekRange: 100
     rotationSpeed: 3
-    guidanceType: PurePursuit
+    guidanceAlgorithm: PurePursuit
     acceleration: 50
     topSpeed: 100
     initialSpeed: 50
@@ -102,10 +102,10 @@
     lifetime: 50
   - type: WorldLoader
     radius: 1
-  - type: ActiveRadioHeading
+  - type: VXSActiveRadioHeading
     seekRange: 500
     rotationSpeed: 200
-    guidanceType: PredictiveGuidance
+    guidanceAlgorithmg: PredictiveGuidance
     acceleration: 40
     topSpeed: 100
     initialSpeed: 10
@@ -148,10 +148,10 @@
         Blunt: 50
         Structural: 500
     deleteOnCollide: true
-  - type: ActiveRadioHeading
+  - type: VXSActiveRadioHeading
     seekRange: 1000
     rotationSpeed: 30
-    guidanceType: PurePursuit
+    guidanceAlgorithmg: PurePursuit
     acceleration: 100
     topSpeed: 200
     initialSpeed: 10
@@ -188,10 +188,10 @@
     lifetime: 50
   - type: WorldLoader
     radius: 1
-  - type: ActiveRadioHeading
+  - type: VXSActiveRadioHeading
     seekRange: 50
     rotationSpeed: 10
-    guidanceType: PurePursuit
+    guidanceAlgorithmg: PurePursuit
     acceleration: 10
     topSpeed: 200
     initialSpeed: 50
@@ -241,10 +241,10 @@
     lifetime: 50
   - type: WorldLoader
     radius: 1
-  - type: ActiveRadioHeading
+  - type: VXSActiveRadioHeading
     seekRange: 50
     rotationSpeed: 10
-    guidanceType: PurePursuit
+    guidanceAlgorithmg: PurePursuit
     acceleration: 10
     topSpeed: 200
     initialSpeed: 50
