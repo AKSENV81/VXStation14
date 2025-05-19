@@ -56,3 +56,9 @@
 
 - type: Tag
   id: Armorplate
+
+- type: Tag
+  id: HeatCountermeasuresShell
+
+- type: Tag
+  id: RadarCountermeasuresShell

@@ -4,5 +4,5 @@ namespace Content.Server._VXS.ActiveRadioHeading.Components;
 public sealed partial class VXSRetargetComponent: Component
 {
     [DataField("chanceToRetarget")]
-    public float ChanceToRetarget = 0.9f;
+    public float ChanceToRetarget = 0.6f;
 }

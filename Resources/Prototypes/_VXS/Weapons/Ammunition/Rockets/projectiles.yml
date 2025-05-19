@@ -23,9 +23,9 @@
     seekRange: 100
     rotationSpeed: 3
     guidanceAlgorithm: PurePursuit
-    acceleration: 50
-    topSpeed: 100
-    initialSpeed: 50
+    acceleration: 1
+    topSpeed: 5
+    initialSpeed: 1
     FOV: 60
     lockedIn: false
   - type: Destructible
