@@ -1,17 +1,17 @@
 using System.Numerics;
 
-namespace Content.Server._VXS.ActiveRadioHeading;
+namespace Content.Server._VXS.ActiveRadioHeading.Components;
 
 /// <summary>
 /// Thanks, ekxkiri and justaunitydev!!
 /// </summary>
 [RegisterComponent]
-public sealed partial class ActiveRadioHeadingComponent : Component
+public sealed partial class VXSActiveRadioHeadingComponent : Component
 {
     /// <summary>
     /// How far does this fire a raycast onto?
     /// </summary>
-    [DataField("seekRange")]
+    [DataField]
     public float SeekRange = 300f;
 
     [DataField]
@@ -20,7 +20,7 @@ public sealed partial class ActiveRadioHeadingComponent : Component
     /// <summary>
     /// If null it will default to 100.
     /// </summary>
-    [DataField("rotationSpeed")]
+    [DataField]
     public Angle? RotationSpeed = 100f;
 
     /// <summary>
@@ -28,7 +28,7 @@ public sealed partial class ActiveRadioHeadingComponent : Component
     /// Options are "PredictiveGuidance" and "PurePursuit".
     /// Defaults to "PredictiveGuidance".
     /// </summary>
-    [DataField("guidanceType")]
+    [DataField]
     public GuidanceType GuidanceAlgorithm = GuidanceType.PredictiveGuidance;
 
     /// <summary>
@@ -40,19 +40,19 @@ public sealed partial class ActiveRadioHeadingComponent : Component
     /// <summary>
     /// How fast does the missile accelerate in m/s/s?
     /// </summary>
-    [DataField("acceleration")]
+    [DataField]
     public float Acceleration = 50f;
 
     /// <summary>
     /// What is the missiles top speed in m/s?
     /// </summary>
-    [DataField("topSpeed")]
+    [DataField]
     public float TopSpeed = 50f;
 
     /// <summary>
     /// What is the missiles initial speed in m/s?
     /// </summary>
-    [DataField("initialSpeed")]
+    [DataField]
     public float InitialSpeed = 10f;
 
     /// <summary>
@@ -64,16 +64,16 @@ public sealed partial class ActiveRadioHeadingComponent : Component
     /// <summary>
     /// What is the missiles field of view in degrees?
     /// </summary>
-    [DataField("FOV")]
+    [DataField]
     public float FOV = 90f;
 
-    public float oldDistance;
+    public float OldDistance;
 
-    public Vector2 oldPosition;
+    public Vector2 OldPosition;
 }
 
 public enum GuidanceType
 {
-    PredictiveGuidance = 1<<1,
-    PurePursuit = 1<<2
+    PredictiveGuidance = 1 << 1,
+    PurePursuit = 1 << 2,
 }
