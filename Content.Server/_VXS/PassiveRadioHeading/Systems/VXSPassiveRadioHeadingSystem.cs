@@ -22,7 +22,7 @@ public sealed class PassiveRadioHeadingSystem : EntitySystem
     {
         base.Update(frameTime);
 
-        var query = EntityQueryEnumerator<ActiveRadioHeadingComponent, TransformComponent>(); // get all radioheading missiles
+        var query = EntityQueryEnumerator<PassiveRadioHeadingComponent, TransformComponent>(); // get all radioheading missiles
         while (query.MoveNext(out var uid, out var comp, out var xform))
         {
             if (comp.Speed < comp.InitialSpeed) { comp.Speed = comp.InitialSpeed; } // start at initial speed
@@ -41,7 +41,7 @@ public sealed class PassiveRadioHeadingSystem : EntitySystem
         }
     }
 
-    public void GetNewTarget(EntityUid uid, ActiveRadioHeadingComponent component, TransformComponent transform) // Get the closest valid target
+    public void GetNewTarget(EntityUid uid, PassiveRadioHeadingComponent component, TransformComponent transform) // Get the closest valid target
     {
         var closestDistance = float.MaxValue;
         EntityUid? closestGrid = null;
@@ -89,7 +89,7 @@ public sealed class PassiveRadioHeadingSystem : EntitySystem
             component.TargetEntity = closestGrid;
         }
     }
-    public void PredictiveGuidance(EntityUid uid, ActiveRadioHeadingComponent comp, TransformComponent xform, float frameTime) // Predictive Guidance, predicts targets position at impact time.
+    public void PredictiveGuidance(EntityUid uid, PassiveRadioHeadingComponent comp, TransformComponent xform, float frameTime) // Predictive Guidance, predicts targets position at impact time.
     {
         if (comp.TargetEntity.HasValue)
         {
@@ -116,7 +116,7 @@ public sealed class PassiveRadioHeadingSystem : EntitySystem
         }
     }
 
-    public void PurePursuit(EntityUid uid, ActiveRadioHeadingComponent comp, TransformComponent xform, float frameTime) // Pure Pursuit, points directly at target.
+    public void PurePursuit(EntityUid uid, PassiveRadioHeadingComponent comp, TransformComponent xform, float frameTime) // Pure Pursuit, points directly at target.
     {
         if (comp.TargetEntity.HasValue)
         {
