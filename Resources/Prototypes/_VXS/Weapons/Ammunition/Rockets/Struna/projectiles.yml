@@ -1,15 +1,13 @@
-# СТРУНА
 - type: entity
   id: BulletRocketAntiShipStrunaHE
   name: SSR-800ARH String
-  parent: BaseBulletTrigger
+  parent: BaseBulletRocketAntiShip
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
     layers:
       - state: he
-  - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBomb
     maxIntensity: 50
@@ -17,8 +15,6 @@
     totalIntensity: 600
   - type: TimedDespawn
     lifetime: 50
-  - type: WorldLoader
-    radius: 1
   - type: VXSActiveRadioHeading
     seekRange: 100
     rotationSpeed: 3
@@ -36,21 +32,17 @@
       behaviors:
       - !type:DoActsBehavior
         acts: ["Destruction"]
-  - type: NpcFactionMember
-    factions:
-    - Missile
 
 - type: entity
   id: BulletRocketAntiShipStrunaEMP
   name: SSR-806ARHEM Arc
-  parent: BaseBulletTrigger
+  parent: BaseBulletRocketAntiShip
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
     layers:
       - state: emp
-  - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: Default
     maxIntensity: 100
@@ -62,8 +54,6 @@
     disableDuration: 15
   - type: TimedDespawn
     lifetime: 50
-  - type: WorldLoader
-    radius: 1
   - type: VXSActiveRadioHeading
     seekRange: 100
     rotationSpeed: 3
@@ -85,14 +75,13 @@
 - type: entity
   id: BulletRocketAntiShipStrunaRLS
   name: SSR-100ARHMC Frostbush
-  parent: BaseBulletTrigger
+  parent: BaseBulletRocketAntiShip
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
     layers:
       - state: he
-  - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBomb
     maxIntensity: 50
@@ -100,16 +89,14 @@
     totalIntensity: 600
   - type: TimedDespawn
     lifetime: 50
-  - type: WorldLoader
-    radius: 1
   - type: VXSActiveRadioHeading
-    seekRange: 500
-    rotationSpeed: 200
-    guidanceAlgorithmg: PredictiveGuidance
-    acceleration: 40
-    topSpeed: 100
-    initialSpeed: 10
-    FOV: 100
+    seekRange: 150
+    rotationSpeed: 40
+    guidanceAlgorithm: PredictiveGuidance
+    acceleration: 10
+    topSpeed: 130
+    initialSpeed: 30
+    FOV: 80
     lockedIn: true
   - type: Destructible
     thresholds:
@@ -123,7 +110,7 @@
 - type: entity
   id: BulletRocketAntiShipStrunaNuclear
   name: SSR-20ARHN Mint
-  parent: BaseBulletTrigger
+  parent: BaseBulletRocketAntiShip
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
@@ -132,8 +119,6 @@
       - state: nuclear
   - type: TimedDespawn
     lifetime: 50
-  - type: WorldLoader
-    radius: 1
   - type: Destructible
     thresholds:
     - trigger:
@@ -149,22 +134,20 @@
         Structural: 500
     deleteOnCollide: true
   - type: VXSActiveRadioHeading
-    seekRange: 1000
+    seekRange: 500
     rotationSpeed: 30
-    guidanceAlgorithmg: PurePursuit
+    guidanceAlgorithm: PurePursuit
     acceleration: 100
     topSpeed: 200
     initialSpeed: 10
     FOV: 90
     lockedIn: true
-  # - type: TriggerOnEnterGrid Dunno if this good idea
   - type: SpawnOnTrigger
     proto: NuclearFalloutAsh
   - type: EmpOnTrigger
     range: 20
     energyConsumption: 10000
     disableDuration: 15
-  - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: FireBomb
     maxIntensity: 30
@@ -172,105 +155,28 @@
     totalIntensity: 2000
   - type: DeleteOnTrigger
 
-# СВИЧБЛЕЙД
+
 
 - type: entity
-  id: BulletRocketAntiShipSwitchbladeHE
-  name: ASM-875T Switchblade-ARH
-  parent: BaseBulletTrigger
+  id: BulletRocketAntiShipStrunaHERD
+  name: SSR-800ARH String-RDD
+  parent: BulletRocketAntiShipStrunaHE
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _VXS/Weapons/Ammunition/Explosives/switchblade.rsi
+    sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
     layers:
-      - state: he
-  - type: TimedDespawn
-    lifetime: 50
-  - type: WorldLoader
-    radius: 1
-  - type: VXSActiveRadioHeading
-    seekRange: 50
-    rotationSpeed: 10
-    guidanceAlgorithmg: PurePursuit
-    acceleration: 10
-    topSpeed: 200
-    initialSpeed: 50
-    FOV: 60
-    lockedIn: true
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 200
-        Structural: 2000
-    penetrationThreshold: 1000
-    penetrationDamageTypeRequirement:
-    - Structural
-    deleteOnCollide: false
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: TwoStageTrigger
-    triggerDelay: 1
-    components:
-      - type: ExplodeOnTrigger
-      - type: Explosive
-        explosionType: HardBomb
-        maxIntensity: 100
-        intensitySlope: 35
-        totalIntensity: 350
-  - type: NpcFactionMember
-    factions:
-    - Missile
+      - state: he_rd
+  - type: TriggerOnEnterGrid
 
 - type: entity
-  id: BulletRocketAntiShipSwitchbladeEMP
-  name: ASM-875EMP Switchblade-ARH
-  parent: BaseBulletTrigger
+  id: BulletRocketAntiShipStrunaEMPRD
+  name: SSR-806ARHEM Arc-RD
+  parent: BulletRocketAntiShipStrunaEMP
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _VXS/Weapons/Ammunition/Explosives/switchblade.rsi
+    sprite: _VXS/Weapons/Ammunition/Explosives/struna.rsi
     layers:
-      - state: emp
-  - type: TimedDespawn
-    lifetime: 50
-  - type: WorldLoader
-    radius: 1
-  - type: VXSActiveRadioHeading
-    seekRange: 50
-    rotationSpeed: 10
-    guidanceAlgorithmg: PurePursuit
-    acceleration: 10
-    topSpeed: 200
-    initialSpeed: 50
-    FOV: 60
-    lockedIn: true
-  - type: Projectile
-    damage:
-      types:
-        Blunt: 200
-        Structural: 2000
-    penetrationThreshold: 1000
-    penetrationDamageTypeRequirement:
-    - Structural
-    deleteOnCollide: false
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 10
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-  - type: TwoStageTrigger
-    triggerDelay: 1
-    components:
-      - type: EmpOnTrigger
-        range: 5
-        energyConsumption: 1000
-        disableDuration: 5
+      - state: emp_rd
+  - type: TriggerOnEnterGrid

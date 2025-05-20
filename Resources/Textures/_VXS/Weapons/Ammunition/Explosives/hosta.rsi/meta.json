@@ -1,26 +1,23 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "made by AngeloV for VXSS14, nuclear made by TooMuchGolang for VXSS14",
+  "copyright": "made by AngeloV for VXSS14, redacted by TooMuchGolang for VXSS14",
   "size": {
     "x": 32,
     "y": 64
   },
   "states": [
     {
-      "name": "emp"
+      "name": "aex"
     },
     {
       "name": "he"
     },
     {
-      "name": "inced"
+      "name": "emp"
     },
     {
-      "name": "thermobar"
-    },
-    {
-      "name": "nuclear"
+      "name": "blank"
     },
     {
       "name": "emp_rd"

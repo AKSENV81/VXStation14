@@ -11,9 +11,9 @@
   - type: ExplodeOnTrigger
   - type: Explosive
     explosionType: HardBomb
-    maxIntensity: 50
-    intensitySlope: 10
-    totalIntensity: 800
+    maxIntensity: 80
+    intensitySlope: 15
+    totalIntensity: 1500
   - type: TimedDespawn
     lifetime: 100
   - type: WorldLoader
@@ -53,6 +53,42 @@
     range: 7
     energyConsumption: 80000
     disableDuration: 20
+  - type: TimedDespawn
+    lifetime: 100
+  - type: WorldLoader
+    radius: 1
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: NpcFactionMember
+    factions:
+    - Missile
+
+- type: entity
+  id: BulletTorpedoAntiShipChirNuclear
+  name: 1N92R Whitefish-X
+  parent: BaseBulletTrigger
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/chir.rsi
+    layers:
+      - state: x90f
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 250
+    intensitySlope: 15
+    totalIntensity: 50000
+  - type: EmpOnTrigger
+    range: 10
+    energyConsumption: 80000
+    disableDuration: 10
   - type: TimedDespawn
     lifetime: 100
   - type: WorldLoader
