@@ -17,4 +17,4 @@
   - type: TimedDespawn
     lifetime: 6
   - type: VXSRetarget
-    chanceToRetarget: 0.6
+    chanceToRetarget: 0.3
