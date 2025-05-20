@@ -37,3 +37,13 @@
   - type: CartridgeAmmo
     proto: BulletRocketAntiShipHostaEMPRD
     deleteOnSpawn: true
+
+- type: entity
+  id: CartridgeRocketAntiShipHostaN
+  name: MRR-60 ARH HH Hosta-N authorization keys
+  categories: [ HideSpawnMenu ]
+  parent: BaseCartridgeRocketAntiShip
+  components:
+  - type: CartridgeAmmo
+    proto: BulletRocketAntiShipHostaN
+    deleteOnSpawn: true
