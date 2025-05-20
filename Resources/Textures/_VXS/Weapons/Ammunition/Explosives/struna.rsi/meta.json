@@ -21,6 +21,12 @@
     },
     {
       "name": "nuclear"
+    },
+    {
+      "name": "emp_rd"
+    },
+    {
+      "name": "he_rd"
     }
   ]
 }

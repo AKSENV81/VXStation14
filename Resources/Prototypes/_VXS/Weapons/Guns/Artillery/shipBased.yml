@@ -620,11 +620,11 @@
           - MidImpassable
           - LowImpassable
 
-# RBU-90 530mm | TODO: FIX
+# RBU-90 530mm
 
 - type: entity
-  parent: BaseControllableTurret
   id: WeaponRocketArtilleryRBU90
+  parent: [ShuttleGunBase, BaseControllableTurret]
   name: RBU-90
   suffix: 530mm, Chir
   components:
@@ -641,6 +641,9 @@
       targetZoom: 3.0,3.0
     - type: Eye
       pvsScale: 5
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
     - type: Destructible
       thresholds:
         - trigger:
@@ -682,11 +685,11 @@
       soundRack:
         path: /Audio/_ADT/ADTGlobalEvents/ShipBattle/Weapons/Guns/MagIn/shell_in.ogg
 
-# RBU-30 530mm | TODO: FIX
+# RBU-30 530mm
 
 - type: entity
-  parent: ShuttleGunBase
   id: WeaponRocketArtilleryRBU30
+  parent: [ShuttleGunBase]
   name: RBU-30
   suffix: 530mm, Chir, Uncontrollable
   components:
@@ -698,6 +701,9 @@
       drawdepth: Mobs
       layers:
         - state: icon
+    - type: ContainerContainer
+      containers:
+        ballistic-ammo: !type:Container
     - type: Destructible
       thresholds:
         - trigger:
@@ -732,7 +738,7 @@
       whitelist:
         tags:
           - Torpedo530mm
-      capacity: 8
+      capacity: 4
       proto: null
       soundInsert:
         path: /Audio/_ADT/ADTGlobalEvents/ShipBattle/Weapons/Guns/MagIn/shell_in.ogg
