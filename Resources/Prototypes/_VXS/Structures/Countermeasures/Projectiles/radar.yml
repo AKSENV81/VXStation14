@@ -15,6 +15,6 @@
     - state: radar
       shader: unshaded
   - type: TimedDespawn
-    lifetime: 6
+    lifetime: 50
   - type: VXSRetarget
-    chanceToRetarget: 0.3
+    chanceToRetarget: 0.2
