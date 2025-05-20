@@ -133,3 +133,37 @@
         - CartridgeRocketAntiShipHostaEMPRD
     capacity: 1
     proto: CartridgeRocketAntiShipHostaEMPRD
+
+- type: entity
+  id: WeaponRocketAntiShipHostaN
+  name: MRR-60 ARH HH Hosta-N # ЯДЕРНЫЙ
+  parent: BaseWeaponRocketAntiShip
+  description: Medium-range missile with an active radar homing head combined with an inertial guidance system. This missile has Thermonuclear warhead.
+  components:
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/hosta.rsi
+    state: aex
+  - type: StaticPrice
+    price: 2500
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 100
+    intensitySlope: 5
+    maxIntensity: 4
+  - type: Gun
+    projectileSpeed: 60
+    fireRate: 1
+    minAngle: 0
+    maxAngle: 1
+    soundGunshot:
+      path: /Audio/Effects/explosion_small3.ogg
+      params:
+        pitch: 0.8
+        volume: 5
+  - type: BallisticAmmoProvider
+    cycleable: false
+    whitelist:
+      entities:
+        - CartridgeRocketAntiShipHostaN
+    capacity: 1
+    proto: CartridgeRocketAntiShipHostaN
