@@ -29,7 +29,7 @@ public sealed class VXSActiveRadioHeadingSystem : EntitySystem
 
             _physics.SetLinearVelocity(uid, _transform.GetWorldRotation(xform).ToWorldVec() * comp.Speed);
 
-            if (comp.TargetEntity is not null)
+            if (!TerminatingOrDeleted(comp.TargetEntity)) // also checks for nullity
             {
                 if ((comp.GuidanceAlgorithm & GuidanceType.PredictiveGuidance) != 0)
                     PredictiveGuidance(uid, comp, xform, frameTime);
@@ -149,12 +149,9 @@ public sealed class VXSActiveRadioHeadingSystem : EntitySystem
         TransformComponent xform,
         float frameTime)
     {
-        if (comp.TargetEntity is null)
-            return;
-
         var oldDistance = comp.OldDistance;
         var oldPosition = comp.OldPosition;
-        var entXform = Transform(comp.TargetEntity.Value);
+        var entXform = Transform(comp.TargetEntity!.Value);
 
         var distance = Vector2.Distance(
             _transform.ToMapCoordinates(xform.Coordinates).Position,
@@ -185,10 +182,7 @@ public sealed class VXSActiveRadioHeadingSystem : EntitySystem
         TransformComponent xform,
         float frameTime)
     {
-        if (!comp.TargetEntity.HasValue)
-            return;
-
-        var entXform = Transform(comp.TargetEntity.Value);
+        var entXform = Transform(comp.TargetEntity!.Value);
         var angle = (_transform.ToMapCoordinates(entXform.Coordinates).Position -
                      _transform.ToMapCoordinates(xform.Coordinates).Position).ToWorldAngle();
 
