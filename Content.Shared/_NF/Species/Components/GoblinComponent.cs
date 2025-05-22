@@ -14,6 +14,3 @@ public sealed partial class GoblinVehicleComponent : Component { }
 
 [RegisterComponent]
 public sealed partial class GoblinPreciousTrashComponent : Component { }
-
-[RegisterComponent]
-public sealed partial class GoblinPreciousTrashBagComponent : Component { }

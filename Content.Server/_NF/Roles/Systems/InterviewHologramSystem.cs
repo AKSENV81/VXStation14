@@ -31,7 +31,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
     [Dependency] private IAdminLogManager _adminLogger = default!;
     [Dependency] private IChatManager _chat = default!;
     [Dependency] private GameTicker _gameTicker = default!;
-    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] private IPrototypeManager _proto = default!;
     [Dependency] private IServerPreferencesManager _prefs = default!;
     [Dependency] private ActionsSystem _actions = default!;
@@ -70,7 +70,8 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
         _actions.SetToggled(ent.Comp.ToggleApprovalActionEntity, ent.Comp.ApplicantApproved);
 
         // Apply the current character's appearance from their profile if it exists.
-        if (!_player.TryGetSessionByEntity(ent, out var session))
+        if (!TryComp(ent, out MindContainerComponent? mindContainer)
+            || !_mind.TryGetSession(mindContainer.Mind, out var session))
             return;
 
         ApplyAppearanceForSession(ent, session);
@@ -128,7 +129,8 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
     {
         // Nothing to do.
         if (ent.Comp.AppearanceApplied && ent.Comp.NotificationsSent
-            || !_player.TryGetSessionByEntity(ent, out var session))
+            || !TryComp(ent, out MindContainerComponent? mindContainer)
+            || !_mind.TryGetSession(mindContainer.Mind, out var session))
         {
             return;
         }
@@ -159,8 +161,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
             while (mindQuery.MoveNext(out _, out var mindComp))
             {
                 if (mindComp.CurrentEntity == null
-                    || mindComp.UserId == null
-                    || !_player.TryGetSessionById(mindComp.UserId, out var mindSession)
+                    || mindComp.Session == null
                     || !_inventory.TryGetSlotEntity(mindComp.CurrentEntity.Value, "id", out var slotItem)
                     || !HasComp<PdaComponent>(slotItem)
                     || !IsCaptain(mindComp.CurrentEntity.Value, ent))
@@ -176,7 +177,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
                     wrappedMessage,
                     EntityUid.Invalid,
                     false,
-                    mindSession.Channel);
+                    mindComp.Session.Channel);
             }
 
             ent.Comp.NotificationsSent = true;
@@ -201,12 +202,9 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
         if (!TryComp(ent, out TransformComponent? xform))
             return;
 
-        if (!_mind.TryGetMind(ent, out var mindUid, out var mindComp)
-            || mindComp.UserId == null
-            || !_player.TryGetSessionById(mindComp.UserId, out var session))
-        {
+        var mindUid = _mind.GetMind(ent);
+        if (mindUid == null || !_mind.TryGetSession(mindUid, out var session))
             return;
-        }
 
         HumanoidCharacterProfile profile;
         if (_prefs.GetPreferences(session.UserId).SelectedCharacter is HumanoidCharacterProfile currentProfile)
@@ -226,9 +224,9 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
             session: session
             );
 
-        _mind.TransferTo(mindUid, newEntity);
+        _mind.TransferTo(mindUid.Value, newEntity);
         _chat.DispatchServerMessage(session, Loc.GetString("interview-hologram-message-accepted"), suppressLog: true);
-        _roles.MindAddJobRole(mindUid, jobPrototype: ent.Comp.Job); // Overwrites
+        _roles.MindAddJobRole(mindUid.Value, jobPrototype: ent.Comp.Job); // Overwrites
 
         // Run spawn event for game rules, traits, etc.
         _gameTicker.PlayersJoinedRoundNormally++;
@@ -261,7 +259,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
     {
         // Log cancellation
         string player;
-        if (_player.TryGetSessionByEntity(ent, out var session))
+        if (_playerManager.TryGetSessionByEntity(ent, out var session))
             player = $"Player {session.Name}";
         else
             player = $"Someone";
@@ -285,7 +283,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
     {
         // Log cancellation
         string player;
-        if (_player.TryGetSessionByEntity(ent, out var session))
+        if (_playerManager.TryGetSessionByEntity(ent, out var session))
             player = $"Player {session.Name}";
         else
             player = $"Someone";
@@ -315,7 +313,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
             RemComp<JobTrackingComponent>(ent);
         }
 
-        if (_player.TryGetSessionByEntity(ent, out var session))
+        if (_mind.TryGetSession(_mind.GetMind(ent), out var session))
         {
             // Inform the user why they were dismissed.
             if (message != null)

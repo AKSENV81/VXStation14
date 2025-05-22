@@ -232,7 +232,6 @@
         nameSegments:
         - NamesNinjaTitle
         - NamesNinja
-        nameFormat: name-format-ninja
       mindRoles:
       - MindRoleNinja
 
@@ -319,7 +318,6 @@
         nameSegments:
         - NamesWizardFirst
         - NamesWizardLast
-        nameFormat: name-format-wizard
       mindRoles:
       - MindRoleWizard
 
@@ -552,7 +550,6 @@
         nameSegments:
         - NamesSyndicatePrefix
         - NamesSyndicateNormal
-        nameFormat: name-format-nukie-generic
       - type: NpcFactionMember
         factions:
         - Syndicate

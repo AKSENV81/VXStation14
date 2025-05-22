@@ -41,7 +41,6 @@
     size: Normal
   - type: MagnetPickup # Frontier
     magnetEnabled: false # Frontier
-  - type: GoblinPreciousTrashBag # Frontier
 
 - type: entity
   name: trash bag

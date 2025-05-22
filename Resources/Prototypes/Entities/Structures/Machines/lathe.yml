@@ -119,7 +119,6 @@
         - Sheet
         - RawMaterial
         - Ingot
-  - type: OreSiloClient
   - type: Lathe
     idleState: icon
     runningState: building
@@ -144,7 +143,7 @@
     - ReportingStatic # DeltaV
   - type: EmagLatheRecipes
     emagStaticPacks:
-    - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+    - SecurityAmmoStatic
   - type: BlueprintReceiver
     whitelist:
       tags:
@@ -198,7 +197,6 @@
         - Sheet
         - RawMaterial
         - Ingot
-  - type: OreSiloClient
   - type: Lathe
     idleState: icon
     runningState: building
@@ -230,10 +228,10 @@
     - NFPouches # Frontier
   - type: EmagLatheRecipes
     emagDynamicPacks:
-    - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic
+    - SecurityAmmo
     - SecurityExplosives
     - SecurityEquipment
-    #- SecurityWeapons # Frontier
+    - SecurityWeapons
     - SyringeGuns # Delta-V
 
 - type: entity
@@ -301,7 +299,6 @@
         - Sheet
         - RawMaterial
         - Ingot
-  - type: OreSiloClient
   - type: RequireProjectileTarget
 
 - type: entity
@@ -322,7 +319,6 @@
   description: Creates parts for robotics and other mechanical needs.
   components:
   - type: Sprite
-    snapCardinals: true # Frontier
     sprite: Structures/Machines/exosuit_fabricator.rsi
     layers:
     - state: fab-idle
@@ -351,7 +347,6 @@
       - Sheet
       - RawMaterial
       - Ingot
-  - type: OreSiloClient
   - type: GuideHelp
     guides:
     - Robotics
@@ -405,7 +400,6 @@
   components:
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
-    snapCardinals: true # Frontier
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
@@ -424,27 +418,22 @@
     runningState: icon
     staticPacks:
     - SecurityEquipmentStatic
-    - NfsdPracticeStatic # Frontier: SecurityPracticeStatic<NfsdPracticeStatic
-    - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+    - SecurityPracticeStatic
+    - SecurityAmmoStatic
     - SecurityWeaponsStatic
     dynamicPacks:
-    - SalvageSecurityBoards
-    - SalvageSecurityWeapons
     - SecurityEquipment
     # - SecurityBoards # Frontier
     - SecurityExplosives
-    #- SecurityAmmo # Frontier
-    #- SecurityWeapons # Frontier
-    #- SecurityDisablers # Frontier
+    - SecurityAmmo
+    - SecurityWeapons
+    - SecurityDisablers
   - type: MaterialStorage
     whitelist:
       tags:
         - Sheet
         - RawMaterial
         - Ingot
-  - type: OreSiloClient
-  # - type: LatheAnnouncing # Frontier: spammy
-  #   channels: [Security] # Frontier
 
 - type: entity
   id: AmmoTechFab
@@ -454,7 +443,6 @@
   components:
     - type: Sprite
       sprite: Structures/Machines/techfab.rsi
-      snapCardinals: true # Frontier
       layers:
         - state: icon
           map: ["enum.LatheVisualLayers.IsRunning"]
@@ -472,14 +460,13 @@
       idleState: icon
       runningState: icon
       staticPacks:
-      - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
+      - SecurityAmmoStatic
     - type: MaterialStorage
       whitelist:
         tags:
           - Sheet
           - RawMaterial
           - Ingot
-    - type: OreSiloClient
 
 - type: entity
   id: MedicalTechFab
@@ -489,7 +476,6 @@
   components:
   - type: Sprite
     sprite: Structures/Machines/techfab.rsi
-    snapCardinals: true # Frontier
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
@@ -521,9 +507,6 @@
     board: MedicalTechFabCircuitboard
   - type: StealTarget
     stealGroup: MedicalTechFabCircuitboard
-  - type: OreSiloClient
-  # - type: LatheAnnouncing # Frontier: spammy
-  #   channels: [Medical] # Frontier
 
 - type: entity
   parent: BaseLathe
@@ -654,7 +637,6 @@
   components:
     - type: Sprite
       sprite: Structures/Machines/ore_processor.rsi
-      snapCardinals: true # Frontier
       layers:
         - state: icon
           map: ["enum.LatheVisualLayers.IsRunning"]
@@ -709,7 +691,6 @@
   components:
   - type: Sprite
     sprite: Structures/Machines/sheetifier.rsi
-    snapCardinals: true # Frontier
     layers:
     - state: base_machine
       map: ["enum.LatheVisualLayers.IsRunning"]

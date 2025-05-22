@@ -4,6 +4,7 @@
   name: reagent-name-antiseptic
   group: Toxins
   desc: reagent-desc-antiseptic
+  slippery: true
   physicalDesc: reagent-physical-desc-translucent
   flavor: antiseptic
   color: "#457c7d"
@@ -15,8 +16,6 @@
     amount: -0.5
   - !type:PlantAdjustToxins
     amount: 0.2
-  slipData:
-    requiredSlipSpeed: 3.5
   metabolisms:
     Drink:
       effects:

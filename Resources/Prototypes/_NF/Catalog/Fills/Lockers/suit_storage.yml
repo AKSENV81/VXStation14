@@ -29,14 +29,6 @@
     access: [["HeadOfPersonnel"]]
 
 - type: entity
-  parent: [ SuitStorageBase, StorageFillEVASuitStc ]
-  id: SuitStorageEVAStc
-  suffix: EVA, Station Traffic Controller
-  components:
-  - type: AccessReader
-    access: [["StationTrafficController"]]
-
-- type: entity
   parent: [ SuitStorageBase, StorageFillEVASuitCaptain ]
   id: SuitStorageEVACaptain
   suffix: EVA, Captain
@@ -193,7 +185,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitLuxury
         - id: ClothingMaskGasExplorer
@@ -208,7 +200,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingShoesBootsMag
         - id: ClothingOuterHardsuitSalvage
         - id: ClothingMaskGasExplorer
@@ -223,7 +215,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingOuterHardsuitMercenary
         - id: ClothingMaskGasMercenary
         - id: JetpackMiniFilled
@@ -238,7 +230,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingOuterHardsuitPrivateSecurity
         - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
@@ -254,7 +246,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingOuterHardsuitScaf
         - id: ClothingMaskGasMercenary
         - id: JetpackMiniFilled
@@ -270,7 +262,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingOuterHardsuitPilot
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled
@@ -284,7 +276,7 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
+        - id: AirTankFilled
         - id: ClothingOuterHardsuitClown
         - id: ClothingMaskBreath
         - id: JetpackMiniFilled
@@ -298,11 +290,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdBronze
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdBronze # Frontier
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -314,11 +306,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdSilver
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdSilver # Frontier
         - id: ClothingMaskGasNfsd 
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -330,11 +322,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdBrigmedic
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdBrigmedic # Frontier
         - id: ClothingMaskGasNfsd 
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Brigmedic"]]
 
@@ -346,11 +338,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdGold
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdGold # Frontier
         - id: ClothingMaskGasNfsd 
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -362,11 +354,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdGold
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdGold # Frontier
         - id: ClothingMaskGasNfsd 
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -378,11 +370,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdSheriff
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdSheriff # Frontier
         - id: ClothingMaskGasSheriff
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -394,11 +386,11 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdCombat
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdCombat # Frontier
         - id: ClothingMaskGasNfsd 
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]
 
@@ -410,10 +402,10 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdCommand
+        - id: AirTankFilled
+        - id: ClothingOuterHardsuitNfsdCommand # Frontier
         - id: ClothingMaskGasNfsd 
         - id: JetpackNfsdFilled
-        - id: ClothingShoesBootsMagNfsd
+        - id: ClothingShoesBootsMagNfsd # Frontier
   - type: AccessReader
     access: [["Security"]]

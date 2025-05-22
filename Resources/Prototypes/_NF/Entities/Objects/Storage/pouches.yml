@@ -234,7 +234,7 @@
 - type: entity
   id: NFPouchCaptain
   parent: NFPouchUtility
-  name: captain's pouch
+  name: captains's pouch
   components:
   - type: Sprite
     layers:

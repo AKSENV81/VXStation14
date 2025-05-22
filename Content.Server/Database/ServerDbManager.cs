@@ -412,7 +412,6 @@ namespace Content.Server.Database
         private ServerDbBase _db = default!;
         private LoggingProvider _msLogProvider = default!;
         private ILoggerFactory _msLoggerFactory = default!;
-        private ISawmill _sawmill = default!;
 
         private bool _synchronous;
         // When running in integration tests, we'll use a single in-memory SQLite database connection.
@@ -428,7 +427,6 @@ namespace Content.Server.Database
             {
                 builder.AddProvider(_msLogProvider);
             });
-            _sawmill = _logMgr.GetSawmill("db.manager");
 
             _synchronous = _cfg.GetCVar(CCVars.DatabaseSynchronous);
 
@@ -1169,7 +1167,7 @@ namespace Content.Server.Database
                 Password = pass
             }.ConnectionString;
 
-            _sawmill.Debug($"Using Postgres \"{host}:{port}/{db}\"");
+            Logger.DebugS("db.manager", $"Using Postgres \"{host}:{port}/{db}\"");
 
             builder.UseNpgsql(connectionString);
             SetupLogging(builder);
@@ -1192,12 +1190,12 @@ namespace Content.Server.Database
             if (!inMemory)
             {
                 var finalPreferencesDbPath = Path.Combine(_res.UserData.RootDir!, configPreferencesDbPath);
-                _sawmill.Debug($"Using SQLite DB \"{finalPreferencesDbPath}\"");
+                Logger.DebugS("db.manager", $"Using SQLite DB \"{finalPreferencesDbPath}\"");
                 getConnection = () => new SqliteConnection($"Data Source={finalPreferencesDbPath}");
             }
             else
             {
-                _sawmill.Debug("Using in-memory SQLite DB");
+                Logger.DebugS("db.manager", "Using in-memory SQLite DB");
                 _sqliteInMemoryConnection = new SqliteConnection("Data Source=:memory:");
                 // When using an in-memory DB we have to open it manually
                 // so EFCore doesn't open, close and wipe it every operation.

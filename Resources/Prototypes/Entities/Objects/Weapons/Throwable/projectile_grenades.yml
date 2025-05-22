@@ -25,9 +25,6 @@
         enum.ConstructionVisuals.Layer:
           Primed: { state: primed }
           Unprimed: { state: icon }
-  - type: Tag
-    tags:
-    - HandGrenade
 
 - type: entity
   parent: [ProjectileGrenadeBase, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
@@ -41,8 +38,10 @@
     - state: icon
       map: ["enum.TriggerVisualLayers.Base"]
   - type: ProjectileGrenade
-    fillPrototype: NFPelletClusterRubber # Frontier: use NF variant
+    fillPrototype: PelletClusterRubber
     capacity: 30
+  - type: FlashOnTrigger
+    range: 7
   - type: EmitSoundOnTrigger
     sound:
       path: "/Audio/Effects/flash_bang.ogg"
@@ -68,7 +67,7 @@
     - state: icon
       map: ["enum.TriggerVisualLayers.Base"]
   - type: ProjectileGrenade
-    fillPrototype: NFPelletClusterIncendiary # Frontier: use NF variant
+    fillPrototype: PelletClusterIncendiary
     capacity: 30
   - type: OnUseTimerTrigger
     beepSound:
@@ -94,7 +93,7 @@
     - state: icon
       map: ["enum.TriggerVisualLayers.Base"]
   - type: ProjectileGrenade
-    fillPrototype: NFPelletClusterLethal # Frontier: use NF variant
+    fillPrototype: PelletClusterLethal
     capacity: 30
   - type: OnUseTimerTrigger
     beepSound:

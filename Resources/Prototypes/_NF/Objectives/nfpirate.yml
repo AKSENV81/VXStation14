@@ -8,7 +8,8 @@
     difficulty: 1
   - type: RoleRequirement
     roles:
-    - NFPirateRole
+      mindRoles:
+      - NFPirateRole
 
 - type: entity
   parent: [BaseNFPirateObjective, BaseFreeObjective] # TODO: make this less free?

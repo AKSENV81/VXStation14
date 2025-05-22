@@ -350,11 +350,8 @@ public sealed class ClientClothingSystem : ClothingSystem
                     continue;
                 // End Frontier: revise race check
 
-                if (_displacement.TryAddDisplacement(displacementData, sprite, index, key, out var displacementKey))
-                {
-                    revealedLayers.Add(displacementKey);
+                if (_displacement.TryAddDisplacement(displacementData, sprite, index, key, revealedLayers))
                     index++;
-                }
             }
         }
 

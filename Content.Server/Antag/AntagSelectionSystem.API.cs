@@ -22,8 +22,7 @@ public sealed partial class AntagSelectionSystem
     /// </summary>
     public bool TryGetNextAvailableDefinition(Entity<AntagSelectionComponent> ent,
         [NotNullWhen(true)] out AntagSelectionDefinition? definition,
-        int? players = null,
-        EntityUid? targetEntity = null) // Frontier: add targetEntity
+        int? players = null)
     {
         definition = null;
 
@@ -40,13 +39,6 @@ public sealed partial class AntagSelectionSystem
         foreach (var def in ent.Comp.Definitions)
         {
             var target = GetTargetAntagCount(ent, null, def);
-
-            // Frontier: ignore non-whitelisted/blacklisted entities
-            if (targetEntity != null
-                && (_whitelist.IsWhitelistFail(def.Whitelist, targetEntity.Value)
-                || _whitelist.IsBlacklistPass(def.Blacklist, targetEntity.Value)))
-                continue;
-            // End Frontier
 
             if (mindCount < target)
             {
@@ -272,10 +264,10 @@ public sealed partial class AntagSelectionSystem
         if (!_mind.TryGetMind(entity, out _, out var mindComponent))
             return;
 
-        if (!_playerManager.TryGetSessionById(mindComponent.UserId, out var session))
+        if (mindComponent.Session == null)
             return;
 
-        SendBriefing(session, briefing, briefingColor, briefingSound);
+        SendBriefing(mindComponent.Session, briefing, briefingColor, briefingSound);
     }
 
     /// <summary>
@@ -343,7 +335,7 @@ public sealed partial class AntagSelectionSystem
     {
         var rule = ForceGetGameRuleEnt<T>(defaultRule);
 
-        if (!TryGetNextAvailableDefinition(rule, out var def, targetEntity: player?.AttachedEntity)) // Frontier: add targetEntity
+        if (!TryGetNextAvailableDefinition(rule, out var def))
             def = rule.Comp.Definitions.Last();
         MakeAntag(rule, player, def.Value);
     }

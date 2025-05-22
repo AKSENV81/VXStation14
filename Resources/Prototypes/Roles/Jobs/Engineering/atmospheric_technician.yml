@@ -5,9 +5,8 @@
   playTimeTracker: JobAtmosphericTechnician
   setPreference: false # Frontier
   requirements:
-  - !type:DepartmentTimeRequirement
-    department: Engineering
-    time: 9000 #2.5 hrs
+    - !type:OverallPlaytimeRequirement
+      time: 10800
   startingGear: AtmosphericTechnicianGear
   icon: "JobIconAtmosphericTechnician"
   supervisors: job-supervisors-hire # Frontier

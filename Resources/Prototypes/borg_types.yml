@@ -83,10 +83,9 @@
     - BorgModuleCargo
 
   defaultModules:
-  - BorgModuleMining
   - BorgModuleGrapplingGun
+  - BorgModuleMining
   - BorgModuleAppraisal
-  - BorgModuleTool
   - BorgModuleJetpack # Frontier
 
   radioChannels:

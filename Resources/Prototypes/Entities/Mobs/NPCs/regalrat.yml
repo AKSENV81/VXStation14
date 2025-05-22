@@ -118,12 +118,9 @@
     nameSegments:
     - NamesRegalratKingdom
     - NamesRegalratTitle
-    nameFormat: name-format-regal-rat
-  # Frontier: irrelevant
-  # - type: GuideHelp
+  # - type: GuideHelp # Frontier: irrelevant
   #   guides:
   #   - MinorAntagonists
-  # End Frontier
   - type: Grammar
     attributes:
       gender: male

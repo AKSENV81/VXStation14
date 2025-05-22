@@ -19,7 +19,6 @@
     reoccurrenceDelay: 120
   - type: BluespaceCargoRule
     spawnerPrototype: RandomCargoSpawner
-    flashPrototype: EffectFlashBluespaceQuiet
     requireSafeAtmosphere: true
     minimumSpawns: 2
     maximumSpawns: 5

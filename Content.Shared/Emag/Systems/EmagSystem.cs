@@ -21,7 +21,7 @@ namespace Content.Shared.Emag.Systems;
 public sealed class EmagSystem : EntitySystem
 {
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly SharedChargesSystem _sharedCharges = default!;
+    [Dependency] private readonly SharedChargesSystem _charges = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly TagSystem _tag = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
@@ -66,8 +66,8 @@ public sealed class EmagSystem : EntitySystem
         if (_tag.HasTag(target, ent.Comp.EmagImmuneTag))
             return false;
 
-        Entity<LimitedChargesComponent?> chargesEnt = ent.Owner;
-        if (_sharedCharges.IsEmpty(chargesEnt))
+        TryComp<LimitedChargesComponent>(ent, out var charges);
+        if (_charges.IsEmpty(ent, charges))
         {
             _popup.PopupClient(Loc.GetString("emag-no-charges"), user, user);
             return false;
@@ -85,8 +85,8 @@ public sealed class EmagSystem : EntitySystem
 
         _adminLogger.Add(LogType.Emag, LogImpact.High, $"{ToPrettyString(user):player} emagged {ToPrettyString(target):target} with flag(s): {ent.Comp.EmagType}");
 
-        if (emaggedEvent.Handled)
-            _sharedCharges.TryUseCharge(chargesEnt);
+        if (charges != null  && emaggedEvent.Handled)
+            _charges.UseCharge(ent, charges);
 
         if (!emaggedEvent.Repeatable)
         {
@@ -111,7 +111,8 @@ public sealed class EmagSystem : EntitySystem
         if (!HasComp<EmaggedComponent>(target))
             return false;
 
-        if (_sharedCharges.IsEmpty(ent.Owner))
+        TryComp<LimitedChargesComponent>(ent, out var charges);
+        if (_charges.IsEmpty(ent, charges))
         {
             _popup.PopupClient(Loc.GetString("emag-no-charges"), user, user);
             return false;
@@ -129,8 +130,8 @@ public sealed class EmagSystem : EntitySystem
 
         _adminLogger.Add(LogType.Emag, LogImpact.Medium, $"{ToPrettyString(user):player} demagged {ToPrettyString(target):target} with flag(s): {ent.Comp.EmagType}");
 
-        if (emaggedEvent.Handled)
-            _sharedCharges.TryUseCharge(ent.Owner);
+        if (charges != null && emaggedEvent.Handled)
+            _charges.UseCharge(ent, charges);
 
         if (!emaggedEvent.Repeatable)
         {

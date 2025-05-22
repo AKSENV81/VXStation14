@@ -65,8 +65,6 @@ public abstract class SharedMagicSystem : EntitySystem
     [Dependency] private readonly SharedMindSystem _mind = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
 
-    private static readonly ProtoId<TagPrototype> InvalidForGlobalSpawnSpellTag = "InvalidForGlobalSpawnSpell";
-
     public override void Initialize()
     {
         base.Initialize();
@@ -279,14 +277,14 @@ public abstract class SharedMagicSystem : EntitySystem
         var userVelocity = _physics.GetMapLinearVelocity(ev.Performer);
 
         // If applicable, this ensures the projectile is parented to grid on spawn, instead of the map.
-        var fromMap = _transform.ToMapCoordinates(fromCoords);
+        var fromMap = fromCoords.ToMap(EntityManager, _transform);
         var spawnCoords = _mapManager.TryFindGridAt(fromMap, out var gridUid, out _)
-            ? _transform.WithEntityId(fromCoords, gridUid)
+            ? fromCoords.WithEntityId(gridUid, EntityManager)
             : new(_mapManager.GetMapEntityId(fromMap.MapId), fromMap.Position);
 
         var ent = Spawn(ev.Prototype, spawnCoords);
-        var direction = _transform.ToMapCoordinates(toCoords).Position -
-                         _transform.ToMapCoordinates(spawnCoords).Position;
+        var direction = toCoords.ToMapPos(EntityManager, _transform) -
+                        spawnCoords.ToMapPos(EntityManager, _transform);
         _gunSystem.ShootProjectile(ent, direction, userVelocity, ev.Performer, ev.Performer);
     }
     // End Projectile Spells
@@ -486,7 +484,7 @@ public abstract class SharedMagicSystem : EntitySystem
 
             var ent = human.Comp.OwnedEntity.Value;
 
-            if (_tag.HasTag(ent, InvalidForGlobalSpawnSpellTag))
+            if (_tag.HasTag(ent, "InvalidForGlobalSpawnSpell"))
                 continue;
 
             var mapCoords = _transform.GetMapCoordinates(ent);
