@@ -52,7 +52,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        # startingItem: CartridgeLightRifle # Frontier
+        startingItem: CartridgeLightRifle
         priority: 1
         whitelist:
           tags:
@@ -103,7 +103,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        # startingItem: CartridgeLightRifle # Frontier
+        startingItem: CartridgeLightRifle
         priority: 1
         whitelist:
           tags:
@@ -117,9 +117,10 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
+  - type: PirateBountyItem # Frontier
+    id: AKMS # Frontier
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: M-90gl
   parent: [BaseWeaponRifle, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponRifleM90GrenadeLauncher
@@ -156,7 +157,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        # startingItem: CartridgeRifle # Frontier
+        startingItem: CartridgeRifle
         priority: 1
         whitelist:
           tags:
@@ -172,21 +173,20 @@
   - type: Appearance
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: Lecter
   parent: [BaseWeaponRifle, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponRifleLecter
   description: A high end military grade assault rifle. Uses .20 rifle ammo. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi # Frontier: add _NF prefix
     layers:
       - state: base
         map: ["enum.GunVisualLayers.Base"]
       - state: mag-0
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: Objects/Weapons/Guns/Rifles/lecter.rsi
+    sprite: _NF/Objects/Weapons/Guns/Rifles/lecter.rsi # Frontier: add _NF prefix
   - type: Gun
     cameraRecoilScalar: 2 # VXS
     projectileSpeed: 50 # VXS
@@ -207,7 +207,7 @@
     slots:
       gun_magazine:
         name: Magazine
-        # startingItem: MagazineRifle # Frontier
+        startingItem: MagazineRifle
         insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
         ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
         priority: 2
@@ -217,7 +217,7 @@
         whitelistFailPopup: gun-magazine-whitelist-fail
       gun_chamber:
         name: Chamber
-        # startingItem: CartridgeRifle # Frontier
+        startingItem: CartridgeRifle
         priority: 1
         whitelist:
           tags:
@@ -233,7 +233,6 @@
   - type: Appearance
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: Foam Force Astro Ace
   parent: [BaseWeaponShotgun, BaseGunWieldable]
   id: WeaponRifleFoam
@@ -250,7 +249,7 @@
       tags:
       - BulletFoam
     capacity: 10
-    # proto: BulletFoam # Frontier
+    proto: BulletFoam
   - type: GunRequiresWield #remove when inaccuracy on spreads is fixed
   - type: Gun
     fireRate: 2

@@ -20,6 +20,7 @@ public sealed partial class StationJobsSystem
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IBanManager _banManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
     [Dependency] private readonly AntagSelectionSystem _antag = default!;
     [Dependency] private readonly PlayTimeTrackingSystem _playTime = default!; // Frontier
 
@@ -304,7 +305,7 @@ public sealed partial class StationJobsSystem
             _random.Shuffle(givenStations);
 
             // Frontier: get player session
-            _player.TryGetSessionById(player, out var nfSession);
+            _playerManager.TryGetSessionById(player, out var nfSession);
             // End Frontier
 
             foreach (var station in givenStations)
@@ -391,7 +392,7 @@ public sealed partial class StationJobsSystem
                 if (!_prototypeManager.TryIndex(jobId, out var job))
                     continue;
 
-                if (!job.CanBeAntag && (!_player.TryGetSessionById(player, out var session) || antagBlocked.Contains(session)))
+                if (!job.CanBeAntag && (!_playerManager.TryGetSessionById(player, out var session) || antagBlocked.Contains(session)))
                     continue;
 
                 if (weight is not null && job.Weight != weight.Value)

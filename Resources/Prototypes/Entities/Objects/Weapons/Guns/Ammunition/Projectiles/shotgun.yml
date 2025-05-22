@@ -90,7 +90,7 @@
   parent: PelletShotgunIncendiary
   components:
   - type: ProjectileSpread
-    # proto: PelletShotgunIncendiary # Frontier
+    proto: PelletShotgunIncendiary
     count: 6
     spread: 6 # VXS
 
@@ -114,7 +114,7 @@
   parent: PelletShotgunPractice
   components:
   - type: ProjectileSpread
-    # proto: PelletShotgunPractice # Frontier
+    proto: PelletShotgunPractice
     count: 6
     spread: 15
 
@@ -139,7 +139,7 @@
   parent: PelletShotgunImprovised
   components:
   - type: ProjectileSpread
-    # proto: PelletShotgunImprovised # Frontier
+    proto: PelletShotgunImprovised
     count: 10
     spread: 45
 
@@ -250,7 +250,7 @@
   parent: PelletShotgunUranium
   components:
   - type: ProjectileSpread
-    # proto: PelletShotgunUranium # Frontier
+    proto: PelletShotgunUranium
     count: 5
     spread: 2 # VXS
 
@@ -278,7 +278,7 @@
   parent: PelletGrapeshot
   components:
   - type: ProjectileSpread
-    # proto: PelletGrapeshot # Frontier
+    proto: PelletGrapeshot
     count: 5
     spread: 40
 
@@ -308,6 +308,6 @@
   categories: [ HideSpawnMenu ]
   components:
   - type: ProjectileSpread
-    # proto: PelletGlass # Frontier
+    proto: PelletGlass
     count: 5
     spread: 10

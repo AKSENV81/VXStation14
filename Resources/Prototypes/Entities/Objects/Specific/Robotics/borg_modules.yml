@@ -461,6 +461,7 @@
     - Shovel
     - MineralScannerUnpowered
     # - OreBag # Frontier
+    - Crowbar
     - RadioHandheldNF # Frontier: RadioHandheld<RadioHandheldNF
   # Frontier: droppable borg items
   - type: DroppableBorgModule
@@ -542,24 +543,20 @@
         components:
         - ConstructionMaterials
       displayName: borg-placeholder-display-name-construction-material
+    - id: SheetGlass
+      whitelist:
+        tags:
+        - Ingot
+        - RodMetal1
+        - Sheet
+        components:
+        - ConstructionMaterials
+      displayName: borg-placeholder-display-name-construction-material
     - id: FloorTileItemSteel
       whitelist:
-        tags:
-        - Ingot
-        - RodMetal1
-        - Sheet
         components:
-        - ConstructionMaterials
-      displayName: borg-placeholder-display-name-construction-material
-    - id: CapacitorStockPart
-      whitelist:
-        tags:
-        - Ingot
-        - RodMetal1
-        - Sheet
-        components:
-        - ConstructionMaterials
-      displayName: borg-placeholder-display-name-construction-material
+        - FloorTile
+      displayName: borg-placeholder-display-name-floor-tile
     - id: ThrusterFlatpack
       whitelist:
         components:
@@ -812,11 +809,6 @@
     moduleId: Artifact # Frontier
     items:
     - NodeScanner
-    - Multitool
-    - Wrench
-    - SprayBottle
-    - Beaker
-    - Syringe
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: node-scanner-module }
 
@@ -1022,7 +1014,7 @@
   - type: ItemBorgModule
     moduleId: Weapons # Frontier
     items:
-    - NFWeaponPistolEchis # Frontier: WeaponPistolEchis<WeaponPistolEchis
+    - WeaponPistolEchis
     - EnergyDaggerLoud
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-weapon-module }
@@ -1086,8 +1078,8 @@
 - type: entity
   id: BorgModuleL6C
   parent: [ BaseBorgModuleSyndicateAssault, BaseProviderBorgModule, BaseC3SyndicateContraband ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
-  name: cyborg GSW LMG-6 module # Frontier: "L6C ROW cyborg module"<"cyborg GSW LMG-6 module"
-  description: A module that comes with a GSW LMG-6. # Frontier
+  name: L6C ROW cyborg module
+  description: A module that comes with a L6C.
   components:
     - type: Sprite
       layers:
@@ -1096,7 +1088,7 @@
     - type: ItemBorgModule
       moduleId: L6CROW # Frontier
       items:
-        - NFWeaponLightMachineGunL6C # Frontier: WeaponLightMachineGunL6C<NFWeaponLightMachineGunL6C
+        - WeaponLightMachineGunL6C
         - PinpointerSyndicateNuclear
     - type: BorgModuleIcon
       icon: { sprite: Interface/Actions/actions_borg.rsi, state: syndicate-l6c-module }

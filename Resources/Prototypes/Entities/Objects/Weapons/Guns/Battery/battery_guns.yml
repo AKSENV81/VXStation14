@@ -1,4 +1,3 @@
-# region FRONTIER - IGNORED
 - type: entity
   id: BaseWeaponBattery
   parent: BaseItem
@@ -136,7 +135,7 @@
       map: ["enum.GunVisualLayers.MagUnshaded"]
       shader: unshaded
   - type: HitscanBatteryAmmoProvider
-    # proto: RedMediumLaser # Frontier
+    proto: RedLaser
     fireCost: 83.3
   - type: Item
     size: Normal
@@ -170,7 +169,7 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Battery/makeshift.rsi
   - type: HitscanBatteryAmmoProvider
-    # proto: RedLightLaser # Frontier
+    proto: RedLightLaser
     fireCost: 62.5
   - type: Battery
     maxCharge: 500
@@ -197,7 +196,7 @@
       params:
         variation: 0.2
   - type: ProjectileBatteryAmmoProvider
-    # proto: TeslaGunBullet # Frontier
+    proto: TeslaGunBullet
     fireCost: 300
   - type: MagazineVisuals
     magState: mag
@@ -231,7 +230,7 @@
     availableModes:
     - SemiAuto
   - type: HitscanBatteryAmmoProvider
-    # proto: RedLaserPractice # Frontier
+    proto: RedLaserPractice
     fireCost: 62.5
   - type: StaticPrice
     price: 300
@@ -245,11 +244,10 @@
   - type: StaticPrice
     price: 420
   - type: HitscanBatteryAmmoProvider
-    # proto: RedLaser # Frontier
+    proto: RedLaser
     fireCost: 62.5
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: pulse pistol
   parent: [BaseWeaponBatterySmall, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulsePistol
@@ -277,14 +275,13 @@
     #soundGunshot: VXS
     #  path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: Pulse # Frontier
+    proto: Pulse
     fireCost: 200
   - type: Battery
     maxCharge: 2000
     startingCharge: 2000
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: pulse carbine
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulseCarbine
@@ -314,14 +311,13 @@
     #soundGunshot: VXS
     #  path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: Pulse # Frontier
+    proto: Pulse
     fireCost: 200
   - type: Battery
     maxCharge: 5000
     startingCharge: 5000
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: pulse rifle
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: added BaseC2ContrabandUnredeemable
   id: WeaponPulseRifle
@@ -347,14 +343,13 @@
     #soundGunshot: VXS
     #  path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: Pulse # Frontier
+    proto: Pulse
     fireCost: 100
   - type: Battery
     maxCharge: 40000
     startingCharge: 40000
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: laser cannon
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC2ContrabandUnredeemable] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: WeaponLaserCannon
@@ -380,11 +375,12 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: RedHeavyLaser # Frontier
-    fireCost: 100
-  - type: Tag
-    tags:
-    - TurretCompatibleWeapon
+    proto: RedHeavyLaser
+    fireCost: 250
+  - type: Battery
+    maxCharge: 4000
+    startingCharge: 4000
+
 
 - type: entity
   name: portable particle decelerator
@@ -411,14 +407,13 @@
         params:
           pitch: 2
     - type: ProjectileBatteryAmmoProvider
-      # proto: AntiParticlesProjectile # Frontier
+      proto: AntiParticlesProjectile
       fireCost: 500
     - type: Battery
       maxCharge: 10000
       startingCharge: 10000
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: x-ray cannon
   parent: [BaseWeaponBattery, BaseGunWieldable, BaseC3Contraband] # Frontier: added BaseSecurityContraband<BaseC3Contraband
   id: WeaponXrayCannon
@@ -438,7 +433,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser3.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: XrayLaser # Frontier
+    proto: XrayLaser
     fireCost: 200
   - type: MagazineVisuals
     magState: mag
@@ -481,7 +476,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletDisablerPractice # Frontier
+    proto: BulletDisablerPractice
     fireCost: 50
   - type: Tag
     tags:
@@ -509,7 +504,7 @@
       - suitStorage
       - Belt
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletDisabler # Frontier
+    proto: BulletDisabler
     fireCost: 50
   - type: GuideHelp
     guides:
@@ -544,7 +539,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletDisablerSmg # Frontier
+    proto: BulletDisablerSmg
     fireCost: 25
   - type: MagazineVisuals
     magState: mag
@@ -582,7 +577,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser.ogg
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletTaser # Frontier
+    proto: BulletTaser
     fireCost: 200
   - type: MagazineVisuals
     magState: mag
@@ -591,7 +586,6 @@
   - type: Appearance
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: antique laser pistol
   parent: [BaseWeaponBatterySmall, BaseC1Contraband] # Frontier: BaseGrandTheftContraband<BaseC1Contraband
   id: WeaponAntiqueLaser
@@ -611,7 +605,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: RedMediumLaser # Frontier
+    proto: RedMediumLaser
     fireCost: 100
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -636,7 +630,6 @@
     # not putting a BlockMovement component here cause that's funny.
 
 - type: entity
-  categories: [ HideSpawnMenu ] # Frontier
   name: advanced laser pistol
   parent: [ BaseWeaponBatterySmall, BaseC1Contraband ] # Frontier: BaseSecurityContraband<BaseC1Contraband
   id: WeaponAdvancedLaser
@@ -658,7 +651,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: RedMediumLaser # Frontier
+    proto: RedMediumLaser
     fireCost: 100
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -698,21 +691,19 @@
     fireRate: 1.5
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-    # Frontier: moved to NF variants
-  # - type: ProjectileBatteryAmmoProvider
-  #   proto: AnomalousParticleDeltaStrong
-  #   fireCost: 100
-  # - type: BatteryWeaponFireModes
-  #   fireModes:
-  #   - proto: AnomalousParticleDeltaStrong
-  #     fireCost: 100
-  #   - proto: AnomalousParticleEpsilonStrong
-  #     fireCost: 100
-  #   - proto: AnomalousParticleZetaStrong
-  #     fireCost: 100
-  #   - proto: AnomalousParticleSigmaStrong
-  #     fireCost: 100
-    # End Frontier: moved to NF variants
+  - type: ProjectileBatteryAmmoProvider
+    proto: AnomalousParticleDeltaStrong
+    fireCost: 100
+  - type: BatteryWeaponFireModes
+    fireModes:
+    - proto: AnomalousParticleDeltaStrong
+      fireCost: 100
+    - proto: AnomalousParticleEpsilonStrong
+      fireCost: 100
+    - proto: AnomalousParticleZetaStrong
+      fireCost: 100
+    - proto: AnomalousParticleSigmaStrong
+      fireCost: 100
   - type: Construction
     graph: UpgradeWeaponPistolCHIMP
     node: start
@@ -721,24 +712,22 @@
 
 - type: entity
   name: experimental C.H.I.M.P. handcannon
-  parent: [BaseC3SyndicateContraband, WeaponPistolCHIMP] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [WeaponPistolCHIMP, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
   id: WeaponPistolCHIMPUpgraded
   description: This C.H.I.M.P. seems to have a greater punch than is usual...
   components:
   - type: BatteryWeaponFireModes
-    # Frontier: moved to NF variants
-    # fireModes:
-    # - proto: AnomalousParticleDeltaStrong
-    #   fireCost: 100
-    # - proto: AnomalousParticleEpsilonStrong
-    #   fireCost: 100
-    # - proto: AnomalousParticleOmegaStrong
-    #   fireCost: 100
-    # - proto: AnomalousParticleZetaStrong
-    #   fireCost: 100
-    # - proto: AnomalousParticleSigmaStrong
-    #   fireCost: 100
-    # Frontier: moved to NF variants
+    fireModes:
+    - proto: AnomalousParticleDeltaStrong
+      fireCost: 100
+    - proto: AnomalousParticleEpsilonStrong
+      fireCost: 100
+    - proto: AnomalousParticleOmegaStrong
+      fireCost: 100
+    - proto: AnomalousParticleZetaStrong
+      fireCost: 100
+    - proto: AnomalousParticleSigmaStrong
+      fireCost: 100
 
 - type: entity
   name: eye of a behonker
@@ -756,7 +745,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_clown.ogg
   - type: HitscanBatteryAmmoProvider
-    # proto: RedLaser # Frontier
+    proto: RedMediumLaser
     fireCost: 100
   - type: BatterySelfRecharger
     autoRecharge: true
@@ -790,18 +779,16 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: ProjectileBatteryAmmoProvider
-    # proto: BulletLaserSpread # Frontier
+    proto: BulletLaserSpread
     fireCost: 150
   - type: BatteryWeaponFireModes
-    # Frontier: move to NF variants
-    # fireModes:
-    # - proto: BulletLaserSpread
-    #   fireCost: 150
-    # - proto: BulletLaserSpreadNarrow
-    #   fireCost: 200
-    # - proto: BulletDisablerSmgSpread
-    #   fireCost: 120
-    # End Frontier: move to NF variants
+    fireModes:
+    - proto: BulletLaserSpread
+      fireCost: 150
+    - proto: BulletLaserSpreadNarrow
+      fireCost: 200
+    - proto: BulletDisablerSmgSpread
+      fireCost: 120
   - type: Item
     size: Large
     shape:
@@ -822,47 +809,3 @@
     autoRechargeRate: 24
     autoRechargePause: true
     autoRechargePauseTime: 30
-
-- type: entity
-  name: temperature gun
-  parent: [BaseWeaponBattery, BaseGunWieldable]
-  id: WeaponTemperatureGun
-  description: An advanced gun that shoots body-temperature-changing beams. This probably constitutes as some kind of war crime.
-  components:
-  - type: Sprite
-    sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
-    layers:
-    - state: base
-      map: ["enum.GunVisualLayers.Base"]
-    - state: mag-unshaded-1
-      map: ["enum.GunVisualLayers.MagUnshaded"]
-      shader: unshaded
-  - type: Appearance
-  - type: Item
-    size: Large
-    shape:
-    - 0,0,3,1
-  - type: MagazineVisuals
-    magState: mag
-    steps: 5
-    zeroVisible: false
-  - type: Clothing
-    sprite: Objects/Weapons/Guns/Battery/temp_gun.rsi
-  - type: Gun
-    fireRate: 1
-    soundGunshot:
-      path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
-  - type: ProjectileBatteryAmmoProvider
-    # proto: BoltTempgunCold # Frontier
-    fireCost: 100
-  - type: BatteryWeaponFireModes
-    fireModes: [] # Frontier: add empty list
-    # - proto: BoltTempgunCold # Frontier
-    #   fireCost: 100 # Frontier
-    # - proto: BoltTempgunHot # Frontier
-    #   fireCost: 100 # Frontier
-  - type: Battery
-    maxCharge: 1000
-    startingCharge: 1000
-  - type: StaticPrice
-    price: 100

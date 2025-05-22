@@ -7,7 +7,7 @@
   - type: StorageFill
     contents:
       - id: FlashlightSeclite
-      # - id: WeaponDisabler # Frontier
+      - id: WeaponDisabler
       - id: ClothingBeltSecurityFilled
       - id: Flash
       - id: ClothingEyesGlassesSecurity
@@ -34,8 +34,7 @@
   - type: StorageFill
     contents:
       - id: FlashlightSeclite
-      # - id: WeaponDisabler # Frontier
-      - id: NFWeaponEnergyPistolDisabler # Frontier
+      - id: WeaponDisabler
       - id: ClothingBeltSecurityFilled
       - id: Flash
       - id: ClothingEyesGlassesSecurity
@@ -63,8 +62,7 @@
     contents:
       - id: FlashlightSeclite
         prob: 0.8
-      # - id: WeaponDisabler # Frontier
-      - id: NFWeaponEnergyPistolDisabler # Frontier
+      - id: WeaponDisabler
       - id: ClothingUniformJumpsuitSecGrey
         prob: 0.3
       - id: ClothingHeadHelmetBasic
@@ -92,8 +90,7 @@
   - type: StorageFill
     contents:
       - id: ClothingEyesGlassesSecurity
-      # - id: WeaponDisabler # Frontier
-      - id: NFWeaponEnergyPistolDisabler
+      - id: WeaponDisabler
       - id: TrackingImplanter
         amount: 2
       - id: ClothingOuterHardsuitBrigmedic
@@ -133,8 +130,7 @@
       - id: ClothingHeadHatDetGadget
       - id: ClothingNeckTieDet
       - id: ClothingOuterVestDetective
-      - id: ClothingOuterCoatDetectiveLoadout
-      - id: FlippoEngravedLighter
+      - id: ClothingOuterCoatDetective
       - id: FlashlightSeclite
       - id: ForensicScanner
       - id: LogProbeCartridge
@@ -171,8 +167,8 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
-      amount: 5 # Frontier
+    - id: WeaponDisabler
+      amount: 5
 
 - type: entity
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
@@ -182,75 +178,75 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
+    - id: WeaponPistolMk58
       amount: 4
-    - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - id: MagazinePistol
       amount: 8
 
 - type: entity
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeRifleLecter
-  name: Lecter safe # Frontier: caps
+  name: lecter safe
   categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleAssaultLecter # Frontier: WeaponRifleLecter<NFWeaponRifleAssaultLecter
+    - id: WeaponRifleLecter
       amount: 2
-    - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
+    - id: MagazineRifle
       amount: 4
 
 - type: entity
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeSubMachineGunDrozd
-  name: Drozd safe # Frontier: caps
+  name: drozd safe
   categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponSubMachineGunDrozd # Frontier: WeaponSubMachineGunDrozd<NFWeaponSubMachineGunDrozd
+    - id: WeaponSubMachineGunDrozd
       amount: 2
-    - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
+    - id: MagazinePistolSubMachineGun
       amount: 4
 
 - type: entity
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeShotgunEnforcer
-  name: Enforcer safe # Frontier: caps
+  name: enforcer safe
   categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponShotgunEnforcer # Frontier: WeaponShotgunEnforcer<NFWeaponShotgunEnforcer
+    - id: WeaponShotgunEnforcer
       amount: 2
-    - id: NFAmmunitionBoxShellShotgunBuckshot # Frontier: BoxLethalshot<NFAmmunitionBoxShellShotgunBuckshot
+    - id: BoxLethalshot
       amount: 4
 
 - type: entity
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: GunSafeShotgunKammerer
-  name: Kammerer safe # Frontier: caps
+  name: kammerer safe
   categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponShotgunKammerer # Frontier: WeaponShotgunKammerer<NFWeaponShotgunKammerer
+    - id: WeaponShotgunKammerer
       amount: 2
-    - id: NFAmmunitionBoxShellShotgunBuckshot # Frontier: BoxLethalshot<NFAmmunitionBoxShellShotgunBuckshot
+    - id: BoxLethalshot
       amount: 2
 
 - type: entity
   id: GunSafeSubMachineGunWt550
   suffix: Wt550
   parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
-  name: WT-550 safe # Frontier: caps
+  name: wt550 safe
   categories: [ HideSpawnMenu ] # Frontier
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
+    - id: WeaponSubMachineGunWt550
       amount: 2
-    - id: NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubmachineGunTopMounted35
+    - id: MagazinePistolSubMachineGunTopMounted
       amount: 4
 
 - type: entity
@@ -261,5 +257,5 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponEnergyRifleCarbine # Frontier: WeaponLaserCarbine<NFWeaponEnergyRifleCarbine
+    - id: WeaponLaserCarbine
       amount: 3

@@ -3,7 +3,6 @@ using Content.Shared.Storage.Components;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 using Content.Shared.Emag.Systems;
-using Content.Shared.Xenoarchaeology.Equipment.Components;
 
 namespace Content.Shared.Xenoarchaeology.Equipment;
 
@@ -65,10 +64,8 @@ public abstract class SharedArtifactCrusherSystem : EntitySystem
         if (!_emag.CheckFlag(ent, EmagType.Interaction))
             return;
 
-        if (!ent.Comp.AutoLock)
-            return;
-
-        ent.Comp.AutoLock = false;
+        if (ent.Comp.AutoLock)
+            ent.Comp.AutoLock = false;
         args.Handled = true;
     }
     // End Frontier

@@ -17,7 +17,6 @@
     - HandLabeler
     - Signaller
     - ClothingMaskWeldingGas
-    - SprayPainter
   ## Basic storage
     - ToolboxArtisticNF
     - ToolboxElectricalNF
@@ -42,9 +41,6 @@
     - BorgChargerCircuitboard
     - WeaponCapacitorRechargerCircuitboard
     - AirTank
-    - NFScrapProcessorCircuitboard
-    - MaterialReclaimerMachineCircuitboard
-    - OreProcessorMachineCircuitboard
   # Salvage techfab
     - ClothingOuterEVASuitCargo
     - ClothingOuterEVASuitSalvage
@@ -60,10 +56,8 @@
     - GlowstickRedLathe
     - GlowstickYellow
     - OreBag
-    - ConstructionBag
     - MiningDrill
-    - NFWeaponPka
-    - NFWeaponPkaCannon
+    - WeaponProtoKineticAccelerator
     - ClothingNeckIFFNeutral
     - ClothingNeckIFFGreen
     - ClothingNeckIFFRed
@@ -73,9 +67,6 @@
     - LanternNF
     - CableHVStack
     - CableMVStack
-    - WeaponGrapplingGun
-    - SurvivalKnife
-    - NFWeaponHoloflareGun
 
 - type: latheRecipePack
   id: NFSalvageTechfabDeprecated
@@ -107,10 +98,10 @@
 - type: latheRecipePack
   id: NFSalvageTechfabDeprecatedEmag
   recipes:
-    - NFAmmunitionBoxShellShotgunTranquilizer
-    - NFAmmunitionBoxPistol35
-    - NFAmmunitionBoxPistol45
-    - NFAmmunitionBoxRifle20
-    - NFAmmunitionBoxRifle30
+    - ShellTranquilizer
+    - MagazineBoxPistol
+    - MagazineBoxMagnum
+    - MagazineBoxRifle
+    - MagazineBoxLightRifle
 #       - GrenadeBlast
     - ClothingHeadHelmetCosmonaut

@@ -24,10 +24,12 @@ public sealed class EscapeInventorySystem : EntitySystem
     [Dependency] private readonly ActionBlockerSystem _actionBlockerSystem = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
     [Dependency] private readonly CarryingSystem _carryingSystem = default!; // Carrying system from Nyanotrasen.
-    [Dependency] private readonly SharedActionsSystem _actions = default!; // Frontier: escape actions
+    [Dependency] private readonly SharedActionsSystem _actions = default!;
+    [Dependency] private  readonly EntityManager _entityManager = default!;
 
     // Frontier - cancel inventory escape
-    private readonly EntProtoId _escapeCancelAction = "ActionCancelEscape";
+    [ValidatePrototypeId<EntityPrototype>]
+    private readonly string _escapeCancelAction = "ActionCancelEscape";
 
     /// <summary>
     /// You can't escape the hands of an entity this many times more massive than you.
@@ -124,16 +126,17 @@ public sealed class EscapeInventorySystem : EntitySystem
         RemoveCancelAction(uid, component); // Frontier
     }
 
-    // Frontier: escape actions
+    // Frontier
     private void RemoveCancelAction(EntityUid uid, CanEscapeInventoryComponent component)
     {
         if (component.EscapeCancelAction is not { Valid: true })
-            return;
+         return;
 
         _actions.RemoveAction(uid, component.EscapeCancelAction);
         component.EscapeCancelAction = null;
     }
 
+    // Frontier
     private void OnCancelEscape(EntityUid uid, CanEscapeInventoryComponent component, EscapeInventoryCancelActionEvent args)
     {
         if (component.DoAfter != null)
@@ -141,5 +144,4 @@ public sealed class EscapeInventorySystem : EntitySystem
 
         RemoveCancelAction(uid, component);
     }
-    // End Frontier: escape actions
 }

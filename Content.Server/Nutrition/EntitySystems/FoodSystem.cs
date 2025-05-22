@@ -338,9 +338,6 @@ public sealed class FoodSystem : EntitySystem
         if (ev.Cancelled)
             return;
 
-        var afterEvent = new AfterFullyEatenEvent(user);
-        RaiseLocalEvent(food, ref afterEvent);
-
         var dev = new DestructionEventArgs();
         RaiseLocalEvent(food, dev);
 

@@ -1,4 +1,5 @@
-using System.Linq;
+﻿using System.Linq;
+using Content.Server._NF.CryoSleep; // Frontier
 using Content.Server.GameTicking;
 using Content.Server.Ghost;
 using Content.Server.Mind;
@@ -8,8 +9,6 @@ using Content.Shared.Mind;
 using Robust.Server.GameObjects;
 using Robust.Server.Player;
 using Robust.Shared.Console;
-using Robust.Shared.Player;
-using Content.Server._NF.CryoSleep; // Frontier
 
 namespace Content.Server.Administration.Commands;
 
@@ -17,7 +16,7 @@ namespace Content.Server.Administration.Commands;
 public sealed class AGhostCommand : LocalizedCommands
 {
     [Dependency] private readonly IEntityManager _entities = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    [Dependency] private readonly IPlayerManager _playerManager = default!;
 
     public override string Command => "aghost";
     public override string Help => "aghost";
@@ -107,8 +106,8 @@ public sealed class AGhostCommand : LocalizedCommands
             // TODO: Remove duplication between all this and "GamePreset.OnGhostAttempt()"...
             if (!string.IsNullOrWhiteSpace(mind.CharacterName))
                 metaDataSystem.SetEntityName(ghost, mind.CharacterName);
-            else if (!string.IsNullOrWhiteSpace(player.Name))
-                metaDataSystem.SetEntityName(ghost, player.Name);
+            else if (!string.IsNullOrWhiteSpace(mind.Session?.Name))
+                metaDataSystem.SetEntityName(ghost, mind.Session.Name);
 
             mindSystem.Visit(mindId, ghost, mind);
         }
@@ -119,7 +118,7 @@ public sealed class AGhostCommand : LocalizedCommands
         }
 
         var comp = _entities.GetComponent<GhostComponent>(ghost);
-        ghostSystem.SetCanReturnToBody((ghost, comp), canReturn);
+        ghostSystem.SetCanReturnToBody(comp, canReturn);
         ghostSystem.SetCanReturnFromCryo(comp, cryoSystem.HasCryosleepingBody(player.UserId)); // Frontier
     }
 }

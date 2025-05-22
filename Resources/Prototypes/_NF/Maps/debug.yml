@@ -5,7 +5,7 @@
   minPlayers: 0
   stations:
     NFDev:
-      stationProto: DebugFrontierStation
+      stationProto: StandardFrontierStation
       components:
         - type: StationNameSetup
           mapNameTemplate: "NFDev"

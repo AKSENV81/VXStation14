@@ -95,7 +95,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/gun_sentry.ogg
   - type: BallisticAmmoProvider
-    proto: NFCartridgeRifle25 # Frontier: CartridgeCaselessRifle<NFCartridgeRifle25 (caseless)
+    proto: CartridgeCaselessRifle
     capacity: 500
       
 - type: entity
@@ -121,18 +121,15 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/taser2.ogg
   - type: ProjectileBatteryAmmoProvider
-    proto: NFBulletEnergyTurretLaser # Frontier
+    proto: BulletEnergyTurretLaser
     fireCost: 100
   - type: Battery
     maxCharge: 2000
     startingCharge: 0
   - type: ApcPowerReceiverBattery
-    idleLoad: 5
+    idlePowerUse: 5
     batteryRechargeRate: 200
     batteryRechargeEfficiency: 1.225
   - type: ApcPowerReceiver
     powerLoad: 5
   - type: ExtensionCableReceiver
-  - type: HTN
-    rootTask:
-      task: EnergyTurretCompound

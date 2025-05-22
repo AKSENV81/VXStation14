@@ -6,7 +6,16 @@
     sprite: /Textures/Clothing/OuterClothing/Misc/black_hoodie.rsi
     state: icon
   content:
-  - ClothingBackpackChameleonFill
+  - ChameleonPDA
+  - ClothingUniformJumpsuitChameleon
+  - ClothingOuterChameleon
+  - ClothingNeckChameleon
+  - ClothingMaskGasChameleon
+  - ClothingHeadHatChameleon
+  - ClothingEyesChameleon
+  - ClothingHeadsetChameleon
+  - ClothingShoesChameleon
+  - BarberScissors
   - ChameleonProjector
   - FakeMindShieldImplanter
   - AgentIDCard

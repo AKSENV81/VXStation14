@@ -18,7 +18,6 @@
   - type: SpaceGarbage
   - type: StaticPrice
     price: 0
-  - type: NFIngredient # Frontier
 
 # Packets
 

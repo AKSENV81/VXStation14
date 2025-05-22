@@ -70,7 +70,6 @@
   - ProtolatheHyperConvectionMachineCircuitboard
   - CircuitImprinterHyperConvectionMachineCircuitboard
   - SheetifierMachineCircuitboard
-  - MaterialSiloMachineCircuitboard # Frontier
 
 - type: technology
   id: PowerGeneration

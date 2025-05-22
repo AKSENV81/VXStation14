@@ -2,11 +2,10 @@
 # Guns
 
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkPistolViper
   name: uplink-pistol-viper-name
   description: uplink-pistol-viper-desc
-  # productEntity: WeaponPistolViper # Frontier
+  productEntity: WeaponPistolViper
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -16,11 +15,10 @@
   - UplinkWeaponry
 
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkRevolverPython
   name: uplink-revolver-python-name
   description: uplink-revolver-python-desc
-  # productEntity: WeaponRevolverPythonAP # Frontier
+  productEntity: WeaponRevolverPythonAP
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -31,11 +29,10 @@
 
 # Inbuilt suppressor so it's sneaky + more expensive.
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkPistolCobra
   name: uplink-pistol-cobra-name
   description: uplink-pistol-cobra-desc
-  # productEntity: WeaponPistolCobra # Frontier
+  productEntity: WeaponPistolCobra
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -46,7 +43,6 @@
 
 # Poor accuracy, slow to fire, cheap option
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkRifleMosin
   name: uplink-rifle-mosin-name
   description: uplink-rifle-mosin-desc
@@ -467,12 +463,11 @@
 # Ammo
 
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkPistol9mmMagazine
   name: uplink-pistol-magazine-name
   description: uplink-pistol-magazine-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/pistol_mag.rsi, state: red-icon }
-  # productEntity: MagazinePistol # Frontier
+  productEntity: MagazinePistol
   cost:
     Telecrystal: 1
   categories:
@@ -480,12 +475,11 @@
 
 # For the C20R
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkMagazinePistolSubMachineGun
   name: uplink-pistol-magazine-c20r-name
   description: uplink-pistol-magazine-c20r-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/Pistol/smg_mag.rsi, state: red-icon }
-  # productEntity: MagazinePistolSubMachineGun # Frontier
+  productEntity: MagazinePistolSubMachineGun
   cost:
     Telecrystal: 2
   categories:
@@ -493,12 +487,11 @@
 
 # For the Cobra
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkMagazinePistolCaselessRifle
   name: uplink-pistol-magazine-caseless-name
   description: uplink-pistol-magazine-caseless-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi, state: red-icon }
-  # productEntity: MagazinePistolCaselessRifle # Frontier
+  productEntity: MagazinePistolCaselessRifle
   cost:
     Telecrystal: 1
   categories:
@@ -506,12 +499,11 @@
 
 # For the Python
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkSpeedLoaderMagnumAP
   name: uplink-speedloader-magnum-name
   description: uplink-speedloader-magnu-desc
   icon: { sprite: /Textures/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/magnum_speed_loader.rsi, state: icon }
-  # productEntity: SpeedLoaderMagnumAP # Frontier
+  productEntity: SpeedLoaderMagnumAP
   cost:
     Telecrystal: 3
   categories:
@@ -519,11 +511,10 @@
 
 # For the mosin
 - type: listing
-  abstract: true # Frontier: moved to _NF uplink catalog
   id: UplinkMosinAmmo
   name: uplink-mosin-ammo-name
   description: uplink-mosin-ammo-desc
-  # productEntity: MagazineBoxLightRifle # Frontier
+  productEntity: MagazineBoxLightRifle
   cost:
     Telecrystal: 1
   categories:
@@ -534,7 +525,7 @@
   id: UplinkHristovAmmo
   name: uplink-sniper-ammo-name
   description: uplink-sniper-ammo-desc
-  # productEntity: MagazineBoxAntiMateriel # Frontier
+  productEntity: MagazineBoxAntiMateriel
   cost:
     Telecrystal: 2
   categories:
@@ -989,19 +980,18 @@
   categories:
   - UplinkDisruption
 
-# Note: Removed for the time being until surgery/newmed is added. Considered bloat until then.
-# - type: listing
-#   id: UplinkDuffelSurgery
-#   name: uplink-duffel-surgery-name
-#   description: uplink-duffel-surgery-desc
-#   productEntity: ClothingBackpackDuffelSyndicateFilledMedical
-#   discountCategory: usualDiscounts
-#   discountDownTo:
-#     Telecrystal: 2
-#   cost:
-#     Telecrystal: 4
-#   categories:
-#   - UplinkDisruption
+- type: listing
+  id: UplinkDuffelSurgery
+  name: uplink-duffel-surgery-name
+  description: uplink-duffel-surgery-desc
+  productEntity: ClothingBackpackDuffelSyndicateFilledMedical
+  discountCategory: usualDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkDisruption
 
 # - type: listing # Frontier
   # id: UplinkPowerSink
@@ -1577,19 +1567,6 @@
   - UplinkWearables
 
 - type: listing
-  id: UplinkClothingOuterVestWebElite
-  name: uplink-clothing-outer-vest-web-elite-name
-  description: uplink-clothing-outer-vest-web-elite-desc
-  productEntity: ClothingOuterVestWebElite
-  discountCategory: usualDiscounts
-  discountDownTo:
-    Telecrystal: 3
-  cost:
-    Telecrystal: 5
-  categories:
-  - UplinkWearables
-
-- type: listing
   id: UplinkClothingShoesBootsMagSyndie
   name: uplink-clothing-shoes-boots-mag-syndie-name
   description: uplink-clothing-shoes-boots-mag-syndie-desc
@@ -1649,7 +1626,7 @@
   name: uplink-syndie-raid-name
   description: uplink-syndie-raid-desc
   icon: { sprite: /Textures/Clothing/OuterClothing/Armor/syndie-raid.rsi, state: icon }
-  productEntity: ClothingBackpackSyndicateRaidBundle
+  productEntity: ClothingBackpackDuffelSyndicateRaidBundle
   cost:
     Telecrystal: 8
   categories:
@@ -1666,15 +1643,13 @@
   description: uplink-hardsuit-syndieelite-desc
   icon: { sprite: /Textures/Clothing/OuterClothing/Hardsuits/syndieelite.rsi, state: icon }
   productEntity: ClothingBackpackDuffelSyndicateEliteHardsuitBundle
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 7
   cost:
     Telecrystal: 12
   categories:
   - UplinkWearables
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingOuterHardsuitJuggernaut
@@ -1682,15 +1657,13 @@
   description: uplink-clothing-outer-hardsuit-juggernaut-desc
   icon: { sprite: /Textures/Structures/Storage/Crates/syndicate.rsi, state: icon }
   productEntity: CrateCybersunJuggernautBundle
+  discountCategory: veryRareDiscounts
+  discountDownTo:
+    Telecrystal: 8
   cost:
     Telecrystal: 12
   categories:
   - UplinkWearables
-  conditions:
-  - !type:StoreWhitelistCondition
-    whitelist:
-      tags:
-      - NukeOpsUplink
 
 - type: listing
   id: UplinkClothingEyesHudSyndicate
@@ -1753,7 +1726,7 @@
   id: UplinkRevolverCapGun
   name: uplink-revolver-cap-gun-name
   description: uplink-revolver-cap-gun-desc
-  productEntity: NFRevolverCapGun
+  productEntity: RevolverCapGun
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 2
@@ -1910,7 +1883,7 @@
     Telecrystal: 10 # Frontier: 6<10 (all the time in the world)
   categories:
   - UplinkWeaponry # Frontier: UplinkJob<UplinkWeaponry
-  # conditions: # Frontier:
+  # conditions: # Frontier: 
   # - !type:BuyerJobCondition
   #   whitelist:
   #   - Botanist
@@ -1991,7 +1964,7 @@
   id: uplinkRevolverCapGunFake
   name: uplink-revolver-cap-gun-fake-name
   description: uplink-revolver-cap-gun-fake-desc
-  productEntity: NFRevolverCapGunFake # Frontier: NFRevolverCapGunFake<NFRevolverCapGunFake
+  productEntity: RevolverCapGunFake
   discountCategory: rareDiscounts
   discountDownTo:
     Telecrystal: 3
@@ -2018,7 +1991,7 @@
 #     Telecrystal: 2
 #   categories:
 #   - UplinkJob
-#   conditions:
+#   conditions: 
 #   - !type:BuyerJobCondition
 #     whitelist:
 #     - Clown
@@ -2190,21 +2163,3 @@
 #     Telecrystal: 2
 #   categories:
 #   - UplinkDeception
-
-- type: listing
-  id: UplinkSawAdvanced
-  name: uplink-saw-advanced-name
-  description: uplink-saw-advanced-desc
-  icon: { sprite:  Objects/Specific/Medical/Surgery/saw.rsi, state: advanced}
-  productEntity: SawAdvanced
-  discountCategory: rareDiscounts
-  discountDownTo:
-    Telecrystal: 1
-  cost:
-    Telecrystal: 2
-  categories:
-  - UplinkWeaponry # Frontier: UplinkJob<UplinkWeaponry
-  conditions:
-  # - !type:BuyerJobCondition # Frontier
-  #   whitelist: # Frontier
-  #   - MedicalDoctor # Frontier

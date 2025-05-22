@@ -38,7 +38,7 @@
   id: ClothingBackpackSatchelSmuggler
   name: smuggler's satchel
   suffix: Empty
-  description: A handy, suspicious looking satchel. Just flat enough to fit underneath floor tiles.
+  description: A dingy, suspicious looking satchel.
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/smuggler.rsi
@@ -49,7 +49,7 @@
   id: ClothingBackpackSatchelSmugglerUnanchored
   name: smuggler's satchel
   suffix: Empty, Unanchored
-  description: A handy, suspicious looking satchel. Just flat enough to fit underneath floor tiles.
+  description: A dingy, suspicious looking satchel.
   components:
   - type: Sprite
     sprite: Clothing/Back/Satchels/smuggler.rsi
@@ -79,18 +79,18 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: NFSpeedLoaderCap # Frontier: SpeedLoaderCap<NFSpeedLoaderCap
+        - id: SpeedLoaderCap
           amount: !type:RangeNumberSelector
-            range: 2, 4 # Frontier: 4, 8 < 2, 4
+            range: 4, 8
         - !type:GroupSelector
           children:
-          - id: NFRevolverCapGun # Frontier: RevolverCapGun<NFRevolverCapGun
+          - id: RevolverCapGun
             amount: !type:RangeNumberSelector
-              range: 1, 2 # Frontier: 4, 8 < 1, 2
+              range: 4, 8
             weight: 95
-          - id: NFRevolverCapGunFake # Frontier: RevolverCapGunFake<NFRevolverCapGunFake
+          - id: RevolverCapGunFake
             amount: !type:RangeNumberSelector
-              range: 1, 2 # Frontier: 8<2
+              range: 1, 8
             weight: 5
 
 - type: entity

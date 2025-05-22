@@ -59,11 +59,9 @@
     startingCharge: 300
   - type: Gun
     showExamineText: false
-    fireRate: 2
-    minAngle: 10
-    maxAngle: 20
-    angleIncrease: 2
-    angleDecay: 3
+    fireRate: 4
+    minAngle: 1
+    maxAngle: 10
     soundGunshot:
       path: /Audio/Effects/Lightning/lightningshock.ogg
 
@@ -92,11 +90,9 @@
     count: 1
   - type: Gun
     showExamineText: false
-    fireRate: 2
-    minAngle: 10
-    maxAngle: 20
-    angleIncrease: 2
-    angleDecay: 3
+    fireRate: 4
+    minAngle: 1
+    maxAngle: 10
     selectedMode: SemiAuto
     soundGunshot:
       path: /Audio/Effects/Lightning/lightningshock.ogg
@@ -159,10 +155,8 @@
   - type: Gun
     showExamineText: false
     fireRate: 0.5
-    minAngle: 7
-    maxAngle: 16
-    angleIncrease: 2
-    angleDecay: 3
+    minAngle: 1
+    maxAngle: 10
     selectedMode: SemiAuto
     availableModes:
       - SemiAuto
@@ -188,11 +182,7 @@
     capacity: 3
     count: 3
   - type: Gun
-    fireRate: 1.5
-    minAngle: 10
-    maxAngle: 20
-    angleIncrease: 2
-    angleDecay: 3
+    fireRate: 2
     soundGunshot:
       path: /Audio/Effects/demon_consume.ogg
   - type: RechargeBasicEntityAmmo
@@ -235,10 +225,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      60: Critical
-      120: Dead
+      80: Critical
+      130: Dead
   - type: Stamina
-    critThreshold: 80
+    critThreshold: 100
   - type: MovementSpeedModifier
     baseWalkSpeed: 4
     baseSprintSpeed: 6
@@ -247,7 +237,7 @@
       path: /Audio/Effects/bite.ogg
     damage:
       types:
-        Slash: 8
+        Slash: 10
         Structural: 20
     animation: WeaponArcBite
 
@@ -307,10 +297,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      240: Critical
-      320: Dead
+      300: Critical
+      400: Dead
   - type: Stamina
-    critThreshold: 320
+    critThreshold: 400
   - type: BasicEntityAmmoProvider
     proto: SpawnMobBloodCultistAscendedSummons # MobBloodCultDrainedOne
     capacity: 2
@@ -318,10 +308,8 @@
   - type: Gun
     showExamineText: false
     fireRate: 1
-    minAngle: 10
-    maxAngle: 20
-    angleIncrease: 2
-    angleDecay: 3
+    minAngle: 1
+    maxAngle: 10
     soundGunshot:
       path: /Audio/Effects/teleport_arrival.ogg
   - type: RechargeBasicEntityAmmo
@@ -333,7 +321,7 @@
       path: /Audio/Weapons/Xeno/alien_claw_flesh3.ogg
     damage:
       types:
-        Slash: 16
+        Slash: 20
         Structural: 20
     animation: WeaponArcClaw
   - type: PointLight
@@ -405,10 +393,10 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      80: Critical
-      100: Dead
+      100: Critical
+      130: Dead
   - type: Stamina
-    critThreshold: 320
+    critThreshold: 400
   - type: MeleeWeapon
     soundHit:
       collection: MetalThud
@@ -531,10 +519,6 @@
     - type: Gun
       showExamineText: false
       fireRate: 2
-      minAngle: 10
-      maxAngle: 20
-      angleIncrease: 2
-      angleDecay: 3
       selectedMode: FullAuto
       availableModes:
         - FullAuto
@@ -569,13 +553,13 @@
       thresholds:
         - trigger:
             !type:DamageTrigger
-            damage: 480
+            damage: 600
           behaviors:
             - !type:DoActsBehavior
               acts: [ "Destruction" ]
         - trigger:
             !type:DamageTrigger
-            damage: 240
+            damage: 300
           # TODO: Construction graph
           behaviors:
             - !type:DoActsBehavior

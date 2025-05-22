@@ -2,74 +2,86 @@
 
 - type: latheRecipePack
   id: SecurityEquipmentStatic
-  recipes: [] # Frontier
-  # - ClothingEyesHudSecurity # Frontier
-  # - ForensicPad # Frontier
-  # - Handcuffs # Frontier
-  # - TargetClown # Frontier
-  # - TargetHuman # Frontier
-  # - TargetSyndicate # Frontier
-  # - Zipties # Frontier
+  recipes:
+  - ClothingEyesHudSecurity
+  - ForensicPad
+  - Handcuffs
+  - TargetClown
+  - TargetHuman
+  - TargetSyndicate
+  - Zipties
 
 # Practice ammo/mags and practice weapons
 - type: latheRecipePack
   id: SecurityPracticeStatic
-  recipes: [] # Frontier
-  # - BoxShotgunPractice # Frontier
-  # - MagazineBoxLightRiflePractice # Frontier
-  # - MagazineBoxMagnumPractice # Frontier
-  # - MagazineBoxPistolPractice # Frontier
-  # - MagazineBoxRiflePractice # Frontier
-  # - WeaponDisablerPractice # Frontier
-  # - WeaponLaserCarbinePractice # Frontier
+  recipes:
+  - BoxShotgunPractice
+  - MagazineBoxLightRiflePractice
+  - MagazineBoxMagnumPractice
+  - MagazineBoxPistolPractice
+  - MagazineBoxRiflePractice
+  - WeaponDisablerPractice
+  - WeaponLaserCarbinePractice
   # - WeaponFlareGunSecurity # Frontier
 
 # Shared between secfab and emagged autolathe
 - type: latheRecipePack
   id: SecurityAmmoStatic
-  recipes: [] # Frontier
-  # - BoxLethalshot # Frontier
-  # - BoxShotgunSlug # Frontier
-  # - MagazineBoxLightRifle # Frontier
-  # - MagazineBoxMagnum # Frontier
-  # - MagazineBoxPistol # Frontier
-  # - MagazineBoxRifle # Frontier
-  # - MagazineLightRifle # Frontier
-  # - MagazineLightRifleEmpty # Frontier
-  # - MagazinePistol # Frontier
-  # - MagazinePistolEmpty # Frontier
-  # - MagazinePistolSubMachineGun # Frontier
-  # - MagazinePistolSubMachineGunEmpty # Frontier
-  # - MagazinePistolSubMachineGunTopMounted # Frontier
-  # - MagazinePistolSubMachineGunTopMountedEmpty # Frontier
-  # - MagazineRifle # Frontier
-  # - MagazineRifleEmpty # Frontier
-  # - MagazineShotgun # Frontier
-  # - MagazineShotgunEmpty # Frontier
-  # - MagazineShotgunSlug # Frontier
-  # - SpeedLoaderMagnum # Frontier
-  # - SpeedLoaderMagnumEmpty # Frontier
+  recipes:
+  - BoxLethalshot
+  - BoxShotgunSlug
+  - MagazineBoxLightRifle
+  - MagazineBoxLightRifleRubber # Frontier
+  - MagazineBoxMagnum
+  - MagazineBoxMagnumRubber # Frontier
+  - MagazineBoxPistol
+  - MagazineBoxPistolRubber # Frontier
+  - MagazineBoxRifle
+  - MagazineBoxRifleRubber # Frontier
+  - MagazineLightRifle
+  - MagazineLightRifleRubber # Frontier
+  - MagazineLightRifleEmpty
+  - MagazinePistol
+  - MagazinePistolRubber # Frontier
+  - MagazinePistolEmpty
+  - MagazinePistolSubMachineGun
+  - MagazinePistolSubMachineGunRubber # Frontier
+  - MagazinePistolSubMachineGunEmpty
+  - MagazinePistolSubMachineGunTopMounted
+  - MagazinePistolSubMachineGunTopMountedEmpty
+  - MagazineRifle
+  - MagazineRifleEmpty
+  - MagazineShotgun
+  - MagazineShotgunEmpty
+  - MagazineShotgunSlug
+  - SpeedLoaderMagnum
+  - SpeedLoaderMagnumEmpty
+  - SpeedLoaderRifleHeavy # Frontier
+  - SpeedLoaderRifleHeavyEmpty # Frontier
+  - MagazineNovaliteC1Empty # Frontier
+  - MagazineNovaliteC1 # Frontier
+  - MagazineNovaliteC1Rubber # Frontier
 
 - type: latheRecipePack
   id: SecurityWeaponsStatic
-  recipes: [] # Frontier
-  # - Flash # Frontier
-  # - Stunbaton # Frontier
-  # - CombatKnife # Frontier
-  # - RiotShield # Frontier
+  recipes:
+  - Flash
+  - Stunbaton
+  - CombatKnife
+  - RiotShield
 
 ## Dynamic recipes
 
 - type: latheRecipePack
   id: SecurityEquipment
   recipes:
-  - NFClothingBackpackElectropack # Frontier: use NF prefix
-  # - HoloprojectorSecurity # Frontier
-  - NFPortableRecharger # Frontier: use NF prefix
+  - ClothingBackpackElectropack
+  - HoloprojectorSecurity
+  - PortableRecharger
   - PowerCageHigh
   - PowerCageMedium
   - PowerCageSmall
-  - NFTelescopicShield # Frontier: use NF prefix
+  - TelescopicShield
 
 - type: latheRecipePack
   id: SecurityBoards
@@ -85,20 +97,20 @@
   - ScienceExplosives # sec gets everything for modular grenade making that sci does
   id: SecurityExplosives
   recipes:
-  #- ExplosivePayload # Frontier
-  #- GrenadeBlast # Frontier
-  - NFGrenadeEMP # Frontier: use NF prefix
-  - NFGrenadeFlash # Frontier: use NF prefix
-  - NFMagazineGrenadeEmpty # Frontier: use NF prefix
+  - ExplosivePayload
+  - GrenadeBlast
+  - GrenadeEMP
+  - GrenadeFlash
+  - MagazineGrenadeEmpty
 
 # Shared between secfab and emagged protolathe
-# - type: latheRecipePack # Frontier
-  # id: SecurityAmmo # Frontier
-  # recipes: # Frontier
-  # - BoxBeanbag # Frontier
+- type: latheRecipePack
+  id: SecurityAmmo
+  recipes:
+  - BoxBeanbag
   # - BoxShotgunIncendiary # Frontier
   # - BoxShotgunUranium # Frontier
-  # - BoxShellTranquilizer # Frontier
+  - BoxShellTranquilizer
   # - MagazineBoxLightRifleIncendiary # Frontier
   # - MagazineBoxLightRifleUranium # Frontier
   # - MagazineBoxMagnumIncendiary # Frontier
@@ -115,23 +127,22 @@
   # - MagazinePistolSubMachineGunUranium # Frontier
   # - MagazineRifleIncendiary # Frontier
   # - MagazineRifleUranium # Frontier
-  # - MagazineShotgunBeanbag # Frontier
+  - MagazineShotgunBeanbag
   # - MagazineShotgunIncendiary # Frontier
   # - SpeedLoaderMagnumIncendiary # Frontier
   # - SpeedLoaderMagnumUranium # Frontier
 
-#- type: latheRecipePack # Frontier
-  #id: SecurityWeapons # Frontier
-  #recipes: # Frontier
-  #- Truncheon # Frontier
-  #- WeaponAdvancedLaser # Frontier
-  #- WeaponLaserCannon # Frontier
-  #- WeaponLaserCarbine # Frontier
-  #- WeaponXrayCannon # Frontier
-  #- WeaponTemperatureGun # Frontier
+- type: latheRecipePack
+  id: SecurityWeapons
+  recipes:
+  - Truncheon
+  - WeaponAdvancedLaser
+  - WeaponLaserCannon
+  - WeaponLaserCarbine
+  - WeaponXrayCannon
 
-#- type: latheRecipePack # Frontier
-  #id: SecurityDisablers # Frontier
-  #recipes: # Frontier
-  #- WeaponDisabler # Frontier
-  #- WeaponDisablerSMG # Frontier
+- type: latheRecipePack
+  id: SecurityDisablers
+  recipes:
+  - WeaponDisabler
+  - WeaponDisablerSMG

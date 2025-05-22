@@ -36,9 +36,9 @@
   - PlushieRounyRecipe
   - PlushieXenoRecipe
   - FoamCrossbowRecipe
-  - NFBoxDonkSoftBoxRecipe
-  - NFRevolverCapGunRecipe
-  - NFBoxCartridgeCapRecipe
+  - BoxDonkSoftBoxRecipe
+  - RevolverCapGunRecipe
+  - BoxCartridgeCapRecipe
   - ToyAmongPequenoRecipe
   - FoamCutlassRecipe
   - FoamBladeRecipe
