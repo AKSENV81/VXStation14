@@ -14,8 +14,6 @@
     - BypassDropChecks
     - NoConsoleSound
     - SilentStorageUser
-    - PreventAccessLogging
-    - AllowBiomeLoading
   - type: Input
     context: "aghost"
   - type: Ghost
@@ -24,7 +22,6 @@
   - type: Hands
   - type: ComplexInteraction
   - type: Puller
-    needsHands: false
   - type: CombatMode
   - type: Physics
     ignorePaused: true
@@ -81,10 +78,11 @@
     followEntity: true
     hideCoords: false # Frontier
     maxIffRange: null # Frontier
-  - type: NFCargoOrderConsole
+  - type: CargoOrderConsole
     taxAccounts: # Frontier
       Frontier: 0.25 # Frontier
       Nfsd: 0.15 # Frontier
+  - type: BankClient
   - type: CrewMonitoringConsole
   - type: GeneralStationRecordConsole
     canDeleteEntries: true

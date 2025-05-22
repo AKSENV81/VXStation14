@@ -87,7 +87,7 @@
     back:
     - BoxSurvivalSecurity
     - Flash
-    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - MagazinePistol
 
 - type: startingGear
   id: BoxingKangarooGear

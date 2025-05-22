@@ -100,8 +100,8 @@
     Glass: 150
 
 - type: latheRecipe
-  id: NFWeaponPistolCHIMP # Frontier: NF prefix (consistency with result)
-  result: NFWeaponPistolCHIMP # Frontier: add NF prefix
+  id: WeaponPistolCHIMP
+  result: WeaponPistolCHIMP
   categories:
   - Tools
   completetime: 5
@@ -184,28 +184,15 @@
     Uranium: 100
 
 - type: latheRecipe
-  id: DeviceDesynchronizer
-  result: DeviceDesynchronizer
+  id: WeaponProtoKineticAccelerator
+  result: WeaponProtoKineticAccelerator
+  categories:
+  - Weapons
   completetime: 5
   materials:
-    Steel: 700
-    Glass: 100
-    Uranium: 200
-
-# Frontier: abstracted result, remove definition
-
-# - type: latheRecipe
-#   id: WeaponProtoKineticAccelerator
-#   result: WeaponProtoKineticAccelerator
-#   categories:
-#   - Weapons
-#   completetime: 5
-#   materials:
-#     Steel: 1000
-#     Glass: 500
-#     Silver: 100
-
-# End Frontier: abstracted result, remove definition
+    Steel: 1000
+    Glass: 500
+    Silver: 100
 
 - type: latheRecipe
   id: WeaponTetherGun

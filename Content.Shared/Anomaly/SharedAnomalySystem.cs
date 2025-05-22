@@ -127,26 +127,21 @@ public abstract class SharedAnomalySystem : EntitySystem
     /// <summary>
     /// Begins the animation for going supercritical
     /// </summary>
-    /// <param name="ent">Entity to go supercritical</param>
-    public void StartSupercriticalEvent(Entity<AnomalyComponent?> ent)
+    /// <param name="uid"></param>
+    public void StartSupercriticalEvent(EntityUid uid)
     {
         // don't restart it if it's already begun
-        if (HasComp<AnomalySupercriticalComponent>(ent))
+        if (HasComp<AnomalySupercriticalComponent>(uid))
             return;
 
-        if(!Resolve(ent, ref ent.Comp))
-            return;
-
-        AdminLog.Add(LogType.Anomaly, LogImpact.High, $"Anomaly {ToPrettyString(ent.Owner)} began to go supercritical.");
+        AdminLog.Add(LogType.Anomaly, LogImpact.High, $"Anomaly {ToPrettyString(uid)} began to go supercritical.");
         if (_net.IsServer)
-            Log.Info($"Anomaly is going supercritical. Entity: {ToPrettyString(ent.Owner)}");
+            Log.Info($"Anomaly is going supercritical. Entity: {ToPrettyString(uid)}");
 
-        Audio.PlayPvs(ent.Comp.SupercriticalSoundAtAnimationStart, Transform(ent).Coordinates);
-
-        var super = AddComp<AnomalySupercriticalComponent>(ent);
+        var super = AddComp<AnomalySupercriticalComponent>(uid);
         super.EndTime = Timing.CurTime + super.SupercriticalDuration;
-        Appearance.SetData(ent, AnomalyVisuals.Supercritical, true);
-        Dirty(ent, super);
+        Appearance.SetData(uid, AnomalyVisuals.Supercritical, true);
+        Dirty(uid, super);
     }
 
     /// <summary>
@@ -164,11 +159,10 @@ public abstract class SharedAnomalySystem : EntitySystem
         if (!Timing.IsFirstTimePredicted)
             return;
 
+        Audio.PlayPvs(component.SupercriticalSound, Transform(uid).Coordinates);
+
         if (_net.IsServer)
-        {
-            Audio.PlayPvs(component.SupercriticalSound, Transform(uid).Coordinates);
             Log.Info($"Raising supercritical event. Entity: {ToPrettyString(uid)}");
-        }
 
         var powerMod = 1f;
         if (component.CurrentBehavior != null)
@@ -264,7 +258,7 @@ public abstract class SharedAnomalySystem : EntitySystem
         var newVal = component.Severity + change;
 
         if (newVal >= 1)
-            StartSupercriticalEvent((uid, component));
+            StartSupercriticalEvent(uid);
 
         component.Severity = Math.Clamp(newVal, 0, 1);
         Dirty(uid, component);
@@ -374,7 +368,7 @@ public abstract class SharedAnomalySystem : EntitySystem
             if (Timing.CurTime <= super.EndTime)
                 continue;
             DoAnomalySupercriticalEvent(ent, anom);
-            // Removal of the supercritical component is handled by DoAnomalySupercriticalEvent
+            RemComp(ent, super);
         }
     }
 

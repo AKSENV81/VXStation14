@@ -7,11 +7,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      32: Dead
+      40: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      19: 0.7
-      26: 0.5
+      24: 0.7
+      32: 0.5
   - type: Stamina
     critThreshold: 50
   - type: MovementSpeedModifier
@@ -27,11 +27,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      40: Dead
+      50: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      24: 0.7
-      32: 0.5
+      30: 0.7
+      40: 0.5
   - type: Sprite
     sprite: _NF/Mobs/Aliens/Carps/magic.rsi
     layers:
@@ -50,11 +50,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      40: Dead
+      50: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      24: 0.7
-      32: 0.5
+      30: 0.7
+      40: 0.5
   - type: Sprite
     sprite: _NF/Mobs/Aliens/Carps/holo.rsi
     layers:
@@ -76,11 +76,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      48: Dead
+      60: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      28: 0.7
-      38: 0.5
+      36: 0.7
+      48: 0.5
 
 - type: entity
   id: NFMobShark
@@ -91,11 +91,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      64: Dead
+      80: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      38: 0.7
-      52: 0.5
+      48: 0.7
+      64: 0.5
   - type: Stamina
     critThreshold: 80
   - type: MovementSpeedModifier
@@ -119,11 +119,11 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      40: Dead
+      50: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      24: 0.7
-      32: 0.5
+      30: 0.7
+      40: 0.5
   - type: Fixtures
     fixtures:
       fix1:
@@ -188,7 +188,7 @@
         mask:
         - FlyingMobMask
         layer:
-        - FlyingMobLayer
+        - FlyingMobMask
   - type: Sprite
     drawdepth: SmallMobs
     sprite: _NF/Mobs/Aliens/Carps/wyvern.rsi
@@ -233,10 +233,8 @@
   - type: Gun
     showExamineText: false
     fireRate: 0.5
-    minAngle: 10
-    maxAngle: 20
-    angleIncrease: 2
-    angleDecay: 3
+    minAngle: 31
+    maxAngle: 45
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
@@ -310,7 +308,7 @@
         Base: dead
         BaseUnshaded: dead-unshaded
   - type: BasicEntityAmmoProvider
-    proto: NFBulletAcid
+    proto: BulletAcid
     capacity: 1
     count: 1
 

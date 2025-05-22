@@ -25,6 +25,7 @@
     - NFBoxMREEmpty
     - NFHappyHonkEmpty
     - NFHappyHonkMimeEmpty
+    - NFHappyHonkMcCargoEmpty
     - NFFoodBoxPizza
     - NFFoodBoxDonutEmpty
     - NFFoodBoxNuggetEmpty
@@ -126,15 +127,6 @@
     - WetFloorSign
     - DeskBell
     - BrbSign
-
-- type: latheRecipePack
-  id: NFMcServiceTechfabStatic
-  recipes:
-    - MysteryFigureBox
-    - SpaceBladeMc
-    - NFHappyHonkMcCargoEmpty
-    - ClothingHeadHatMcCrown
-    - CigPackMcCargo
 
 - type: latheRecipePack
   id: NFServiceTechfabDeprecated

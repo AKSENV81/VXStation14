@@ -191,7 +191,6 @@
     layers:
       - state: box
       - state: writing
-  - type: NFIngredient # Frontier: I suppose
 
 - type: entity
   parent: BoxHug

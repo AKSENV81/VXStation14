@@ -26,9 +26,9 @@
   - GroupSpeciesBreathTool
 
 # Silicons
-- type: roleLoadout
+- type: roleLoadout # Frontier: enabled JobBorg
   id: JobBorg
-  nameDataset: NFNamesBorg # Frontier: use NF variant
+  nameDataset: NFNamesBorg # Frontier: restored names_borg value, no comment
   canCustomizeName: true
 
 - type: roleLoadout
@@ -159,7 +159,6 @@
 
 - type: roleLoadout
   id: JobClown
-  canCustomizeName: true
   groups:
   - GroupTankHarness
   - ClownHead
@@ -173,7 +172,6 @@
 
 - type: roleLoadout
   id: JobMime
-  canCustomizeName: true
   groups:
   - GroupTankHarness
   - MimeHead
@@ -418,7 +416,7 @@
   - ChiefMedicalOfficerOuterClothing
   - ChiefMedicalOfficerNeck
   - ChiefMedicalOfficerShoes
-  - MedicalEyewear
+  - Glasses
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
@@ -435,7 +433,7 @@
   - MedicalDoctorOuterClothing
   - MedicalShoes
   - MedicalDoctorPDA
-  - MedicalEyewear
+  - Glasses
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
@@ -446,7 +444,7 @@
   - GroupTankHarness
   - MedicalInternJumpsuit
   - MedicalBackpack
-  - MedicalEyewear
+  - Glasses
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical
@@ -476,7 +474,7 @@
   - MedicalBackpack
   - ParamedicOuterClothing
   - ParamedicShoes
-  - MedicalEyewear
+  - Glasses
   - SurvivalMedical
   - Trinkets
   - GroupSpeciesBreathToolMedical

@@ -61,7 +61,7 @@
   parent: NFBaseArmorRecipe
   result: ClothingOuterArmorBulletproof
   materials:
-    Durathread: 700
+    Durathread: 500
     Steel: 300
     Plasteel: 1000
 

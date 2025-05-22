@@ -66,7 +66,6 @@
     - Trash
   - type: StaticPrice # Frontier
     price: 4 # Frontier
-  - type: NFCookware # Frontier
 
 - type: entity
   name: broken bowl
@@ -86,7 +85,6 @@
   - type: SpaceGarbage
   - type: StaticPrice
     price: 4 # Frontier 0<4 4 needed for arbitrage
-  - type: NFCookware # Frontier
 
 - type: entity
   name: bowl

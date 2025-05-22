@@ -37,7 +37,7 @@
 
 #Emergency EVA
 - type: entity
-  parent: NFClothingOuterEVASuitBase # Frontier: ClothingOuterEVASuitBase<NFClothingOuterEVASuitBase
+  parent: ClothingOuterEVASuitBase
   id: ClothingOuterSuitEmergency
   name: emergency EVA suit
   description: An emergency EVA suit with a built-in helmet. It's horribly slow and lacking in temperature protection, but enough to buy you time from the harsh vacuum of space.
@@ -59,8 +59,6 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
-      storagebase: !type:Container # Frontier
-        ents: [] # Frontier
 
 #Prisoner EVA
 - type: entity
@@ -97,7 +95,7 @@
 
 #Paramedic Voidsuit
 - type: entity
-  parent: NFClothingOuterEVASuitBase #Despite "Voidsuits are light hardsuits", since it parents of EVA Suits, it goes with the other softsuits # Frontier: remove BaseMedicalContraband, ClothingOuterEVASuitBase<NFClothingOuterEVASuitBase
+  parent: ClothingOuterEVASuitBase #Despite "Voidsuits are light hardsuits", since it parents of EVA Suits, it goes with the other softsuits # Frontier: remove BaseMedicalContraband
   id: ClothingOuterHardsuitVoidParamed
   name: paramedic void suit
   description: A void suit made for paramedics.
@@ -157,5 +155,3 @@
   - type: ContainerContainer
     containers:
       toggleable-clothing: !type:ContainerSlot {}
-      storagebase: !type:Container # Frontier
-        ents: [] # Frontier

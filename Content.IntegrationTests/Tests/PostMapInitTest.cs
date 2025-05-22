@@ -33,10 +33,11 @@ namespace Content.IntegrationTests.Tests
         private const bool SkipTestMaps = true;
         private const string TestMapsPath = "/Maps/_NF/Test/"; // Frontier: _NF
 
+        // Frontier: TODO - define this to our set of maps of interest
         private static readonly string[] NoSpawnMaps =
         {
-            // "CentComm", // Frontier: no upstream maps
-            // "Dart" // Frontier: no upstream maps
+            "CentComm",
+            "Dart"
         };
 
         private static readonly string[] Grids =
@@ -70,38 +71,6 @@ namespace Content.IntegrationTests.Tests
         };
 
         private static readonly string[] GameMaps = FrontierConstants.GameMapPrototypes; // Frontier: not inline constants
-        // Frontier: comment out upstream game maps
-        /*
-        private static readonly string[] GameMaps =
-        {
-            "Dev",
-            "TestTeg",
-            "Fland",
-            "Meta",
-            "Packed",
-            "Omega",
-            "Bagel",
-            "CentComm",
-            "Box",
-            "Core",
-            "Marathon",
-            "MeteorArena",
-            "Saltern",
-            "Reach",
-            "Train",
-            "Oasis",
-            "Gate",
-            "Amber",
-            "Loop",
-            "Plasma",
-            "Elkridge",
-            "Convex",
-            "Relic",
-            "dm01-entryway"
-
-        };
-        */
-        // End Frontier: comment out upstream game maps
 
         /// <summary>
         /// Asserts that specific files have been saved as grids and not maps.
@@ -154,7 +123,7 @@ namespace Content.IntegrationTests.Tests
             var cfg = server.ResolveDependency<IConfigurationManager>();
             Assert.That(cfg.GetCVar(CCVars.GridFill), Is.False);
 
-            var shuttleFolder = new ResPath("/Maps/_NF/Shuttles"); // Frontier: use NF maps
+            var shuttleFolder = new ResPath("/Maps/Shuttles");
             var shuttles = resMan
                 .ContentFindFiles(shuttleFolder)
                 .Where(filePath =>

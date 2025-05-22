@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard, removed BaseSecurityContraband
+  parent: [BaseItem, RecyclableItemCardboard] # Frontier: added RecyclableItemCardboard
   id: BaseMagazineBoxAntiMateriel
   name: ammunition box (.60 anti-materiel)
   components:
@@ -9,7 +9,7 @@
     whitelist:
       tags:
         - CartridgeAntiMateriel
-    # proto: CartridgeAntiMateriel # Frontier
+    proto: CartridgeAntiMateriel
     capacity: 10
   - type: Item
     size: Small
@@ -17,7 +17,7 @@
     containers:
       ballistic-ammo: !type:Container
   - type: Sprite
-    sprite: Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/Boxes/anti_materiel.rsi # Frontier: _NF prefix
   - type: MagazineVisuals
     magState: mag
     steps: 4
@@ -26,13 +26,12 @@
 
 # Boxes
 - type: entity
-  abstract: true # Frontier: use NF ammo
   parent: BaseMagazineBoxAntiMateriel
   id: MagazineBoxAntiMateriel
   name: ammunition box (.60 anti-materiel)
   components:
   - type: BallisticAmmoProvider
-    # proto: CartridgeAntiMateriel # Frontier
+    proto: CartridgeAntiMateriel
   - type: Sprite
     layers:
     - state: base

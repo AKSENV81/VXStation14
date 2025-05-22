@@ -120,7 +120,7 @@
   result: RCDEmpty
   completetime: 4
   materials:
-    Steel: 1250 # Frontier: 1000<1250
+    Steel: 1000
     Plastic: 300
 
 - type: latheRecipe
