@@ -46,11 +46,13 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
 {
     private readonly IEntityManager _entManager;
     private readonly IGameTiming _timing;
+    private readonly IMapManager _mapManager;
     private readonly IPrototypeManager _prototypeManager;
     private readonly AnchorableSystem _anchorable;
     private readonly BiomeSystem _biome;
     private readonly DungeonSystem _dungeon;
     private readonly MetaDataSystem _metaData;
+    private readonly SharedTransformSystem _xforms;
     private readonly SharedMapSystem _map;
     private readonly StationSystem _station; // Frontier
     private readonly ShuttleSystem _shuttle; // Frontier
@@ -74,11 +76,13 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         IEntityManager entManager,
         IGameTiming timing,
         ILogManager logManager,
+        IMapManager mapManager,
         IPrototypeManager protoManager,
         AnchorableSystem anchorable,
         BiomeSystem biome,
         DungeonSystem dungeon,
         MetaDataSystem metaData,
+        SharedTransformSystem xform,
         SharedMapSystem map,
         StationSystem stationSystem, // Frontier
         ShuttleSystem shuttleSystem, // Frontier
@@ -90,11 +94,13 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
     {
         _entManager = entManager;
         _timing = timing;
+        _mapManager = mapManager;
         _prototypeManager = protoManager;
         _anchorable = anchorable;
         _biome = biome;
         _dungeon = dungeon;
         _metaData = metaData;
+        _xforms = xform;
         _map = map;
         _station = stationSystem; // Frontier
         _shuttle = shuttleSystem; // Frontier
@@ -202,8 +208,8 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
             }
         }
 
-        _map.InitializeMap(mapId);
-        _map.SetPaused(mapUid, true);
+        _mapManager.DoMapInitialize(mapId);
+        _mapManager.SetMapPaused(mapId, true);
 
         // Setup expedition
         var expedition = _entManager.AddComponent<SalvageExpeditionComponent>(mapUid);
@@ -306,14 +312,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
             if (!lootProto.Guaranteed)
                 continue;
 
-            try
-            {
-                await SpawnDungeonLoot(lootProto, mapUid);
-            }
-            catch (Exception e)
-            {
-                _sawmill.Error($"Failed to spawn guaranteed loot {lootProto.ID}: {e}");
-            }
+            await SpawnDungeonLoot(lootProto, mapUid);
         }
 
         // Handle boss loot (when relevant).
@@ -343,14 +342,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
             if (entry == null)
                 break;
 
-            try
-            {
-                await SpawnRandomEntry((mapUid, grid), entry, dungeon, random);
-            }
-            catch (Exception e)
-            {
-                _sawmill.Error($"Failed to spawn mobs for {entry.Proto}: {e}");
-            }
+            await SpawnRandomEntry(grid, entry, dungeon, random);
         }
 
         // Frontier: difficulty-based loot tables
@@ -380,7 +372,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
                             break;
 
                         _sawmill.Debug($"Spawning dungeon loot {entry.Proto}");
-                        await SpawnRandomEntry((mapUid, grid), entry, dungeon, random);
+                        await SpawnRandomEntry(grid, entry, dungeon, random);
                     }
                     break;
                 default:
@@ -399,7 +391,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
         return true;
     }
 
-    private async Task SpawnRandomEntry(Entity<MapGridComponent> grid, IBudgetEntry entry, Dungeon dungeon, Random random)
+    private async Task SpawnRandomEntry(MapGridComponent grid, IBudgetEntry entry, Dungeon dungeon, Random random)
     {
         await SuspendIfOutOfTime();
 
@@ -423,7 +415,7 @@ public sealed class SpawnSalvageMissionJob : Job<bool>
                     continue;
                 }
 
-                var uid = _entManager.SpawnAtPosition(entry.Proto, _map.GridTileToLocal(grid, grid, tile));
+                var uid = _entManager.SpawnAtPosition(entry.Proto, grid.GridTileToLocal(tile));
                 _entManager.RemoveComponent<GhostRoleComponent>(uid);
                 _entManager.RemoveComponent<GhostTakeoverAvailableComponent>(uid);
                 return;

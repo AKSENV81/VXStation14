@@ -256,7 +256,7 @@
   name: death nettle
   description: This nettle's out for blood.
   id: DeathNettle
-  parent: [ProduceBase, BaseC1Contraband ] # Frontier: BaseMajorContraband<BaseC1Contraband
+  parent: ProduceBase
   components:
   - type: Sprite
     sprite: Objects/Specific/Hydroponics/death_nettle.rsi
@@ -267,56 +267,24 @@
   - type: MeleeWeapon
     damage:
       types:
-        Heat: 8
-        Caustic: 8
+        Heat: 8.5
+        Caustic: 8.5
   - type: SolutionContainerManager
     solutions:
       food:
         reagents:
         - ReagentId: SulfuricAcid
-          Quantity: 15
+          Quantity: 3
         - ReagentId: FluorosulfuricAcid
-          Quantity: 15
+          Quantity: 3
   - type: Produce
     seedId: deathNettle
   - type: MeleeChemicalInjector
-    transferAmount: 5
+    transferAmount: 2
     solution: food
-    pierceArmor: true
+    pierceArmor: false
   - type: Extractable
     grindableSolutionName: food
-  - type: DamageOnInteract
-    damage: 
-      types:
-        Heat: 4
-        Caustic: 4
-    throw: true
-    throwSpeed: 3
-    interactTimer: 2 # Stop the player from spam clicking the entity
-    ignoreResistances: false
-    popupText: powered-light-component-burn-hand
-    interactSound: /Audio/Effects/lightburn.ogg
-    stunChance: 0.10
-    stunSeconds: 1.5
-  - type: Damageable
-    damageContainer: Inorganic
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 25
-      behaviors:
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Voice/Diona/diona_salute.ogg
-          params:
-            volume: -5
-      - !type:DoActsBehavior
-        acts: [ "Destruction" ]
-  - type: DamageOnHit 
-    damage:
-      types:
-        Blunt: 5 # The nettle will "wilt" after 5 hits.
 
 - type: entity
   name: banana
@@ -1830,10 +1798,10 @@
   - type: SolutionContainerManager
     solutions:
       food:
-        maxVol: 15
+        maxVol: 30
         reagents:
         - ReagentId: Amatoxin
-          Quantity: 10
+          Quantity: 25
         - ReagentId: Nutriment
           Quantity: 5
   - type: Sprite
@@ -1874,7 +1842,7 @@
     seedId: gatfruit
   - type: Food
     trash:
-    - NFWeaponRevolverRitland45 # Frontier: WeaponRevolverPython<NFWeaponRevolverRitland45
+    - WeaponRevolverPython
   - type: Tag
     tags:
     - Fruit # It's in the name
@@ -1882,6 +1850,7 @@
     entries:
       Taco: Gatfruit
       Burger: GatfruitBurger
+  - type: BadFood # Frontier: Nope
 
 - type: entity
   name: capfruit
@@ -1909,7 +1878,7 @@
     seedId: realCapfruit
   - type: Food
     trash:
-    - NFRevolverCapGun # Frontier: RevolverCapGun<NFRevolverCapGun
+    - RevolverCapGun
   - type: Tag
     tags:
     - Fruit
@@ -1917,6 +1886,7 @@
     entries:
       Taco: Capfruit
       Burger: CapfruitBurger
+  - type: BadFood # Frontier: Nope
 
 - type: entity
   name: capfruit
@@ -1928,7 +1898,7 @@
     seedId: fakeCapfruit
   - type: Food
     trash:
-    - NFRevolverCapGunFakeGrown # Frontier: add Grown
+    - RevolverCapGunFakeGrown # Frontier: add Grown
 
 - type: entity
   name: rice bushel

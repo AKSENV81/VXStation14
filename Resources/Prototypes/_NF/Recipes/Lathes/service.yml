@@ -85,12 +85,22 @@
 - type: latheRecipe
   id: SodiumLightBulb
   result: SodiumLightBulb
-  parent: BaseLightRecipe
+  categories:
+  - Lights
+  completetime: 2
+  materials:
+    Steel: 50
+    Glass: 50
 
 - type: latheRecipe
   id: ExteriorLightBulb
   result: ExteriorLightBulb
-  parent: BaseLightRecipe
+  categories:
+  - Lights
+  completetime: 2
+  materials:
+    Steel: 50
+    Glass: 50
 
 - type: latheRecipe
   id: DrinkIceBucketEmpty
@@ -138,18 +148,3 @@
   completetime: 2
   materials:
     Wood: 300
-
-# Smokes
-- type: latheRecipe
-  id: CigPackMcCargo
-  result: CigPackMcCargo
-  completetime: 2
-  applyMaterialDiscount: false
-  categories:
-  - Brand
-  - General
-  - StorageNF
-  materials:
-    Plastic: 100
-    Steel: 100
-    Paper: 100

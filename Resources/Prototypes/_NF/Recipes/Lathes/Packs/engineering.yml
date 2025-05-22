@@ -7,7 +7,6 @@
   - PortableGeneratorDKJrMachineCircuitboard
   - GasMiningDrillMachineCircuitboard
   - GaslockFrameMachineCircuitboard
-  - MaterialSiloMachineCircuitboard
 
 - type: latheRecipePack
   id: NFEngineering

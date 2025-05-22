@@ -13,9 +13,3 @@ public enum DeliveryVisuals : byte
     IsPriorityInactive,
     JobIcon,
 }
-
-[Serializable, NetSerializable]
-public enum DeliverySpawnerVisuals : byte
-{
-    Contents,
-}

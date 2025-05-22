@@ -1,11 +1,14 @@
+using Content.Shared.Construction.Components;
 using Content.Shared.Stunnable;
 using Content.Shared.Throwing;
 using Content.Shared.Timing;
 using Content.Shared.Weapons.Melee.Components;
 using Content.Shared.Weapons.Melee.Events;
-using Robust.Shared.Physics.Components;
-using System.Numerics;
 using Content.Shared.Whitelist; // Frontier
+using Robust.Shared.Physics;
+using Robust.Shared.Physics.Components;
+using Robust.Shared.Physics.Systems;
+using System.Numerics;
 
 namespace Content.Shared.Weapons.Melee;
 
@@ -15,6 +18,7 @@ namespace Content.Shared.Weapons.Melee;
 public sealed class MeleeThrowOnHitSystem : EntitySystem
 {
     [Dependency] private readonly SharedTransformSystem _transform = default!;
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
     [Dependency] private readonly UseDelaySystem _delay = default!;
     [Dependency] private readonly SharedStunSystem _stun = default!;
     [Dependency] private readonly ThrowingSystem _throwing = default!;

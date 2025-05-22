@@ -85,7 +85,7 @@ public sealed partial class DockingSystem
             return false;
 
         shuttleDockedAABB = matty.TransformBox(shuttleAABB);
-        gridRotation = offsetAngle.Reduced();
+        gridRotation = (targetGridRotation + offsetAngle).Reduced();
         return true;
     }
 
@@ -132,7 +132,6 @@ public sealed partial class DockingSystem
         EntityUid targetGrid,
         EntityCoordinates coordinates,
         Angle angle,
-        bool fallback = true,
         DockType dockType = DockType.Airlock) // Frontier
     {
         var gridDocks = GetDocks(targetGrid);
@@ -146,11 +145,6 @@ public sealed partial class DockingSystem
             {
                 return config;
             }
-        }
-
-        if (fallback && configs.Count > 0)
-        {
-            return configs.First();
         }
 
         return null;

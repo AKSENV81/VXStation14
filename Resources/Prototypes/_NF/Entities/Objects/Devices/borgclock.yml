@@ -17,8 +17,5 @@
   - type: Item
     size: Small
   - type: StaticPrice
-    price: 20
+    price: 10
   - type: Clock
-  - type: PhysicalComposition
-    materialComposition:
-      Steel: 100

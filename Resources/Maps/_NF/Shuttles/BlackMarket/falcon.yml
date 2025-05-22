@@ -1366,7 +1366,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,-8.5
       parent: 3
-- proto: NFCannonBall
+- proto: CannonBall
   entities:
   - uid: 548
     components:
@@ -1396,7 +1396,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: NFCannonBallGlassshot
+- proto: CannonBallGlassshot
   entities:
   - uid: 543
     components:
@@ -1426,7 +1426,7 @@ entities:
     - type: Physics
       canCollide: False
     - type: InsideEntityStorage
-- proto: NFCannonBallGrapeshot
+- proto: CannonBallGrapeshot
   entities:
   - uid: 540
     components:

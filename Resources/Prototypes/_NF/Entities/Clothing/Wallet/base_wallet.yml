@@ -36,8 +36,6 @@
     blacklist:
       tags:
       - Book
-      components:
-      - Blueprint
   - type: Item
     size: Small
   - type: Clothing

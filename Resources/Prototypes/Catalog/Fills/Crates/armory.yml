@@ -6,9 +6,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponSubMachineGunWt550 # Frontier: WeaponSubMachineGunWt550<NFWeaponSubMachineGunWt550
+      - id: WeaponSubMachineGunWt550
         amount: 2
-      - id: NFMagazineSubMachineGunTopMounted35 # Frontier: MagazinePistolSubMachineGunTopMounted<NFMagazineSubMachineGunTopMounted35
+      - id: MagazinePistolSubMachineGunTopMounted
         amount: 4
 
 - type: entity
@@ -19,9 +19,9 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponShotgunEnforcer # Frontier: WeaponShotgunEnforcer<NFWeaponShotgunEnforcer
+      - id: WeaponShotgunEnforcer
         amount: 2
-      - id: NFAmmunitionBoxShellShotgunBuckshot # Frontier: BoxLethalshot<NFAmmunitionBoxShellShotgunBuckshot
+      - id: BoxLethalshot
         amount: 4
 
 - type: entity
@@ -54,7 +54,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponEnergyRifleCarbine # Frontier: WeaponLaserCarbine<NFWeaponEnergyRifleCarbine
+      - id: WeaponLaserCarbine
         amount: 3
 
 - type: entity
@@ -65,9 +65,9 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponPistolMk58 # Frontier: WeaponPistolMk58<NFWeaponPistolMk58
+    - id: WeaponPistolMk58
       amount: 2
-    - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+    - id: MagazinePistol
       amount: 4
 
 - type: entity
@@ -82,9 +82,9 @@
       amount: 2
     - id: ClothingHeadHelmetRiot
       amount: 2
-    - id: NFWeaponShotgunEnforcerLessLethal # Frontier: WeaponEnforcerRubber<NFWeaponShotgunEnforcerLessLethal
+    - id: WeaponShotgunEnforcerRubber
       amount: 2
-    - id: NFAmmunitionBoxShellShotgunBeanbag # Frontier: BoxBeanbag<NFAmmunitionBoxShellShotgunBeanbag
+    - id: BoxBeanbag
       amount: 2
     - id: RiotShield
       amount: 2

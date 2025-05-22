@@ -188,6 +188,7 @@
   - PLANTS
   - PLASMA
   - ROBOTS
+  - SHUTTLES
   - SPACE
   - SUNLIGHT
   - WATER
@@ -199,7 +200,6 @@
   - CARPET
   - SILENCE
   - GREASE
-  - TRAFFIC
   # End Frontier
 
 # Severity is how bad the allergy is.

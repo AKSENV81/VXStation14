@@ -78,7 +78,6 @@
     softness: 5
     autoRot: true
   - type: Ringer
-  - type: RingerUplink
   - type: DeviceNetwork
     deviceNetId: Wireless
     receiveFrequencyId: PDA
@@ -993,7 +992,6 @@
   - type: Pda
     id: UniversalIDCard
   - type: HealthAnalyzer
-    maxScanRange: null
     scanDelay: 0
     silent: true
   - type: CartridgeLoader
@@ -1106,7 +1104,7 @@
     - DoorBumpOpener
 
 - type: entity
-  parent: [ BasePDA, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: BasePDA
   id: SyndiPDA
   name: syndicate PDA
   description: Ok, time to be a productive member of- oh cool I'm a bad guy time to kill people!
@@ -1466,7 +1464,7 @@
     state: pda-seniorofficer
 
 - type: entity
-  parent: [ BaseC3PirateContrabandNoValue, SyndiPDA ] # Frontier: BaseMajorContraband<BaseC3PirateContrabandNoValue
+  parent: SyndiPDA
   id: PiratePDA
   name: pirate PDA
   description: Yargh!
@@ -1483,9 +1481,9 @@
     state: pda-pirate
 
 - type: entity
-  parent: [ BaseMedicalPDA, BaseC3SyndicateContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContrabandNoValue
+  parent: BaseMedicalPDA
   id: SyndiAgentPDA
-  name: syndicate corpsman PDA
+  name: syndicate agent PDA
   description: For those days when healing normal syndicates aren't enough, try healing nuclear operatives instead!
   components:
   - type: Pda

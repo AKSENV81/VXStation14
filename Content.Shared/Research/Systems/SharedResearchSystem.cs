@@ -220,8 +220,6 @@ public abstract class SharedResearchSystem : EntitySystem
     public void TrySetMainDiscipline(TechnologyPrototype prototype, EntityUid uid, TechnologyDatabaseComponent? component = null)
     {
         return;
-        // Frontier: allow unlocking all disciplines
-        /*
         if (!Resolve(uid, ref component))
             return;
 
@@ -233,8 +231,6 @@ public abstract class SharedResearchSystem : EntitySystem
 
         var ev = new TechnologyDatabaseModifiedEvent();
         RaiseLocalEvent(uid, ref ev);
-        */
-        // End Frontier: allow unlocking all disciplines
     }
 
     /// <summary>
@@ -306,7 +302,7 @@ public abstract class SharedResearchSystem : EntitySystem
         component.UnlockedRecipes.Add(recipe);
         Dirty(uid, component);
 
-        var ev = new TechnologyDatabaseModifiedEvent(new List<string> { recipe });
+        var ev = new TechnologyDatabaseModifiedEvent();
         RaiseLocalEvent(uid, ref ev);
     }
 }

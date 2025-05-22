@@ -15,8 +15,8 @@ using Content.Shared.Popups;
 using Content.Shared.Whitelist;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Physics.Events;
-using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Robust.Server.GameObjects; // Frontier
 
 namespace Content.Server.Anomaly.Effects;
 
@@ -27,13 +27,14 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly BodySystem _body = default!;
     [Dependency] private readonly IChatManager _chat = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly JitteringSystem _jitter = default!;
     [Dependency] private readonly MindSystem _mind = default!;
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly IPrototypeManager _proto = default!;
     [Dependency] private readonly StunSystem _stun = default!;
+    [Dependency] private readonly TransformSystem _transform = default!; // Frontier
+    [Dependency] private readonly SharedAnomalyCoreSystem _anomalyCore = default!; // Frontier
 
     private readonly Color _messageColor = Color.FromSrgb(new Color(201, 22, 94));
 
@@ -104,7 +105,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
         if (ent.Comp.StartMessage is not null &&
             _mind.TryGetMind(ent, out _, out var mindComponent) &&
-            _player.TryGetSessionById(mindComponent.UserId, out var session))
+            mindComponent.Session != null)
         {
             var message = Loc.GetString(ent.Comp.StartMessage);
             var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", message));
@@ -113,7 +114,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
                 wrappedMessage,
                 default,
                 false,
-                session.Channel,
+                mindComponent.Session.Channel,
                 _messageColor);
 
             _popup.PopupEntity(message, ent, ent, PopupType.MediumCaution);
@@ -139,8 +140,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
     private void OnSeverityChanged(Entity<InnerBodyAnomalyComponent> ent, ref AnomalySeverityChangedEvent args)
     {
-        if (!_mind.TryGetMind(ent, out _, out var mindComponent) ||
-            !_player.TryGetSessionById(mindComponent.UserId, out var session))
+        if (!_mind.TryGetMind(ent, out _, out var mindComponent) || mindComponent.Session == null)
             return;
 
         var message = string.Empty;
@@ -175,7 +175,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
             wrappedMessage,
             default,
             false,
-            session.Channel,
+            mindComponent.Session.Channel,
             _messageColor);
 
         _popup.PopupEntity(message, ent, ent, PopupType.MediumCaution);
@@ -217,7 +217,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
 
         if (ent.Comp.EndMessage is not null &&
             _mind.TryGetMind(ent, out _, out var mindComponent) &&
-            _player.TryGetSessionById(mindComponent.UserId, out var session))
+            mindComponent.Session != null)
         {
             var message = Loc.GetString(ent.Comp.EndMessage);
             var wrappedMessage = Loc.GetString("chat-manager-server-wrap-message", ("message", message));
@@ -226,7 +226,7 @@ public sealed class InnerBodyAnomalySystem : SharedInnerBodyAnomalySystem
                 wrappedMessage,
                 default,
                 false,
-                session.Channel,
+                mindComponent.Session.Channel,
                 _messageColor);
 
 

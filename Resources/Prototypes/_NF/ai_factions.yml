@@ -13,7 +13,6 @@
   - Monkey
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Goblin
   - WizFedFaction
@@ -52,7 +51,7 @@
   id: Goblin
 
 - type: npcFaction
-  id: NFSyndicate
+  id: SyndicateNF
   friendly:
   - Syndicate
   hostile:
@@ -68,11 +67,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  #- NFSyndicate
+  #- SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -101,11 +99,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   #- WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -134,11 +131,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   #- BloodCultNF
   - NFPirate
@@ -167,11 +163,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   #- Monkey
   #- Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   #- NFPirate
@@ -200,11 +195,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   #- Goblin
-  - NFSyndicate
+  - SyndicateNF
   #- WizFedFaction # Magic
   - BloodCultNF
   - NFPirate
@@ -233,11 +227,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -266,11 +259,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -299,11 +291,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -332,11 +323,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -365,11 +355,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -398,11 +387,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -431,11 +419,10 @@
   - Xeno
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate
@@ -470,14 +457,13 @@
   - Revolutionary
   - Wizard
   - Dragon
-  - Xenoborg
   ## Frontier Factions
   - Cat
   - Dwarf
   - Harpy
   - Monkey
   - Goblin
-  - NFSyndicate
+  - SyndicateNF
   - WizFedFaction
   - BloodCultNF
   - NFPirate

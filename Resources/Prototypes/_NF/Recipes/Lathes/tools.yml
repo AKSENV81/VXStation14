@@ -92,7 +92,7 @@
   result: ShipyardRCDEmpty
   completetime: 4
   materials:
-    Steel: 1250
+    Steel: 1000
     Plastic: 300
 
 - type: latheRecipe
