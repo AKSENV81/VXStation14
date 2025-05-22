@@ -21,8 +21,9 @@
         ents: []
 
 - type: entity
+  abstract: true # Frontier: use NF variant
   name: china lake
-  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  parent: [BaseWeaponLauncher, BaseGunWieldable, BaseC3SyndicateContraband] # Frontier: BaseSyndicateContraband<BaseC3Contraband
   id: WeaponLauncherChinaLake
   description: PLOOP.
   components:
@@ -54,7 +55,7 @@
       tags:
         - Grenade
     capacity: 3
-    proto: GrenadeFrag
+    # proto: GrenadeFrag # Frontier
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
 
@@ -86,7 +87,7 @@
     whitelist:
       tags:
         - CartridgeRocket
-    proto: CartridgeRocket
+    # proto: CartridgeRocket # Frontier
     capacity: 1
     soundInsert:
       path: /Audio/Machines/id_insert.ogg # VXS
@@ -99,6 +100,7 @@
   - type: Appearance
 
 - type: entity
+  abstract: true # Frontier: use NF variant
   name: multiple rocket launcher
   suffix: DEBUG # VXS
   parent: BaseWeaponLauncher
@@ -125,7 +127,7 @@
     whitelist:
       tags:
         - CartridgeRocket
-    proto: CartridgeRocketSlow
+    # proto: CartridgeRocketSlow # Frontier
     soundInsert:
       path: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
   - type: MagazineVisuals
@@ -135,8 +137,9 @@
   - type: Appearance
 
 - type: entity
+  abstract: true # Frontier: use NF variant
   name: pirate cannon
-  parent: [BaseC3PirateContraband, BaseWeaponLauncher] # Frontier: added C3PirateContraband
+  parent: [BaseWeaponLauncher]
   id: WeaponLauncherPirateCannon
   description: Kaboom!
   components:
@@ -162,7 +165,7 @@
         tags:
           - CannonBall
       capacity: 1
-      proto: CannonBall
+      # proto: CannonBall # Frontier
       soundInsert:
         path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
 
@@ -268,7 +271,7 @@
       fireRate: 0.5
       clumsyProof: true
     - type: BasicEntityAmmoProvider
-      proto: GrapplingHook
+      proto: NFGrapplingHook # Frontier: use NF variant
       capacity: 1
     - type: Sprite
       sprite: Objects/Weapons/Guns/Launchers/grappling_gun.rsi
