@@ -1,65 +1,37 @@
-<div class="header" align="center">
-<img alt="Frontier Station" height="300" src="https://github.com/new-frontiers-14/frontier-station-14/blob/master/Resources/Textures/_NF/Logo/logo.png?raw=true" />
-</div>
+<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
 
-Frontier Station is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
+<p align="center"> Станция 14 это сессионная игрушка про взаимодействие космонафтиков и взаимодействие газов. Сборка VXS14 представляет примерно такой же геймплей, но по большей части про стрелялки.</p>
 
-This is the primary repo for Frontier Station.
+## Ссылки
 
-If you want to host or create content for Frontier Station, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+[Дискорд](https://discord.gg/wArjmHTv7S) | [Апстрим](https://github.com/space-wizards/space-station-14) | [Вики](https://vxs14.miraheze.org/wiki/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0)
 
-## Links
+## Контрибьютинг
 
-<div class="header" align="center">  
-[Discord](https://discord.gg/tpuAT7d3zm/) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Patreon](https://www.patreon.com/frontierstation14) | [Wiki](https://frontierstation.wiki.gg/)
-</div>
+Список TODO можно увидеть в дискорде проекта или получить у мейнтейнера проекта.
 
-## Documentation/Wiki
+## Локальный сервер
 
-Our [wiki](https://frontierstation.wiki.gg/) has documentation on Frontier Station's content.
+0. Установите необходимые зависимости (Dotnet, git, python)
+1. Клонируйте репозиторий (git clone https://github.com/kel593/VXSS14/)
+2. Запустите `RUN_THIS.py` для установки дополнительных зависимостей
+3. Компилируйте решение (dotnet build)
+4. Запустите решение (dotnet run --project Content.Server)
 
-## Contributing
+[Более детальная инструкция по работе с репозиторием и запуску локального сервера](https://docs.spacestation14.com/en/general-development/setup.html)
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of ideas](https://discord.com/channels/1123826877245694004/1127017858833068114) that can be done and anybody can pick them up. Don't be afraid to ask for help either!
+## Лицензия
 
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
-
-If you make any contributions, please make sure to read the markers section in [MARKERS.md](https://github.com/new-frontiers-14/frontier-station-14/blob/master/MARKERS.md)
-Any changes made to files belonging to our upstream should be properly marked in accordance to what is specified there.
-
-## Building
-
-1. Clone this repo:
-```shell
-git clone https://github.com/new-frontiers-14/frontier-station-14.git
-```
-2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
-```shell
-cd frontier-station-14
-python RUN_THIS.py
-```
-3. Compile the solution:  
-
-Build the server using `dotnet build`.
-
-[More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
-
-## License
-
-Content contributed to this repository after commit 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 is licensed under the GNU Affero General Public License version 3.0, unless otherwise stated (note Attributions below). See `LICENSE-AGPLv3.txt`.
-Content contributed to this repository before commit 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 is licensed under the MIT license, unless otherwise stated. See `LICENSE-MIT.txt`.
+Контент репозитория после коммита 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 лицензирован под GNU Affero General Public License 3.0, если не указано другое. Подробнее в `LICENSE-AGPLv3.txt`.
+Контент репозитория до коммита 2fca06eaba205ae6fe3aceb8ae2a0594f0effee0 лицензированы под MIT license, если не указано другое. Подробнее в `LICENSE-MIT.txt`.
 
 [2fca06eaba205ae6fe3aceb8ae2a0594f0effee0](https://github.com/new-frontiers-14/frontier-station-14/commit/2fca06eaba205ae6fe3aceb8ae2a0594f0effee0) was pushed on July 1, 2024 at 16:04 UTC
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/new-frontiers-14/frontier-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).  
+Большинство ассетов лицензированы под [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) если не указано другое. У ассетов есть свои лицензии и авторские права которые указаны в файле meta.json. [Пример](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
-Note that some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+Стоит взять во внимание необходимость убрать контент под лицензией [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или схожими лицензиями если вы захотите использовать этот проект коммерчески.
 
-## Attributions
-
-When we pull content from other forks, we organize their content to repo-specific subfolders to better track attribution and limit merge conflicts.
-
-Content under these subdirectories originate from their respective forks and may contain modifications. These modifications are denoted by comments around the modified lines.
+## Дополнительное
 
 | Subdirectory | Fork Name | Fork Repository | License |
 |--------------|-----------|-----------------|---------|
@@ -75,6 +47,8 @@ Content under these subdirectories originate from their respective forks and may
 | `_Impstation` | Impstation | https://github.com/impstation/imp-station-14 | AGPL 3.0 |
 | `_NC14` | Nuclear 14 | https://github.com/Vault-Overseers/nuclear-14 | AGPL 3.0 |
 | `Nyanotrasen` | Nyanotrasen | https://github.com/Nyanotrasen/Nyanotrasen | MIT |
+| `_Backmen` | Backmen | https://github.com/Rxup/space-station-14 | AGPL 3.0 |
+| `_CorvaxNext` | Corvax Next | https://github.com/space-syndicate/space-station-14-next | AGPL 3.0 |
 
 Additional repos that we have ported features from without subdirectories are listed below.
 
