@@ -1,37 +1,29 @@
-<!-- Guidelines: https://docs.spacestation14.io/en/getting-started/pr-guideline -->
+## О пулл-реквесте
+<!-- Вкратце о том что поменялось/добавилось. -->
 
-## About the PR
-<!-- What did you change? -->
-<!-- If this is a code change, summarize at high level how your new code works. This makes it easier to review. -->
+## Зачем / Почему / Баланс
+<!-- Зачем это было делать? Кому будет лучше? -->
 
-## Why / Balance
-<!-- Discuss how this would affect game balance or explain why it was changed. Link any relevant discussions or issues. -->
+## Технические детали
+<!-- Технические детали. Всякие разные. -->
 
-## Technical details
-<!-- Summary of code changes for easier review. -->
+## Тестирование
+<!-- Как это проверить на работоспособность и как эти штуки себя должны ввести? -->
 
-## How to test
-<!-- Describe a procedure to test this feature, along with expected output/behavior. -->
+## Медиа
+<!-- Вложить изображения/видео изменений если это уместно. -->
 
-## Media
-<!-- Attach media if the PR makes ingame changes (clothing, items, features, etc). 
-Small fixes/refactors are exempt. Media may be used in SS14 progress reports with credit. -->
+## Требования
+<!-- Подтвердить выставив икс в скобочках, типа вот так [X]: -->
+- [ ] Я знаю что сделал.
+- [ ] Во время разработки я не использовал какие-либо наркотические вещества.
+- [ ] Я всё это протестировал и соглашаюсь понести ответственность за все свои деяния совершенные в этом репозитории по статье Ук.РФ Ст.№228 П.1 в случае если допущу ошибку/возникновение багов.
 
-## Requirements
-<!-- Confirm the following by placing an X in the brackets [X]: -->
-- [ ] I have read [CONTRIBUTING.md](https://github.com/new-frontiers-14/frontier-station-14/blob/master/CONTRIBUTING.md) and and am following the [Pull Request and Changelog Guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
-- [ ] I have added media to this PR or it does not require an ingame showcase.
-- [ ] I have reviewed the [Ship Submission Guidelines](https://frontierstation.wiki.gg/wiki/Ship_Submission_Guidelines) if relevant.
-- [ ] I confirm that AI tools were not used in generating the material in this PR.
-<!-- You should understand that not following the above may get your PR closed at maintainer’s discretion -->
+## Всякая хрень которая может поломать другие PRы
+<!-- Если вы поменяли, например, имя класса или что-нибудь такое, напишите это тут. -->
 
-## Breaking changes
-<!-- List any breaking changes, including namespaces, public class/method/field changes, prototype renames; and provide instructions for fixing them. -->
-
-**Changelog**
-<!-- Add a Changelog entry to make players aware of new features or changes that could affect gameplay.
-Make sure to read the guidelines and take this Changelog template out of the comment block in order for it to show up.
-Changelog must have a :cl: symbol, so the bot recognizes the changes and adds them to the game's changelog. -->
+**Чейнжлог**
+<!-- Мне лень это тут писать, сами разберётесь, а? -->
 <!--
 :cl:
 - add: Added fun!
