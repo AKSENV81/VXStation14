@@ -1,0 +1,26 @@
+- type: soundCollection
+  id: VXSLobbyMusic
+  files:
+    - /Audio/_VXS/Lobby/buran.ogg
+    - /Audio/_VXS/Lobby/cvetok.ogg
+    - /Audio/_VXS/Lobby/disciplina.ogg
+    - /Audio/_VXS/Lobby/dvestidvesti.ogg
+    - /Audio/_VXS/Lobby/liniya.ogg
+    - /Audio/_VXS/Lobby/nevedomasmert.ogg
+    - /Audio/_VXS/Lobby/noch.ogg
+    - /Audio/_VXS/Lobby/patroni.ogg
+    - /Audio/_VXS/Lobby/pechal.ogg
+    - /Audio/_VXS/Lobby/pobeda.ogg
+    - /Audio/_VXS/Lobby/poteri.ogg
+    - /Audio/_VXS/Lobby/prosvistela.ogg
+    - /Audio/_VXS/Lobby/takinado.ogg
+    - /Audio/_VXS/Lobby/vesna.ogg
+    - /Audio/_VXS/Lobby/zhmurki.ogg
+    - /Audio/_VXS/Lobby/lubo.ogg
+    - /Audio/_VXS/Lobby/strana.ogg
+    - /Audio/_VXS/Lobby/zvezdopad.ogg
+    - /Audio/_VXS/Lobby/evangelie.ogg
+    - /Audio/_VXS/Lobby/mertvye.ogg
+    - /Audio/_VXS/Lobby/produrachka.ogg
+    - /Audio/_VXS/Lobby/pirozhok.ogg
+    - /Audio/_VXS/Lobby/kapital.ogg
