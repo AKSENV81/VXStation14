@@ -34,3 +34,8 @@
  - /Prototypes/Research/arsenal.yml # Frontier
  - /Prototypes/game_presets.yml # Frontier
  - /Prototypes/Shuttles/shuttle_incoming_event.yml # Frontier
+ - /Prototypes/_NF/lobbyscreens.yml # VXS
+ - /Prototypes/lobbyscreens.yml # VXS
+ - /Prototypes/holidays.yml # VXS
+ - /Prototypes/_NF/SoundCollections/lobby.yml # VXS
+ - /Prototypes/SoundCollections/lobby.yml # VXS

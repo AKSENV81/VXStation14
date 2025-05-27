@@ -1,0 +1,27 @@
+- type: lobbyBackground
+  id: Nestrelyanniy
+  background: /Textures/_VXS/LobbyScreens/towebp.webp
+
+- type: lobbyBackground
+  id: Kozel
+  background: /Textures/_VXS/LobbyScreens/kozelblyad.webp
+
+- type: lobbyBackground
+  id: PTSD
+  background: /Textures/_VXS/LobbyScreens/ptsd.webp
+
+- type: lobbyBackground
+  id: Izokorteks
+  background: /Textures/_VXS/LobbyScreens/izocortex.webp
+
+- type: lobbyBackground
+  id: Jupiter
+  background: /Textures/_VXS/LobbyScreens/jupiter.webp
+
+- type: lobbyBackground
+  id: MKS
+  background: /Textures/_VXS/LobbyScreens/mks.webp
+
+- type: lobbyBackground
+  id: Saturn
+  background: /Textures/_VXS/LobbyScreens/saturn.webp
