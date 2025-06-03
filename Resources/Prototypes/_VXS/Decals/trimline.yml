@@ -1,0 +1,118 @@
+- type: decal
+  id: TrimlineBoxOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_box
+
+- type: decal
+  id: TrimlineCornerNeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_corner_ne
+
+- type: decal
+  id: TrimlineCornerNwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_corner_nw
+
+- type: decal
+  id: TrimlineCornerSeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_corner_se
+
+- type: decal
+  id: TrimlineCornerSwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_corner_sw
+
+- type: decal
+  id: TrimlineEndEOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_end_e
+
+- type: decal
+  id: TrimlineEndNOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_end_n
+
+- type: decal
+  id: TrimlineEndSOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_end_s
+
+- type: decal
+  id: TrimlineEndWOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_end_w
+
+- type: decal
+  id: TrimlineInnerNeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_inner_ne
+
+- type: decal
+  id: TrimlineInnerNwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_inner_nw
+
+- type: decal
+  id: TrimlineInnerSeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_inner_se
+
+- type: decal
+  id: TrimlineInnerSwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_inner_sw
+
+- type: decal
+  id: TrimlineLineEOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_line_e
+
+- type: decal
+  id: TrimlineLineNOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_line_n
+
+- type: decal
+  id: TrimlineLineSOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_line_s
+
+- type: decal
+  id: TrimlineLineWOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/trimline.rsi
+    state: trimline_line_w

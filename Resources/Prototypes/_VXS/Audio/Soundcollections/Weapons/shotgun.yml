@@ -1,0 +1,13 @@
+- type: soundCollection
+  id: InsertShotgunShell
+  files:
+    - /Audio/_VXS/Weaponry/Gunsounds/Shotgun/insertShell1.ogg
+    - /Audio/_VXS/Weaponry/Gunsounds/Shotgun/insertShell2.ogg
+    - /Audio/_VXS/Weaponry/Gunsounds/Shotgun/insertShell3.ogg
+    - /Audio/_VXS/Weaponry/Gunsounds/Shotgun/insertShell4.ogg
+
+- type: soundCollection
+  id: ShotgunPumpRack
+  files:
+    - /Audio/_VXS/Weaponry/Gunsounds/Shotgun/soundShotgunRack1.ogg
+    - /Audio/_VXS/Weaponry/Gunsounds/Shotgun/soundShotgunRack2.ogg

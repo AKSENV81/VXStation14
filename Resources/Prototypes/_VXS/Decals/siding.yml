@@ -1,0 +1,118 @@
+- type: decal
+  id: SidingBoxOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_box
+
+- type: decal
+  id: SidingCornerNeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_corner_ne
+
+- type: decal
+  id: SidingCornerNwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_corner_nw
+
+- type: decal
+  id: SidingCornerSeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_corner_se
+
+- type: decal
+  id: SidingCornerSwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_corner_sw
+
+- type: decal
+  id: SidingEndEOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_end_e
+
+- type: decal
+  id: SidingEndNOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_end_n
+
+- type: decal
+  id: SidingEndSOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_end_s
+
+- type: decal
+  id: SidingEndWOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_end_w
+
+- type: decal
+  id: SidingInnerNeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_inner_ne
+
+- type: decal
+  id: SidingInnerNwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_inner_nw
+
+- type: decal
+  id: SidingInnerSeOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_inner_se
+
+- type: decal
+  id: SidingInnerSwOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_inner_sw
+
+- type: decal
+  id: SidingLineEOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_line_e
+
+- type: decal
+  id: SidingLineNOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_line_n
+
+- type: decal
+  id: SidingLineSOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_line_s
+
+- type: decal
+  id: SidingLineWOverlayGreyscale
+  defaultCustomColor: true
+  sprite:
+    sprite: _SS220/Decals/siding.rsi
+    state: siding_line_w

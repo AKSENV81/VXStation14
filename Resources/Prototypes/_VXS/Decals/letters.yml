@@ -1,0 +1,155 @@
+- type: decal
+  id: TemplateLetterA
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "a"
+
+- type: decal
+  id: TemplateLetterB
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "b"
+
+- type: decal
+  id: TemplateLetterC
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "c"
+
+- type: decal
+  id: TemplateLetterD
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "d"
+
+- type: decal
+  id: TemplateLetterE
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "e"
+
+- type: decal
+  id: TemplateLetterF
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "f"
+
+- type: decal
+  id: TemplateLetterG
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "g"
+
+- type: decal
+  id: TemplateLetterH
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "h"
+
+- type: decal
+  id: TemplateLetterI
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "i"
+
+- type: decal
+  id: TemplateLetterJ
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "j"
+
+- type: decal
+  id: TemplateLetterK
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "k"
+
+- type: decal
+  id: TemplateLetterL
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "l"
+
+- type: decal
+  id: TemplateLetterM
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "m"
+
+- type: decal
+  id: TemplateLetterN
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "n"
+
+- type: decal
+  id: TemplateLetterO
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "o"
+
+- type: decal
+  id: TemplateLetterP
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "p"
+
+- type: decal
+  id: TemplateLetterQ
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "q"
+
+- type: decal
+  id: TemplateLetterR
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "r"
+
+- type: decal
+  id: TemplateLetterS
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "s"
+
+- type: decal
+  id: TemplateLetterT
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "t"
+
+- type: decal
+  id: TemplateLetterU
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "u"
+
+- type: decal
+  id: TemplateLetterV
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "v"
+
+- type: decal
+  id: TemplateLetterW
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "w"
+
+- type: decal
+  id: TemplateLetterX
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "x"
+
+- type: decal
+  id: TemplateLetterY
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "y"
+
+- type: decal
+  id: TemplateLetterZ
+  sprite:
+    sprite: _VXS/Decals/letters.rsi
+    state: "z"

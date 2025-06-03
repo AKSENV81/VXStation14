@@ -1,0 +1,10 @@
+
+- type: npcFaction
+  id: Missile
+  hostile:
+  - PointDefenseGun
+
+- type: npcFaction
+  id: PointDefenseGun
+  hostile:
+  - Missile

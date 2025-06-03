@@ -1,0 +1,59 @@
+- type: decal
+  id: TemplateNumber0
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "0"
+
+- type: decal
+  id: TemplateNumber1
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "1"
+
+- type: decal
+  id: TemplateNumber2
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "2"
+
+- type: decal
+  id: TemplateNumber3
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "3"
+
+- type: decal
+  id: TemplateNumber4
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "4"
+
+- type: decal
+  id: TemplateNumber5
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "5"
+
+- type: decal
+  id: TemplateNumber6
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "6"
+
+- type: decal
+  id: TemplateNumber7
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "7"
+
+- type: decal
+  id: TemplateNumber8
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "8"
+
+- type: decal
+  id: TemplateNumber9
+  sprite:
+    sprite: _SS220/Decals/template_numbers.rsi
+    state: "9"
