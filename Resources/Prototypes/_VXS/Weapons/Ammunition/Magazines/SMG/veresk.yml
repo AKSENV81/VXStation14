@@ -1,0 +1,32 @@
+- type: entity
+  id: PistolMagazineVereskHeath
+  name: heath magazine (6.35x15mm AWR25S)
+  parent: BaseItem
+  components:
+  - type: Tag
+    tags:
+      - MagazineVeresk
+  - type: BallisticAmmoProvider
+    proto: CartridgeCaselessRifle
+    mayTransfer: true
+    whitelist:
+      tags:
+        - CartridgeCaselessRifle
+    capacity: 20
+  - type: Item
+    size: Small
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Magazines/veresk.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-1
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: false
+  - type: Appearance

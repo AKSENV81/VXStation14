@@ -1,0 +1,54 @@
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: VXSBaseBullet
+  id: VXSBullet50bmgTrasser
+  name: bullet (12.7x99mm)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 65
+        Blunt: 40
+        Structural: 75
+    penetrationThreshold: 100
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 90
+  - type: TimedDespawn
+    lifetime: 30
+  - type: Sprite
+    noRot: false
+    sprite: _VXS/Weapons/Ammunition/Projectiles/projectiles.rsi
+    layers:
+    - state: trasser_2
+      shader: unshaded
+  - type: Tracer
+    color: "#FFFFFFFF"
+    length: 5
+
+- type: entity
+  categories: [ HideSpawnMenu ]
+  parent: VXSBaseBullet
+  id: VXSBullet50bmg
+  name: bullet (12.7x99mm)
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 65
+        Blunt: 40
+        Structural: 75
+    penetrationThreshold: 100
+    penetrationDamageTypeRequirement:
+    - Structural
+  - type: StaminaDamageOnCollide
+    damage: 90
+  - type: TimedDespawn
+    lifetime: 30
+  - type: Sprite
+    noRot: false
+    sprite: _VXS/Weapons/Ammunition/Projectiles/projectiles.rsi
+    layers:
+    - state: trasser_2
+      shader: unshaded
