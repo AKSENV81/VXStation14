@@ -168,8 +168,12 @@
       offsetSpeed: 0.3
     - type: Eye
       pvsScale: 5
-    #- type: NightVision TODO: Port both systems
-    #  overlay: true
+    - type: NightVision
+      isActive: true
+      toggleAction: null
+      color: "#838996"
+      activateSound: null
+      deactivateSound: null
     - type: Destructible
       thresholds:
         - trigger:
@@ -525,8 +529,10 @@
       targetZoom: 3.0,3.0
     - type: Eye
       pvsScale: 5
-    #- type: NightVision TODO: Port both systems
-    #  overlay: true
+    - type: NightVision
+      color: "#20B2AA"
+      activateSound: null
+      deactivateSound: null
     - type: Destructible
       thresholds:
         - trigger:
