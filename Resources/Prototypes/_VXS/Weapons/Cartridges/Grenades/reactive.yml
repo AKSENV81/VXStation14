@@ -1,0 +1,94 @@
+- type: entity
+  id: CartridgeRocketThermobar
+  name: TBG-7V grenade (105mm)
+  suffix: thermobaric
+  parent: BaseItem
+  description: The thermobaric warhead has a high explosive, fragmentation and incendiary effect, causing devastating damage to the enemy's manpower on the battlefield. The penetration capability of this ammunition is sufficient to defeat lightly armored and unarmored vehicles, and the TBG-7B's impact factors effectively affect the enemy located in trenches and bunkers at a distance of two meters from the epicenter of the grenade explosion. This ammunition leaves no chance for all living things in small spaces.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeRocket
+      - CartridgeRocketThermobar
+  - type: Item
+    size: Large
+  - type: CartridgeAmmo
+    proto: BulletRocketThermobar
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/rpg.rsi
+    state: thermobar
+  - type: StaticPrice
+    price: 300
+  - type: SmokeOnTrigger
+    duration: 2
+    spreadAmount: 8
+  - type: FlashOnTrigger
+    range: 3
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Thermobaric
+    maxIntensity: 35
+    intensitySlope: 1
+    totalIntensity: 100
+    maxTileBreak: 1
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: RocketThermobarGraph
+    node: rocketThermobar
+
+- type: entity
+  id: CartridgeRocketFrag
+  name: OG-7V grenade (40mm)
+  suffix: frag
+  parent: BaseItem
+  description: The OG-7V shot with fragmentation grenade is designed to suppress live forces, including those with personal protective equipment (body armor), located in open terrain, in field-type shelters and buildings, as well as to defeat non-armored vehicles.
+  components:
+  - type: Tag
+    tags:
+      - CartridgeRocket
+      - CartridgeRocketFragTag
+  - type: Item
+    size: Large
+  - type: CartridgeAmmo
+    proto: BulletRocketFrag
+    deleteOnSpawn: true
+  - type: Sprite
+    sprite: _VXS/Weapons/Ammunition/Explosives/rpg.rsi
+    state: frag
+  - type: StaticPrice
+    price: 250
+  - type: SmokeOnTrigger
+    duration: 1
+    spreadAmount: 6
+  - type: FlashOnTrigger
+    range: 4
+  - type: ExplodeOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 40
+    intensitySlope: 2
+    totalIntensity: 200
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:TriggerBehavior
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Construction
+    graph: RocketFragGraph
+    node: rocketFrag

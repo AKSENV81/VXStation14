@@ -1,0 +1,25 @@
+- type: entity
+  id: PelletClusterLethalSmall
+  name: shrapnel
+  categories: [ HideSpawnMenu ]
+  parent: [BaseBullet, PelletClusterLethal]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+  - type: TimedDespawn
+    lifetime: 0.30
+
+- type: entity
+  id: PelletClusterLethalHeavy
+  name: shrapnel
+  categories: [ HideSpawnMenu ]
+  parent: [BaseBullet, PelletClusterLethal]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 75
+  - type: TimedDespawn
+    lifetime: 0.15
